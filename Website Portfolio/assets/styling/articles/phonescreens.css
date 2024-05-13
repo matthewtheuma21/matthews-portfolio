@@ -1,65 +1,109 @@
 body {
-    font-family: 'coolvetica';
-    background-color: #000000;
-  }
-
-  .img-fluid {
-    padding-top: 30px;
-    padding-left: 70px;
-    margin-top: 40px;
-    width: 80px;
-  }
-
-  h1{
-    color: white;
-    margin-left: 80px;
-    margin-top: 100px;
-    padding-top: 20px;
-  }
-
-  .background-images {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+  font-family: 'coolvetica';
 }
 
-.background-image1 img{
-    width: 20%;
-    height: auto;
-    margin-left: 1250px;
-    transform: rotate(355deg);
-    z-index: -1;
-  }
+.black-bg {
+  background-color: black;
+}
 
-  .background-image2 img{
-    width: 20%;
-    height: auto;
-    margin-left: 1250px;
-    z-index: -1;
-  }
+.back-arrow img{
+  margin-top: 40px;
+  margin-left: 40px;
+  width: 70px;
+}
 
-  .background-image3 img{
-    width: 20%;
-    height: auto;
-    margin-left: 1250px;
-    transform: rotate(355deg);
-    z-index: -1;
-  }
+h1 {
+  color: white;
+  margin-left: 80px;
+  margin-top: 100px;
+  padding-top: 20px;
+  font-family: 'coolvetica';
+}
 
-  .row{
-    display: flex;
-  }
+.background-images {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
 
-  .col-5 p{
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    margin-left: 80px;
-    padding-right: 600px; /* Adjust as needed */
-    padding-top: 20px;
-    z-index: 1;
-    position: relative
-  }
-  
+.bg-sketches-2 {
+  width: 300px;
+  height: auto;
+  margin-left: -60px;
+  z-index: -1;
+}
+
+.bg-sketches-3 {
+  width: 300px;
+  height: auto;
+  margin-left: -100px;
+  margin-top: -15px;
+  transform: rotate(355deg);
+  z-index: -2;
+}
+
+.bg-sketches-1 {
+  margin-top: -100px;
+  width: 400px;
+  height: auto;
+  margin-left: 260px;
+  transform: rotate(355deg);
+  z-index: -1;
+}
+
+
+.row {
+  display: flex;
+}
+
+.col-6 p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  margin-left: 80px;
+  margin-right: 80px;
+  /* Adjust as needed */
+  padding-top: 40px;
+  z-index: 1;
+  position: relative
+}
+
+.visual-1{
+  width: 200px;
+  margin-top: -280px;
+  margin-left: -50px;
+}
+
+.preview1{
+  width: 210px;
+  padding-left: 10px;
+  margin-top: -280px;
+}
+
+.visual-2{
+  width: 200px;
+  margin-top: 10px;
+  margin-left: -50px;
+}
+
+.preview2{
+  width: 210px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.image-row .col{
+  padding-left: 400px;
+}
+
+.image-row .col .preview3{
+  width: 300px;
+  padding: 40px;
+}
+
+.image-row .col .preview4{
+  width: 300px;
+  padding: 40px;
+}
