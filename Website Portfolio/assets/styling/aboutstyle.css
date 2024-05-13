@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'coolvetica';
+    src: url(fonts/coolvetica\ rg.otf) format('truetype');
+}
+
+body{
+    background-color: black;
+    font-family: "coolvetica", sans-serif;
+}
+
+.col-3 .back-arrow img{
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100px;
+}
+
+.text-graphic img{
+    width: 70%;
+    position: absolute;
+    padding-left: 200px;
+}
+
+.main-image img{
+    width: 45%;
+    padding-left: 380px;
+    padding-top: 550px;
+}
+
+.text{
+    color: white;
+    padding-top: 40px;
+    padding-left: 380px;
+    padding-right: 450px;
+    padding-bottom: 40px;
+    text-align: justify;
+    font-size: 20px;
+}

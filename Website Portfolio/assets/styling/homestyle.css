@@ -1,0 +1,260 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  
+}
+
+.title-content{
+  color: white;
+  text-align: center;
+  font-family: "coolvetica", sans-serif;
+}
+
+h4{
+  font-size: 60px;
+  margin: 0;
+  padding-top: 150px;
+}
+
+h1{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 200px;  
+  font-weight: 800;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* navigation bar */
+
+nav .navigation-bar{
+  margin-left: 350px;
+}
+
+.navigation-bar {
+  padding-top: 80px;
+  /* to adjust the navigation bar at the bottom, in my own specific preference */
+  text-align: center;
+  font-size: 23px;
+  font-weight: bolder;
+  font-family: coolvetica;
+}
+
+.navigation-bar a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.navigation-bar .row{
+  display: flex;
+}
+
+.navigation-bar .row .col{
+  padding: 30px;
+  align-items: center;
+}
+
+/* text underline animation */
+.navigation-bar a:before {
+  content: ' ';
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  background: #ff3333;
+  transition: all 0.4s ease;
+}
+
+.navigation-bar a:hover:before{
+  width: 100%;
+  top: 25px;
+}
+
+/* header text */
+
+.white-container{
+  background-color: #fff;
+  width: 100%;
+}
+
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  40%, 60% {
+    transform: translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animated-title {
+  color: #222;
+  font-family: Roboto, Arial, sans-serif;
+  height: 90vmin;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+}
+
+.animated-title > div {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.animated-title > div div {
+  font-size: 12vmin;
+  padding: 2vmin 0;
+  position: absolute;
+}
+
+.animated-title > div div span {
+  display: block;
+}
+
+.animated-title > div.text-top {
+  border-bottom: 1vmin solid #000;
+  top: 0;
+}
+
+.animated-title > div.text-top div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animated-title > div.text-top div span:first-child {
+  color: #767676;
+}
+
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+
+.animated-title > div.text-bottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}
+
+/* text description*/
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+ul {
+  width: 100%;
+  overflow: hidden;
+}
+ul li {
+  position: relative;
+  cursor: pointer;
+}
+ul li .overlay {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  background: #000;
+  display: blocK;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 8;
+}
+ul li .info {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  z-index: 999;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 30px 20px 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul li .info h2 {
+  font-family: 'coolvetica', sans-serif;
+  font-size: 30px;
+  line-height: 50px;
+}
+ul li .info p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+ul li .info .btn {
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 20px;
+}
+ul li .info .description {
+  display: none;
+}
+ul li .bg-img img {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+

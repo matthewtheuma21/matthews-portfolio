@@ -1,0 +1,40 @@
+.content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 60px;
+    padding-left: 160px;
+    padding-right: 100px;
+    text-align: justify;
+    
+}
+
+.side_img {
+    width: 15%;
+    float: right;
+    padding-left: 30px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+/* ribbon */
+
+.ribbon {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.tab {
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
