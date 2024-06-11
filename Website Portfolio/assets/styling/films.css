@@ -1,0 +1,19 @@
+body{
+    font-family: 'coolvetica';
+}
+  
+.black-bg {
+    background-color: black;
+}
+
+.back-arrow img{
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100px;
+}
+
+h1{
+    font-size: 250px;
+    padding-left: 50px;
+    text-align: center;
+}

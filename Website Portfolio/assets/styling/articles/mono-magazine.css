@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.black-bg {
+    background-color: black;
+}
+
+.back-arrow img {
+    margin-top: 40px;
+    margin-left: -40px;
+    padding-bottom: 30px;
+    width: 70px;
+    height: auto;
+}
+
+h1 {
+    color: white;
+    margin-left: 80px;
+    margin-top: 100px;
+    padding-top: 20px;
+    font-family: 'coolvetica';
+}
+
+h2 {
+    margin-left: 800px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-family: 'coolvetica';
+}
+
+.col-4 .front-cover{
+    width: 460px;
+    padding-left: 100px;
+}
+
+/* book flip animation */
+input {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.book {
+    display: flex;
+    margin-left: 90px;
+}
+
+#cover {
+    width: 355px;
+    height: 504px;
+}
+
+.flip-book {
+    width: 355px;
+    height: 504px;
+    position: relative;
+    perspective: 1500px;
+}
+
+.flip {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: .5s;
+    color: #000;
+}
+
+.front {
+    position: absolute;
+    width: 355px;
+    height: 504px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: inset 20px 0 50px rgba(255, 255, 255, 0.5) 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.back {
+    position: absolute;
+    width: 355px;
+    height: 504px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: #000;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 13px;
+    right: 13px;
+    cursor: pointer;
+    color: #ffdd00;
+    font-weight: 600;
+    font-family: 'coolvetica';
+    font-size: 25px;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 13px;
+    right: 13px;
+    cursor: pointer;
+    color: #ffdd00;
+    font-weight: 600;
+    font-family: 'coolvetica';
+    font-size: 25px;
+}
+
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+#p4 {
+    z-index: 0;
+}
+
+#c1:checked~.flip-book #p1 {
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+
+#c2:checked~.flip-book #p2 {
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+
+#c3:checked~.flip-book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+#c4:checked~.flip-book #p4 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+
+/* p */
+
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    z-index: 1;
+    position: relative
+}
