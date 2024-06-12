@@ -24,7 +24,6 @@ body {
   h2 {
     color: white;
     margin-left: 80px;
-    margin-top: -40px;
     padding-bottom: 30px;
     font-family: 'coolvetica';
   }
@@ -61,7 +60,6 @@ body {
   .main-preview {
     width: 540px;
     margin-top: 40px;
-    margin-right: 20px;
     padding-left: 60px;
     padding-bottom: 50px;
   }

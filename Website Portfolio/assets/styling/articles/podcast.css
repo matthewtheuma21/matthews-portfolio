@@ -1,0 +1,79 @@
+body {
+    font-family: 'coolvetica';
+  }
+  
+  .black-bg {
+    background-color: black;
+  }
+  
+  .back-arrow img {
+    margin-top: 40px;
+    margin-left: -40px;
+    padding-bottom: 30px;
+    width: 70px;
+  }
+  
+  h1 {
+    color: white;
+    margin-left: 80px;
+    margin-top: 100px;
+    padding-top: 20px;
+    font-family: 'coolvetica';
+  }
+  
+  .col-7 p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    margin-left: 80px;
+    margin-right: 80px;
+    /* Adjust as needed */
+    padding-top: 40px;
+    z-index: 1;
+    position: relative
+  }
+  
+  .preview5 {
+    width: 500px;
+    padding-left: 10px;
+    margin-top: 120px;
+  }
+
+  .image {
+    position: relative;
+  }
+  
+  .col-4 .image img {
+    transition: transform 0.3s ease;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-left: 40px;
+  }
+
+  #img1 {
+    margin-left: 50px;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  .header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin-left: 40px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.header h2{
+    color: white;
+    font-weight: 500;
+    font-family: 'coolvetica';
+  }
+  
+  .image:hover .header {
+    transform: translateY(1);
+  }
