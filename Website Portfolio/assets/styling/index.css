@@ -1,125 +1,167 @@
-@import url(http://fonts.googleapis.com/css?family=Lustria|Lato:300);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
+body{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-html {
-  line-height: 1;
+.black-bg {
+  background-color: black;
 }
 
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
+.title-content{
+  color: white;
   text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+  font-family: "coolvetica", sans-serif;
 }
 
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+.logo{
+  width: 220px;
+  padding-top: 30px;
+  margin-left: -85px;
 }
 
-a img {
-  border: none;
+h4{
+  font-size: 30px;
+  margin-left: -80px;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
+h1{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 120px;  
+  font-weight: 800;
+  margin-left: -80px;
 }
 
-body {
-  overflow-x: hidden;
+/* navigation bar */
+
+.navigation-bar {
+  margin-left: -120px;
+  padding-left: 50px;
+  /* to adjust the navigation bar at the bottom, in my own specific preference */
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: coolvetica;
+}
+
+.navigation-bar a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.navigation-bar li{
+  list-style: none;
+  text-align: left;
+}
+
+/* text underline animation */
+.navigation-bar a:before {
+  content: ' ';
+  position: absolute;
+  height: 5px;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  background: #ff3333;
+  transition: all 0.4s ease;
+}
+
+.navigation-bar a:hover:before{
+  width: 100%;
+  top: 30px;
+}
+
+.col-8 .home-image img{
+  width: 900px;
+  height: auto;
+}
+
+/* hover section */
+
+section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: 620px;
+    margin-top: 150px;
+    z-index: 10; /* Ensure the section is on top of the image */
+    padding: 5px;
+    background: rgba(0, 0, 0, 0); /* Optional: Add a background to improve readability */
+    color: white; /* Ensure text color is visible */
+}
+
+section p {
+  margin: 0;
+  color: hsl(0, 0%, 0%);
+  text-align: center;
+  background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
+  color: transparent;
+  background-clip: text;
+}
+
+.code {
+  font-size: 30px;
+  color: hsl(0 0% 100%);
+}
+
+.code:hover {
+  cursor:default;
+}
+
+.digit {
+  display: flex;
+  height: 100%;
+  padding: 5px;
+  font-family: "coolvetica";
+}
+
+.digit:focus-visible {
+  outline-color: hsl(0 0% 50% / 0.25);
+  outline-offset: 1rem;
+}
+
+.digit span {
+  scale: calc(var(--active, 0) + 0.5);
+  filter: blur(calc((1 - var(--active, 0)) * 1rem));
+  transition: scale calc(((1 - var(--active, 0)) + 0.2) * 1s), filter calc(((1 - var(--active, 0)) + 0.2) * 1s);
 }
 
 ul {
-  width: 100%;
-  overflow: hidden;
+  padding: 0;
+  margin: 0;
 }
-ul li {
-  position: relative;
-  cursor: pointer;
+
+
+:root {
+  --lerp-0: 1; /* === sin(90deg) */
+  --lerp-1: calc(sin(50deg));
+  --lerp-2: calc(sin(45deg));
+  --lerp-3: calc(sin(35deg));
+  --lerp-4: calc(sin(25deg));
+  --lerp-5: calc(sin(15deg));
 }
-ul li .overlay {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-  opacity: 0.4;
-  background: #000;
-  display: blocK;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: 8;
+
+.digit:is(:hover, :focus-visible) {
+  --active: var(--lerp-0);
 }
-ul li .info {
-  position: relative;
-  width: 100%;
-  z-index: 999;
-  color: #fff;
-  display: block;
-  text-align: center;
-  padding: 30px 20px 20px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.digit:is(:hover, :focus-visible) + .digit,
+.digit:has(+ .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-1);
 }
-ul li .info h2 {
-  font-family: "Lustria", serif;
-  font-size: 30px;
-  line-height: 50px;
+.digit:is(:hover, :focus-visible) + .digit + .digit,
+.digit:has(+ .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-2);
 }
-ul li .info p {
-  font-family: "Lato", sans-serif;
-  font-size: 18px;
-  line-height: 30px;
-  padding-bottom: 20px;
+.digit:is(:hover, :focus-visible) + .digit + .digit + .digit,
+.digit:has(+ .digit + .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-3);
 }
-ul li .info .btn {
-  line-height: 30px;
-  display: inline-block;
-  padding: 0 10px;
-  border: 1px solid #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  font-family: "Lato", sans-serif;
-  margin-bottom: 20px;
+.digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit,
+.digit:has(+ .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-4);
 }
-ul li .info .description {
-  display: none;
-}
-ul li .bg-img img {
-  position: absolute;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
+.digit:is(:hover, :focus-visible) + .digit + .digit + .digit + .digit + .digit,
+.digit:has(+ .digit + .digit + .digit + .digit + .digit:is(:hover, :focus-visible)) {
+  --active: var(--lerp-5);
 }
