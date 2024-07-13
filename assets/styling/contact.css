@@ -18,8 +18,8 @@ section{
     left: 0;
     right: 0;
     bottom: 0;
-    margin-left: 520px;
-    margin-top: 250px;
+    margin-left: 430px;
+    margin-top: 200px;
     background: rgba(0, 0, 0, 0); 
     color: white; /* Ensure text color is visible */
 }
@@ -45,7 +45,7 @@ section p {
   display: flex;
   height: 100%;
   padding: 5px;
-  font-family: "coolvetica";
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .digit:focus-visible {

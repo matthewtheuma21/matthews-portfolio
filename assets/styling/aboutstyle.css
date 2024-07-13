@@ -1,11 +1,7 @@
-@font-face {
-    font-family: 'coolvetica';
-    src: url(fonts/coolvetica\ rg.otf) format('truetype');
-}
 
 body{
     background-color: black;
-    font-family: "coolvetica", sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .back-arrow img{
