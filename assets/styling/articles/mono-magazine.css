@@ -23,14 +23,14 @@ h1 {
     margin-left: 80px;
     margin-top: 100px;
     padding-top: 20px;
-    font-family: 'coolvetica';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
     margin-left: 800px;
     padding-top: 50px;
     padding-bottom: 30px;
-    font-family: 'coolvetica';
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .col-4 .front-cover{
@@ -106,9 +106,9 @@ img {
     bottom: 13px;
     right: 13px;
     cursor: pointer;
-    color: #ffdd00;
+    color: #ffffff;
     font-weight: 600;
-    font-family: 'coolvetica';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
 
@@ -117,9 +117,9 @@ img {
     bottom: 13px;
     right: 13px;
     cursor: pointer;
-    color: #ffdd00;
+    color: #ffffff;
     font-weight: 600;
-    font-family: 'coolvetica';
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
 }
 
@@ -165,8 +165,8 @@ p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 200px;
+    margin-right: 200px;
     padding-top: 60px;
     padding-bottom: 40px;
     z-index: 1;
