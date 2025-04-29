@@ -26,6 +26,11 @@ body{
     padding-top: 550px;
 }
 
+.img img{
+    width: 75%;
+    padding-left: 320px;
+}
+
 .text{
     color: white;
     padding-top: 40px;
