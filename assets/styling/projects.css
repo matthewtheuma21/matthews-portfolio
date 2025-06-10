@@ -15,10 +15,16 @@
     background-color: #000000;
   }
   
+  .logo{
+  width: 150px;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
   /* navigation bar */
 
 nav .navigation-bar{
-  margin-left: 400px;
+  margin-left: 100px;
 }
 
 .navigation-bar {
@@ -60,6 +66,16 @@ nav .navigation-bar{
 .navigation-bar a:hover:before{
   width: 100%;
   top: 25px;
+}
+
+hr {
+  margin-left: 130px;
+}
+
+.information p {
+  padding-left: 130px;
+  padding-top: 10px;
+  color: white;
 }
 
   /* image grid design*/

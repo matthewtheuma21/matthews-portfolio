@@ -30,6 +30,7 @@ h1 {
   
 .results{
     width: 700px;
+    padding-bottom: -50px;
 }
 
   ul {

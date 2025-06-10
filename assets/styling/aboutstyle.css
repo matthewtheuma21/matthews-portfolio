@@ -8,6 +8,12 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.logo{
+  width: 150px;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+
 .back-arrow img{
     margin-top: 40px;
     margin-left: 40px;
