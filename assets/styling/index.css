@@ -114,6 +114,7 @@ ul {
   .hero-image img {
     height: auto;
     object-fit: contain;
+    padding-top: 40px;
   }
 }
 
