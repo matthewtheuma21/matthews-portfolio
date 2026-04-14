@@ -8,37 +8,181 @@
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
     <link rel="stylesheet" href="assets/styling/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
-<body class="black-bg">
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
 
-    <div class="logo">
-        <img src="assets/images/mynewlogo.png" alt="index-logo">
-    </div>
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
 
-    <div class="image-container">
-        <img src="assets/images/me3.png" alt="my-image">
+<body id="top">
+    <div class="scroll-bar"></div>
 
-        <div class="overlay-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav>
-                            <div class="navigation-bar"> <!-- navigation -->
-                                <ul>
-                                    <li><a href="projects.html">PROJECTS</a></li>
-                                    <li><a href="photography.html">PHOTOGRAPHY</a></li>
-                                    <li><a href="films.html">FILMS</a></li>
-                                    <li><a href="aboutpage.html">ABOUT ME</a></li>
-                                    <li><a href="contact.html">CONTACT</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="100" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><b>home</b></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
                 </div>
             </div>
+        </nav>
+        <div class="hero-image">
+            <img src="assets/images/home-image.jpg" alt="Hero Image">
         </div>
+
+        <h1 class="hero-text">> most liked projects</h1>
+
+        <div class="container mt-4">
+            <!-- FIRST ROW -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="project1.html">
+                        <img src="assets/images/project-preview1.jpg" class="img-fluid project-img" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="project2.html">
+                        <img src="assets/images/project-preview2.jpg" class="img-fluid project-img" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="project3.html">
+                        <img src="assets/images/project-preview4.jpg" class="img-fluid project-img" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- SECOND ROW -->
+            <div class="row g-4 mt-1">
+
+                <div class="col-md-4">
+                    <a href="project4.html">
+                        <img src="assets/images/knorr-package-02.png" class="img-fluid project-img" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="project5.html">
+                        <img src="assets/images/project-preview1.jpg" class="img-fluid project-img" alt="">
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="project6.html">
+                        <img src="assets/images/project-preview3.jpg" class="img-fluid project-img" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container newest-section mt-5">
+
+            <h1 class="section-title"> > NEWEST UPLOAD</h1>
+            <p>CHECK OUT MY LATEST WORK HERE...</p>
+
+            <div class="row mt-4">
+
+                <div class="col-12">
+                    <a href="newest-project.html">
+                        <img src="assets/images/project-preview3.jpg" class="img-fluid newest-img" alt="">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container thesis-section mt-5">
+
+            <h1 class="section-title"> > my thesis study</h1>
+            <p>UNDERSTANDING SENSORY ADVERTISEMENT AS A TOOL FOR EMOTIONAL COMMUNICATION IN GRAPHIC DESIGN</p>
+
+            <div class="row mt-4">
+
+                <div class="col-12">
+                    <a href="newest-project.html">
+                        <img src="assets/images/streetphotograph1.jpg" class="img-fluid newest-img" alt="">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <p class="subtitle">
+        <span class="top-line">design should be more about</span><br>
+        <span class="bottom-line">its experience than perfection</span>
+    </p>
+
+    <a href="#top" class="back-to-top">↑ back to top</a>
+
+    <script>
+        const button = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
 
 </body>
