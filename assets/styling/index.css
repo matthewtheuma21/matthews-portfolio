@@ -42,6 +42,7 @@ html body {
   color: black;
 }
 
+
 .nav-link b {
   font-weight: 900;
 }
@@ -105,6 +106,11 @@ ul {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vh;
+  }
+}
 
 .hero-image img {
   width: 100%;
