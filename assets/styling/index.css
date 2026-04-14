@@ -108,7 +108,12 @@ ul {
 
 @media (max-width: 768px) {
   .hero-image {
-    height: 60vh;
+    height: auto;
+  }
+
+  .hero-image img {
+    height: auto;
+    object-fit: contain;
   }
 }
 
