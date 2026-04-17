@@ -4,224 +4,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Projects</title>
+  <title>Projects</title>
 
-  <link rel="stylesheet" href="assets/styling/projects.css">
+  <link rel="stylesheet" href="assets/styling/bootstrap.css">
   <link rel="stylesheet" href="assets/styling/master.css">
+  <link rel="stylesheet" href="assets/styling/projects.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
 </head>
 
-<body>
+<!-- TOP RED SCROLL LINE -->
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
 
+    document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+  });
+</script>
 
-  <div class="logo">
-    <img src="assets/images/mynewlogo.png" class="logo" alt="index-logo">
-  </div>
+<body id="top">
+  <div class="scroll-bar"></div>
 
-  <nav>
-    <div class="navigation-bar"> <!-- navigation -->
-      <div class="row">
-        <div class="col">
-          <a href="index.html">HOME</a>
-        </div>
-        <div class="col">
-          <a href="photography.html">PHOTOGRAPHY</a>
-        </div>
-        <div class="col">
-          <a href="films.html">FILMS</a>
-        </div>
-        <div class="col">
-          <a href="aboutpage.html">ABOUT ME</a>
-        </div>
-        <div class="col">
-          <a href="contact.html">CONTACT ME</a>
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+
+        <!-- LEFT: Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/LOGO.png" alt="Logo" width="130" height="40">
+        </a>
+
+        <!-- TOGGLE (for mobile) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- CENTER: Nav links -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="aboutpage.html">about</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html"><b>work</b></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">contact</a>
+            </li>
+
+          </ul>
+
+          <!-- RIGHT: Image -->
+          <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
         </div>
       </div>
+    </nav>
+
+    <div class="container mt-5">
+
+      <h1 class="section-title">> Projects</h1>
+
+      <div class="row g-4">
+
+
+        <!-- PROJECT 1 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project2.html" class="project-card">
+            <img src="assets/images/bakefirst_thumbnail.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Branding and Editorial Design: Baking Book 'Bake First'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project3.html" class="project-card">
+            <img src="assets/images/dezine_thumbnail.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Editorial Design: 'DEZINE' Zine Collab</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="san-lo-ud.html" class="project-card">
+            <img src="assets/images/san-loud_thumbnail.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Branding: 'Rome Social Hub' Festival</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="knorr.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="coe.html" class="project-card">
+            <img src="assets/images/coe-logo.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Branding: Council of Europe, 'Presidency of Malta 2025'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 7 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Rebranding - 'Knorr' Packaging</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 8 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="snail-zine.html" class="project-card">
+            <img src="assets/images/snail-zine.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Editorial Design: 'The Snail' - Zine Artwork</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 9 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="t-shirt.html" class="project-card">
+            <img src="assets/images/t-shirt-preview1.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">T-Shirt Design: 'Cringecore'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 10 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 11 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="hdmi.html" class="project-card">
+            <img src="assets/images/hdmi_thumbnail.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Website Design - 'The Hidden Gems of Malta' </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 12 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="thomas.html" class="project-card">
+            <img src="assets/images/thomas&friends-surprise.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Branding & Packaging Design: Collectables for 'Thomas & Friends'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 13 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 14 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="mono-magazine.html" class="project-card">
+            <img src="assets/images/mono-thumbnail.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Editorial Design: Magazine 'MONO'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 15 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="harmony.html" class="project-card">
+            <img src="assets/images/harmony.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Branding: Fictional Festival 'HRMNY'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 16 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 17 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 18 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="project4.html" class="project-card">
+            <img src="assets/images/knorr-package-02.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">#</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
     </div>
-  </nav>
 
-  <hr style="width:83%;text-align:left;padding-left:200px">
-  </hr>
+    <p class="subtitle">
+      <span class="top-line">design should be more about</span><br>
+      <span class="bottom-line">its experience than perfection</span>
+    </p>
 
-  <div class="information">
-    <p>A couple of projects I have worked on....</p>
+    <a href="#top" class="back-to-top">↑ back to top</a>
+
+    <!-- 'BACK TO TOP' Button -->
+
+    <script>
+      const button = document.querySelector('.back-to-top');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          button.classList.add('show');
+        } else {
+          button.classList.remove('show');
+        }
+      });
+    </script>
+
   </div>
-
-  <div class="gallery-image">
-    <div class="img-box">
-      <a href="t-shirt.html">
-        <img src="assets/images/t-shirt-preview1.jpg" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>'cringecore' T-Shirt Visual</p>
-            <p class="opacity-low">Kardashian Inspiration</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="knorr.html">
-        <img src="assets/images/knorr-package-02.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Rebranding Knorr</p>
-            <p class="opacity-low">Packaging Design</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="coe.html">
-        <img src="assets/images/coe-logo.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Council of Europe Malta 2024</p>
-            <p class="opacity-low">Brand Organisation Work</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="#">
-        <img src="assets/images/arrows-01-01.jpg" />
-        <div class="transparent-box">
-          <div class="caption">
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="snail-zine.html">
-        <img src="assets/images/snail-zine.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>The Snail Zine</p>
-            <p class="opacity-low">Zine Artwork</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="mono-magazine.html">
-        <img src="assets/images/mono1.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>The Mono Magazine</p>
-            <p class="opacity-low">Music Magazine</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="vogue-content.html">
-        <img src="assets/images/vogue1.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Vogue Customization</p>
-            <p class="opacity-low">Content Creation for people</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="san-lo-ud.html">
-        <img src="assets/images/san-lo-ud.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>The Festival of Rome - San Lo-ud</p>
-            <p class="opacity-low">Festival Branding</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="thomas.html">
-        <img src="assets/images/thomas&friends-surprise.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Thomas & Friends Surprise</p>
-            <p class="opacity-low">Toy Branding</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="self-expression.html">
-        <img src="assets/images/selfexpression01.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>#selfexpression - myself & i</p>
-            <p class="opacity-low">Personal Artwork</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="podcast.html">
-        <img src="assets/images/podcastcover.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>'Għandi Bagandi?' Podcast</p>
-            <p class="opacity-low">Unreleased Maltese Podcat</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box">
-      <a href="harmony.html">
-        <img src="assets/images/harmony.png" />
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Harmony 24 Festival</p>
-            <p class="opacity-low">Fictional Festival Branding Idea</p>
-          </div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- Wider gallery images -->
-  <div class="gallery-image2">
-    <div class="img-box2">
-      <a href="losancianos.html">
-        <img src="assets/images/ancianos-thumbnail.png" alt="" />
-        <div class="transparent-box2">
-          <div class="caption">
-            <p>Los Ancianos - The Elderly</p>
-            <p class="opacity-low">A Health Campaign</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="img-box2">
-      <a href="hdmi.html">
-        <img src="assets/images/hdmi1.png" />
-        <div class="transparent-box2">
-          <div class="caption">
-            <p>The Gems of The Maltese Islands</p>
-            <p class="opacity-low">Tourism & Exploration Website</p>
-          </div>
-        </div>
-      </a>
-    </div>s
-    <div class="img-box2">
-      <a href="epilepsy.html">
-        <img src="assets/images/epilepsy1.png" />
-        <div class="transparent-box2">
-          <div class="caption">
-            <p>Working with Caritas Epilepsy and Promotion Social Service</p>
-            <p class="opacity-low">Social Service Branding</p>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <h2>Revolutionising Logos</h2>
-
-  <div class="logos">
-    <img src="assets/images/cd-logo.jpg">
-    <img src="assets/images/vsc-logo.png">
+  <div class="footer-image">
+    <img src="assets/images/FOOTER.jpg" alt="Footer">
   </div>
 
 </body>

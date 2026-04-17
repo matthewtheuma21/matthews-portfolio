@@ -4,238 +4,176 @@
   box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #000000;
-  }
-  
-  .logo{
-  width: 150px;
-  padding-top: 10px;
+html body {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: red;
+  z-index: 9999;
+}
+
+/* navigation bar */
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.7); /* white with opacity */
+  backdrop-filter: blur(10px); /* glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* subtle depth */
+  z-index: 1000;
+}
+
+.navbar-brand {
   padding-left: 30px;
 }
 
-  /* navigation bar */
-
-nav .navigation-bar{
-  margin-left: 100px;
-}
-
-.navigation-bar {
-  padding-top: 10px;
-  /* to adjust the navigation bar at the bottom, in my own specific preference */
-  text-align: center;
-  font-size: 23px;
-  font-weight: bolder;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.navigation-bar a {
-  color: white;
-  text-decoration: none;
+.nav-link {
   position: relative;
+  margin-right: 80px;
+  font-weight: 200;
+  display: inline-block;
+  font-size: 30px;
+  color: black;
 }
 
-.navigation-bar .row{
-  display: flex;
+
+.nav-link b {
+  font-weight: 900;
 }
 
-.navigation-bar .row .col{
-  padding: 30px;
-  align-items: center;
-}
-
-/* text underline animation */
-.navigation-bar a:before {
-  content: ' ';
+/* underline */
+.nav-link::after {
+  content: "";
   position: absolute;
-  height: 3px;
-  width: 0%;
-  bottom: 0;
   left: 0;
-  background: #ff3333;
-  transition: all 0.4s ease;
+  bottom: 5px;
+  width: 0%;
+  height: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
 }
 
-.navigation-bar a:hover:before{
+/* hover effect */
+.nav-link:hover::after {
   width: 100%;
-  top: 25px;
 }
 
-hr {
-  margin-left: 130px;
+.code {
+  font-size: 30px;
+  color: hsl(0, 0%, 0%);
 }
 
-.information p {
-  padding-left: 130px;
-  padding-top: 10px;
-  color: white;
+.code:hover {
+  cursor: default;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
   /* image grid design*/
   
-  .gallery-image {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .gallery-image img {
-    height: 300px;
-    width: 300px;
-    transform: scale(1.0);
-    transition: transform 0.4s ease;
-  }
-  
-  .img-box {
-    box-sizing: content-box;
-    margin: 10px;
-    height: 300px;
-    width: 300px;
-    overflow: hidden;
-    display: inline-block;
-    color: white;
-    position: relative;
-    background-color: white;
-  }
-  
-  .caption {
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-    opacity: 0.0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    color: white;
-  }
-  
-  .caption p{
-    font-weight: 700;
-  }
-  
-  .transparent-box {
-    height: 300px;
-    width: 300px;
-    background-color:rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .img-box:hover img { 
-    transform: scale(1.1);
-  }
-  
-  .img-box:hover .transparent-box {
-    background-color:rgba(0, 0, 0, 0.5);
-  }
-  
-  .img-box:hover .caption {
-    transform: translateY(-20px);
-    opacity: 1.0;
-  }
-  
-  .img-box:hover {
-    cursor: pointer;
-  }
-  
-  .caption > p:nth-child(2) {
-    font-size: 0.8em;
-  }
-  
-  .opacity-low {
-    opacity: 0.5;
-  }
-
-  /* wide gallery images */
-
-  .gallery-image2 {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .gallery-image2 img {
-    height: 430px;
-    width: 1250px;
-    transform: scale(1.0);
-    transition: transform 0.4s ease;
-  }
-  
-  .img-box2 {
-    box-sizing: content-box;
-    margin: 10px;
-    height: 430px;
-    width: 1250px;
-    overflow: hidden;
-    display: inline-block;
-    color: white;
-    position: relative;
-    background-color: white;
-  }
-  
-  .transparent-box2 {
-    height: 430px;
-    width: 1250px;
-    background-color:rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: background-color 0.3s ease;
-  }
-
-  .caption {
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-    opacity: 0.0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    color: white;
-  }
-  
-  .caption p{
-    font-weight: 700;
-  }
-
-  .img-box2:hover img { 
-    transform: scale(1.1);
-  }
-  
-  .img-box2:hover .transparent-box2 {
-    background-color:rgba(0, 0, 0, 0.5);
-  }
-  
-  .img-box2:hover .caption {
-    transform: translateY(-20px);
-    opacity: 1.0;
-  }
-  
-  .img-box2:hover {
-    cursor: pointer;
-  }
-
-
-  /* logos */
-
-h2{
-  color: white;
-  padding-left: 300px;
-  padding-bottom: 40px;
-  padding-top: 40px;
+ /* wrapper */
+.project-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 15px;
+  text-decoration: none;  
+  color: inherit;  
 }
 
-.logos img{
-  width: 80%;
-  padding-left: 300px;
-  margin: 30px;
-  height: auto;
+/* image */
+.project-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* overlay layer */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.7);
+  
   display: flex;
+  align-items: flex-end; /* pushes text to bottom */
+  padding: 20px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* text */
+.project-title {
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* hover effects */
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* back to top link */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  background-color: white;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+  opacity: 0;              /* hidden by default */
+  pointer-events: none;    /* not clickable */
+}
+
+/* visible state */
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* footer */
+
+.footer-image {
+  width: 100%;
+}
+
+.footer-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
