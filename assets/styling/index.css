@@ -198,6 +198,12 @@ ul {
   color: black;
 }
 
+@media (max-width: 768px) {
+  .brands-title {
+    padding-left: 20px;
+  }
+}
+
 .brands-logos {
   display: flex;
   justify-content: center;
@@ -211,6 +217,7 @@ ul {
   width: auto;
   object-fit: contain;
 }
+
 
 .logo-2 {
   height: 30px;
