@@ -3,79 +3,141 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Council of Europe - Campaign</title>
 
     <link rel="stylesheet" href="assets/styling/articles/coe.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
-<body class="black-bg">
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<body id="top">
+
+
+    <div class="scroll-bar"></div>
 
     <div class="container">
-        <div class="row">
-            <div class="back-arrow">
-                <a href="projects.html">
-                    <img src="assets/images/back-arrow-white.png" class="back-arrow" alt="Arrow">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="130" height="40">
                 </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="row">
+            <div class="col-8">
+                <h1>Council of Europe - Malta Campaign 2025 </h1> <br>
+                <h2>Student Project</h2>
+
+                <p>In 2024, the European Council Representative of Malta announced to MCAST that Malta would hold the
+                    Presidency of
+                    the Council of Europe from May to November 2025. As part of this initiative, students at MCAST Mosta
+                    were
+                    invited to develop a brand identity, with the best visual concept being selected for official use.
+                    Although the
+                    project had a tight deadline of only two months, the experience proved to be incredibly rewarding.
+                    While
+                    I did
+                    not win the final selection, my work was recognised and shortlisted among the top submissions.
+                    <br>
+                    <br>
+                    The logo is a symbolic composition featuring a stylized Maltese cross, conveying a message relevant
+                    to
+                    today's
+                    generation. Traditionally a symbol of protection, the cross is presented in a folded form,
+                    representing
+                    unity
+                    and the shared direction of the Maltese people. A sandy yellow line signifies the island itself and
+                    its
+                    renowned
+                    beaches, while additional elements introduce key national colours like red (from the Maltese flag)
+                    and
+                    blue that
+                    represents the sea. Together, these elements reflect both the cultural identity and natural beauty
+                    of
+                    Malta.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/coe-logo-02.png" class="preview5" alt="visual">
+            </div>
+        </div>
+
+        <h3>MOCK UPS:</h3>
+        <div class="wrapper">
+            <div class="gallery">
+                <ul>
+                    <li><img src="assets/images/backpack.png"></li>
+                    <li><img src="assets/images/coaster.png"></li>
+                    <li><img src="assets/images/tote-bag.png"></li>
+                    <li><img src="assets/images/luggage-tag.png"></li>
+                    <li><img src="assets/images/lawn-banner.png"></li>
+                    <li><img src="assets/images/banners.png"></li>
+                    <li><img src="assets/images/lanyard.png"></li>
+                    <li><img src="assets/images/postage-stamp.png"></li>
+                </ul>
             </div>
         </div>
     </div>
 
-
-    <div class="row">
-        <div class="col-8">
-            <h1>Council of Europe - Malta Campaign 2025 </h1> <br>
-            <h2>Student Project</h2>
-
-            <p>In 2024, the European Council Representative of Malta announced to MCAST that Malta would hold the
-                Presidency of
-                the Council of Europe from May to November 2025. As part of this initiative, students at MCAST Mosta
-                were
-                invited to develop a brand identity, with the best visual concept being selected for official use.
-                Although the
-                project had a tight deadline of only two months, the experience proved to be incredibly rewarding. While
-                I did
-                not win the final selection, my work was recognised and shortlisted among the top submissions.
-                <br>
-                <br>
-                The logo is a symbolic composition featuring a stylized Maltese cross, conveying a message relevant to
-                today's
-                generation. Traditionally a symbol of protection, the cross is presented in a folded form, representing
-                unity
-                and the shared direction of the Maltese people. A sandy yellow line signifies the island itself and its
-                renowned
-                beaches, while additional elements introduce key national colours like red (from the Maltese flag) and
-                blue that
-                represents the sea. Together, these elements reflect both the cultural identity and natural beauty of
-                Malta.
-            </p>
-        </div>
-        <div class="col-4">
-            <img src="assets/images/coe-logo-02.png" class="preview5" alt="visual">
-        </div>
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
-
-    <h3>MOCK UPS:</h3>
-    <div class="wrapper">
-        <div class="gallery">
-            <ul>
-                <li><img src="assets/images/backpack.png"></li>
-                <li><img src="assets/images/coaster.png"></li>
-                <li><img src="assets/images/tote-bag.png"></li>
-                <li><img src="assets/images/luggage-tag.png"></li>
-                <li><img src="assets/images/lawn-banner.png"></li>
-                <li><img src="assets/images/banners.png"></li>
-                <li><img src="assets/images/lanyard.png"></li>
-                <li><img src="assets/images/postage-stamp.png"></li>
-            </ul>
-        </div>
-    </div>
-    </div>
-
-
+    
 </body>
 
 </html>

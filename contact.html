@@ -9,37 +9,144 @@
     <link rel="stylesheet" href="assets/styling/contact.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body class="black-bg">
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
 
-    <div class="back-arrow">
-        <a href="index.html">
-            <img src="assets/images/back-arrow-white.png" class="img-fluid" alt="Arrow">
-        </a>
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<body id="top">
+
+    <div class="scroll-bar"></div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="130" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html"><b>contact</b></a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-image">
+            <img src="assets/images/contact.jpg" alt="Hero Image">
+        </div>
+
+        <div class="contact-section">
+
+            <!-- LEFT: Address box -->
+            <div class="contact-left">
+                <h3>Contact</h3>
+                <p>
+                    Matthew Theuma<br>
+                    Graphic Designer<br>
+                    Malta<br><br>
+                    +356 7709 3184<br>
+                    matthewgarlic@gmail.com
+                </p>
+            </div>
+
+            <!-- RIGHT: Form -->
+            <div class="contact-right">
+                <form action="https://formspree.io/f/xwvaanqw" method="POST">
+
+                    <div class="form-group">
+                        <label>Name and Surname</label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>What are you looking for?</label>
+                        <textarea name="message" rows="3" required></textarea>
+                    </div>
+
+                    <!-- Optional but smart -->
+                    <input type="hidden" name="_subject" value="New Contact Form Submission">
+                    <input type="hidden" name="_replyto" value="matthewgarlic@gmail.com">
+
+                    <button type="submit">Send</button>
+
+                    <input type="hidden" name="_redirect" value="thankyou.html">
+
+                </form>
+
+                </form>
+            </div>
+
+        </div>
     </div>
 
-    <div class="contact-list">
-        <li>
-            <div>Instagram Account:</div>
-            <div>
-                <span>@mt_gd__</span>
-            </div>
-        </li>
+    <a href="#top" class="back-to-top">↑ back to top</a>
 
-        <li>
-            <div>Email:</div>
-            <div>
-                <span>matthewgarlic@gmail.com</span>
-            </div>
-        </li>
+    <!-- 'BACK TO TOP' Button -->
 
-        <li>
-            <div>Mobile Number:</div>
-            <div>
-                <span>77093184</span>
-            </div>
-        </li>
+    <script>
+        const button = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                button.classList.add('show');
+            } else {
+                button.classList.remove('show');
+            }
+        });
+    </script>
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
 
 </body>

@@ -4,78 +4,216 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
+html body {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: red;
+  z-index: 9999;
+}
+
+/* navigation bar */
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.7); /* white with opacity */
+  backdrop-filter: blur(10px); /* glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* subtle depth */
+  z-index: 1000;
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.navbar-brand {
+  padding-left: 30px;
+}
+
+.nav-link {
+  position: relative;
+  margin-right: 80px;
+  display: inline-block;
+  color: black;
+}
+
+
+.nav-link b {
+  font-weight: 900;
+}
+
+/* underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.code {
+  font-size: 30px;
+  color: hsl(0, 0%, 0%);
+}
+
+.code:hover {
+  cursor: default;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* span image under navigation row */
+.hero-image {
+  width: 100%;
+  height: 150px;
+  margin-top: 140px;
+  padding-bottom: 30px;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
 }
 
-.black-bg {
-  background-color: black;
+@media (max-width: 768px) {
+  .hero-image {
+    height: auto;
+  }
+
+  .hero-image img {
+    height: auto;
+    object-fit: contain;
+    padding-top: 40px;
+  }
 }
 
-.back-arrow img {
-  margin-left: 40px;
-  padding-top: 20px;
-  width: 100px;
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* keeps it looking good on all screens */
+  display: block;
 }
 
-/* headline animation css*/
 
-.contact-list div {
-  display:inline-block;
-  overflow:hidden;
-  white-space:nowrap;
-  padding-left: 140px;
+/* form */
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin-top: 120px;
+    padding: 40px;
 }
 
-.contact-list {
-  padding-top: 300px;
+.contact-left {
+    width: 35%;
+}
+
+.contact-left h3 {
+    margin-bottom: 20px;
+    color: black;
+}
+
+.contact-left p {
+  color: black;
+}
+
+.contact-right {
+    width: 65%;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: black; 
+}
+
+/* Inputs with ONLY bottom border */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Remove ugly focus glow */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom: 1px solid black;
+}
+
+/* Button */
+button {
+    background: black;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* back to top link */
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  background-color: white;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-size: 14px;
   font-weight: 500;
-  font-size: 50px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+  opacity: 0;              /* hidden by default */
+  pointer-events: none;    /* not clickable */
 }
 
-.contact-list li{
-  list-style: none;
+/* visible state */
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.contact-list div:first-of-type {
-  animation: showup 15s infinite;
+/* footer */
+
+.footer-image {
+  width: 100%;
 }
 
-.contact-list div:last-of-type {
-  width:0px;
-  animation: reveal 7s infinite;
-}
-
-.contact-list div:last-of-type span {
-  margin-left:-355px;
-  animation: slidein 7s infinite;
-}
-
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
-}
-
-@keyframes slidein {
-    0% { margin-left:-800px; }
-    20% { margin-left:-800px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
-}
-
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:800px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:800px;}
+.footer-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
