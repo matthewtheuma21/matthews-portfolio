@@ -4,37 +4,130 @@
   box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    place-items: center;
-  }
-
-  .black-bg{
-    background-color: black;
-  }
-
-  .back-arrow img {
-    margin-top: 40px;
-    margin-left: -40px;
-    padding-bottom: 10px;
-    width: 70px;
-    height: auto;
+html body {
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: black;
 }
 
-.website-map img{
-    width: 1300px;
-    padding-bottom: 30px;
+.scroll-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: red;
+  z-index: 9999;
+}
+
+/* navigation bar */
+
+.navbar {
+  background-color: rgba(255, 255, 255);
+  /* white with opacity */
+  backdrop-filter: blur(10px);
+  /* glass effect */
+  -webkit-backdrop-filter: blur(10px);
+  /* Safari support */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  /* subtle depth */
+  z-index: 1000;
+}
+
+.navbar-brand {
+  padding-left: 30px;
+  font-size: 200px;
+}
+
+.nav-item .nav-link {
+  position: relative;
+  margin-right: 80px;
+  font-weight: 200;
+  display: inline-block;
+  font-size: 30px;
+  color: black;
+}
+
+/* underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
+}
+
+/* hover effect */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.code {
+  font-size: 30px;
+  color: hsl(0, 0%, 0%);
+}
+
+.code:hover {
+  cursor: default;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*image and text downwards */
+
+
+.website-map img {
+  width: 1300px;
+  padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 h1 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: -150px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 500px;
 }
 
-.col p{
-    text-align: justify;
-    margin-left: 440px;
-    margin-right: 400px;
-    padding-bottom: 40px;
-  }
+.website-btn {
+  width: 400px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  margin-left: 530px;
+  padding-bottom: 40px;
+}
+
+.website-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+.col p {
+  text-align: justify;
+  margin-left: 440px;
+  margin-right: 400px;
+  padding-bottom: 40px;
+}
+
+/* footer */
+
+.footer-image {
+  width: 100%;
+}
+
+.footer-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 80px;
+}

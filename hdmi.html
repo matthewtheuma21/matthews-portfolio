@@ -9,32 +9,88 @@
     <link rel="stylesheet" href="assets/styling/articles/hdmi.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="black-bg">
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<body id="top">
+
+    <div class="scroll-bar"></div>
 
     <div class="container">
-        <div class="row">
-            <div class="back-arrow">
-                <a href="projects.html">
-                    <img src="assets/images/back-arrow-white.png" class="back-arrow" alt="Arrow">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="130" height="40">
                 </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
             </div>
-        </div>
+        </nav>
     </div>
 
     <div class="website-map">
         <img src="assets/images/website-map.png" class="back-arrow" alt="Arrow">
     </div>
 
-    <h1>The Hidden Gems of Malta<br>My Own Website</h1>
+    <h1>The Hidden Gems of Malta<br>Created by me...</h1>
 
     <div class="row">
         <div class="col">
+
+            <a href="https://matthewtheuma21.github.io/The-Hidden-Gems-in-the-Maltese-Islands/index.html"
+                target="_blank">
+                <img src="assets/images/website-hdmi_button.jpg" alt="Visit Website" class="website-btn">
+            </a>
+
             <p>
-                WEBSITE LINK: https://matthewtheuma21.github.io/The-Hidden-Gems-in-the-Maltese-Islands/index.html
-                <br>
-                <br>
                 I aspired to create a platform that showcases the hidden beauty of Malta, making this knowledge
                 accessible both to locals and to tourists visiting our islands. My vision was to develop a website that
                 surpasses the quality and usefulness of many existing sites currently available online. Typically, most
@@ -60,6 +116,11 @@
             </p>
         </div>
     </div>
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
+
 
 </body>
 
