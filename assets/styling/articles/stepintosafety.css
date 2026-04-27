@@ -11,7 +11,7 @@ html body {
     height: 100%;
     box-sizing: border-box;
     overflow-x: hidden;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 .scroll-bar {
@@ -27,7 +27,7 @@ html body {
 /* navigation bar */
 
 .navbar {
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.7);
     /* white with opacity */
     backdrop-filter: blur(10px);
     /* glass effect */

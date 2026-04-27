@@ -142,11 +142,9 @@ ul {
 }
 
 .newest-img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
+   width: 100%;
+  height: auto;
   border-radius: 15px;
-  display: block;
 }
 
 /* bottom text before footer */
@@ -171,6 +169,19 @@ ul {
   font-size: 42px;   /* strong + clear */
   color: black;
   margin-top: -30px;
+}
+
+@media (max-width: 768px) {
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .newest-section p,
+  .thesis-section p {
+    font-size: 14px;
+  }
+
 }
 
 /* brand logos section*/
@@ -214,6 +225,19 @@ ul {
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .top-line,
+  .bottom-line {
+    display: block;
+  }
+
+}
 
 .logo-2 {
   height: 30px;

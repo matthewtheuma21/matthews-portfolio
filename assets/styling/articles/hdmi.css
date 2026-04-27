@@ -27,7 +27,7 @@ html body {
 /* navigation bar */
 
 .navbar {
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.7);
   /* white with opacity */
   backdrop-filter: blur(10px);
   /* glass effect */
@@ -93,7 +93,7 @@ ul {
 }
 
 h1 {
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 500px;
 }

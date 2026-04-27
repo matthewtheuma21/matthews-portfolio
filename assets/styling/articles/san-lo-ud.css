@@ -27,7 +27,7 @@ html body {
 /* navigation bar */
 
 .navbar {
-  background-color: rgba(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.7);
   /* white with opacity */
   backdrop-filter: blur(10px);
   /* glass effect */
@@ -86,7 +86,7 @@ ul {
 /* paragraph down */
 
 h1 {
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: 80px;
   margin-top: 100px;
   padding-top: 120px;
@@ -94,7 +94,7 @@ h1 {
 }
 
 .col-6 p {
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   text-align: justify;
