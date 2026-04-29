@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding</title>
+
+    <link rel="stylesheet" href="assets/styling/articles/bakefirst.css">
+    <link rel="stylesheet" href="assets/styling/bootstrap.css">
+    <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+
+<body id="top">
+
+    <div class="scroll-bar"></div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="130" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+
+        <h1>BAKE FIRST - Breakfast Recipe Baking Book</h1>
+
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="assets/images/bakefirst-book.jpg" alt="preview 1">
+                <img src="assets/images/bakefirst-book02.jpg" alt="preview 2">
+                <img src="assets/images/bakefirst-book03.jpg" alt="preview 3">
+                <img src="assets/images/bakefirst-book04.jpg" alt="preview 4">
+                <img src="assets/images/bakefirst-book05.jpg" alt="preview 5">
+                <img src="assets/images/bakefirst-book06.jpg" alt="preview 6">
+                <img src="assets/images/bakefirst-book08.jpg" alt="preview 8">
+                <img src="assets/images/bakefirst-book09.jpg" alt="preview 9">
+                <img src="assets/images/bakefirst-book10.jpg" alt="preview 10">
+
+                <!-- duplicate images for seamless loop -->
+                <img src="assets/images/bakefirst-book.jpg" alt="preview 1">
+                <img src="assets/images/bakefirst-book02.jpg" alt="preview 2">
+                <img src="assets/images/bakefirst-book03.jpg" alt="preview 3">
+                <img src="assets/images/bakefirst-book04.jpg" alt="preview 4">
+                <img src="assets/images/bakefirst-book05.jpg" alt="preview 5">
+                <img src="assets/images/bakefirst-book06.jpg" alt="preview 6">
+                <img src="assets/images/bakefirst-book08.jpg" alt="preview 8">
+                <img src="assets/images/bakefirst-book09.jpg" alt="preview 9">
+                <img src="assets/images/bakefirst-book10.jpg" alt="preview 10">
+
+            </div>
+        </div>
+
+        <h2>FREE DIGITAL PREVIEW </h2>
+
+        <section>
+            <div class="book">
+                <input type="checkbox" id="c1">
+                <input type="checkbox" id="c2">
+                <input type="checkbox" id="c3">
+                <input type="checkbox" id="c4">
+                <input type="checkbox" id="c5">
+                <input type="checkbox" id="c6">
+                <input type="checkbox" id="c7">
+
+                <div id="cover"><img src="assets/images/bakefirst-page1.jpg"></div>
+
+                <div class="flip-book">
+                    <div class="flip" id="p1"> <!-- PAGE 1 -->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page3.jpg">
+                            <label class="back-btn" for="c1">Back </label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page2.jpg">
+                            <label class="next-btn" for="c1">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p2"> <!-- PAGE 2-->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page5.jpg">
+                            <label class="back-btn" for="c2">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page4.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c2">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p3"> <!-- PAGE 3-->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page7.jpg">
+                            <label class="back-btn" for="c3">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page6.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c3">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p4"> <!-- PAGE 4-->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page9.jpg">
+                            <label class="back-btn" for="c4">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page8.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c4">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p5"> <!-- PAGE 5-->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page11.jpg">
+                            <label class="back-btn" for="c5">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page10.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c5">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p6"> <!-- PAGE 6-->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page13.jpg">
+                            <label class="back-btn" for="c6">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page12.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c6">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p7"> <!-- PAGE 7-->
+                        <div class="back">
+                            <img src="assets/images/bakefirst-page15.jpg">
+                            <label class="back-btn" for="c7">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bakefirst-page14.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c7">Next >></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-right">
+                    <h3>
+                        < PRESS HERE</h3>
+                </div>
+            </div>
+        </section>
+
+
+        <p>At the core of this project is <b>a manifesto that prioritises sensory experience and emotional engagement over
+            literal visual representation</b>. Rather than depicting recognisable objects, the work focuses on <b>communicating
+            internal qualities such as taste, texture, and atmosphere</b>. Through minimal colour palettes, close-up
+            compositions, and “straight-to-the-face” imagery, the book invites the viewer to feel rather than simply
+            see. This approach challenges passive consumption, encouraging moments of pause, curiosity, and exploration.
+            <br> <br>
+            These principles guided every stage of the design process. Appetising visuals were achieved through
+            detailed, high-quality imagery that emphasises richness and texture, enhanced using tools such as Krea
+            Enhancer and Photoshop. A structured grid system and consistent pacing were applied to maintain clarity and
+            balance, ensuring the visual abstraction remained controlled and readable. <b>The result is an immersive yet
+            cohesive visual language that translates the manifesto into a physical reading experience.</b>
+            <br> <br>
+            The content of the book was curated with equal intention. Recipes were carefully selected to be simple,
+            quick, and suitable for everyday breakfast preparation, focusing on accessibility without compromising
+            appeal. <b>By choosing dishes that are both visually engaging and easy to recreate, the book creates a
+            practical and inviting experience for the reader, reinforcing its aim to make cooking approachable,
+            enjoyable, and sensorially engaging</b>.
+
+        <div class="footer-image">
+            <img src="assets/images/FOOTER.jpg" alt="Footer">
+        </div>
+
+</body>
+
+</html>

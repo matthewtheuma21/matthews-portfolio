@@ -86,13 +86,44 @@ ul {
 /* text downwards */
 
 .row h1 {
-    padding-left: 270px;
+    padding-left: 490px;
     padding-top: 110px;
     color: black;
 }
 
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+    width: 200px;
+    /* adjust size */
+    height: auto;
+    margin-right: 15px;
+    padding-top: 20px;
+}
+
+/* animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .row h2 {
-    margin-left: 640px;
+    margin-left: 600px;
     padding-top: 10px;
     padding-bottom: 30px;
     font-family: 'Inter', sans-serif;
@@ -119,7 +150,8 @@ input {
     height: 504px;
     display: flex;
     align-items: center;
-    flex-shrink: 0; /* prevents shrinking */
+    flex-shrink: 0;
+    /* prevents shrinking */
 }
 
 .flip-book {
@@ -170,7 +202,7 @@ input {
     bottom: 13px;
     right: 13px;
     cursor: pointer;
-    color: #ffdd00;
+    color: #ffffff;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
     font-size: 25px;
@@ -208,22 +240,29 @@ input {
 
     transition: all 0.2s ease;
 }
-
 .book-right h3 {
-  font-size: 15px;
-  padding-right: 100px;
-  padding-left: 30px;
-  padding-top: 465px;
-  margin-bottom: 20px;
-  color: black;
+    font-size: 15px;
+    padding-right: 100px;
+    padding-left: 30px;
+    padding-top: 465px;
+    margin-bottom: 20px;
+    color: black;
 }
 
 #p1 {
-    z-index: 3;
+    z-index: 4;
 }
 
 #p2 {
+    z-index: 3;
+}
+
+#p3 {
     z-index: 2;
+}
+
+#p4 {
+    z-index: 1;
 }
 
 #c1:checked~.flip-book #p1 {
@@ -235,6 +274,18 @@ input {
     transform: rotateY(-180deg);
     z-index: 2;
 }
+
+#c3:checked~.flip-book #p3 {
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+
+#c4:checked~.flip-book #p4 {
+    transform: rotateY(-180deg);
+    z-index: 4;
+}
+
+
 
 /* p */
 

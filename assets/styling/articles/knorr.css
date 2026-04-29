@@ -11,7 +11,7 @@ html body {
   height: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .scroll-bar {
@@ -155,7 +155,7 @@ ul {
 .col-6 p {
   color: rgb(0, 0, 0);
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   text-align: justify;
   margin-left: 80px;
   margin-right: 30px;
@@ -165,22 +165,28 @@ ul {
   position: relative
 }
 
+.img-wrapper {
+  overflow: hidden;
+  border-bottom-left-radius: 100px;
+}
+
 .preview4 {
-  width: 500px;
-  padding-left: 100px;
-  margin-top: 20px;
-  padding-top: 130px;
+  display: block;
+  width: auto;
+  height: 530px;
+  padding-left: 0;
+  margin-top: 160px;
 }
 
 .col-5 .preview5 {
   width: 800px;
-  margin-top: 5px;
+  margin-top: 45px;
   padding-left: 10px;
 }
 
 .col-7 .preview5 {
   width: 750px;
-  margin-top: 15px;
+  margin-top: 45px;
   padding-left: 80px;
 }
 
@@ -212,11 +218,11 @@ h2 {
   /* Zoom effect on hover */
 }
 
-.col-5 .preview5{
+.col-5 .preview5 {
   padding-right: 50px;
 }
 
-.col-7 .preview5{
+.col-7 .preview5 {
   padding-left: 115px;
 }
 
