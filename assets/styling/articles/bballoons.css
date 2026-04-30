@@ -328,7 +328,7 @@ p {
     .flip-book,
     .front,
     .back {
-        width: 90vw;
+        width: 500px;
         height: auto;
     }
 
