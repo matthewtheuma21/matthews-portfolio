@@ -306,26 +306,22 @@ p {
 
     /* Headings */
     .row h1 {
-        padding-left: 20px;
+        padding-left: 150px;
         padding-top: 100px;
         font-size: 28px;
-        text-align: left;
+        text-align: center;
     }
 
     .row h2 {
-        margin-left: 20px;
+        padding-left: 100px;
         font-size: 16px;
     }
 
     /* Book layout */
     .book {
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        margin: 40px 0;
-
-        transform: scale(0.75);
-        transform-origin: top center;
+        margin: 40px;
     }
 
     #cover,
@@ -351,8 +347,8 @@ p {
 
     /* Text */
     p {
-        padding-left: 50px;
-        padding-right: 50px;
+        margin-left: 50px;
+        margin-right: 50px;
         font-size: 15px;
     }
 
