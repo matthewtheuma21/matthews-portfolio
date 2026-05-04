@@ -155,14 +155,10 @@ ul {
 @media (max-width: 768px) {
   .project-img {
     width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-     border-radius: 10px;
-  }
-
-  .row.g-4 {
-    --bs-gutter-x: 10px;
-    --bs-gutter-y: 10px;
+    aspect-ratio: 4 / 3;
+    /* keeps them wide */
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
 
@@ -186,7 +182,8 @@ ul {
 
   .newest-section,
   .thesis-section {
-    margin-top: 25px !important; /* override mt-5 */
+    margin-top: 25px !important;
+    /* override mt-5 */
   }
 
 }
@@ -286,6 +283,16 @@ ul {
   .top-line,
   .bottom-line {
     display: block;
+
+  }
+
+  .top-line {
+    font-size: 18px;
+  }
+
+  .bottom-line {
+    font-size: 18px;
+    margin-top: -10px;
   }
 
 }
