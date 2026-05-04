@@ -155,8 +155,7 @@ ul {
 @media (max-width: 768px) {
   .project-img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* keeps them wide */
+    height: 60px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -174,9 +173,8 @@ ul {
     margin-bottom: 5px;
   }
 
-  .container newest-section mt-5,
   .container thesis-section mt-5 {
-    margin-top: 25px;
+    margin-top: -25px;
   }
 
 }
