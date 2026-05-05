@@ -144,7 +144,8 @@ input {
     display: flex;
     justify-content: center;
     margin: 70px auto;
-    padding-left: 240px;
+    align-items: center;
+    padding-left: 220px;
 }
 
 #cover {
@@ -352,13 +353,12 @@ p {
         margin: 20px auto;
 
         transform: scale(0.4);
-        /* 🔥 THIS is the fix */
         transform-origin: top left;
 
         position: relative;
         left: 50%;
         transform: translateX(-50%) scale(0.4);
-        padding-left: 30px;
+        padding-left: 0px;
     }
 
     .next-btn,
