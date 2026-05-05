@@ -377,12 +377,6 @@ p {
         width: 120px;
     }
 
-    #cover,
-    .flip-book {
-        width: 280px;
-        height: 400px;
-    }
-
     .front,
     .back {
         width: 100%;
