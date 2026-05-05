@@ -355,23 +355,25 @@ p {
 
     }
 
-    #cover,
-    .flip-book {
-        width: 170px;
-        height: 240px;
+    .book {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 20px auto;
+        padding-left: 0;
+
+        transform: scale(0.5);
+        /* 🔥 THIS is the fix */
+        transform-origin: top center;
     }
+
 
     #cover img,
     .flip-book img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    .front,
-    .back {
-        width: 170px;
-        height: 240px;
     }
 
     /* TEXT */
