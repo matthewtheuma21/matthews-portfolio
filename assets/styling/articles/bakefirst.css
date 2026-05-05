@@ -329,64 +329,43 @@ p {
 
 @media (max-width: 768px) {
 
-    /* Headings */
-    .row h1 {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 100px;
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        font-size: 24px;
     }
 
-    .row h2 {
-        margin-left: 0;
-        text-align: center;
-        font-size: 18px;
+    .text-section {
+        max-width: 90%;
     }
 
-    /* Paragraph */
-    p {
-        margin-left: 20px;
-        margin-right: 20px;
+    .text-section p {
         font-size: 14px;
         text-align: left;
     }
 
-    /* Book layout */
+    /* IMPORTANT: keep book proportions */
     .book {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
+        margin: 0;
+        justify-content: center;
     }
 
     #cover,
     .flip-book {
-        width: 90%;
-        height: auto;
+        width: 280px;
+        height: 400px;
     }
 
     .front,
     .back {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
 
-    /* Buttons scale down */
-    .next-btn,
-    .back-btn {
-        font-size: 12px;
-        padding: 6px 10px;
-    }
-
-    /* Right text */
-    .book-right h3 {
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    /* Carousel images smaller */
-    .carousel img {
-        width: 120px;
+    /* Keep pages behaving like pages */
+    .flip {
+        width: 100%;
+        height: 100%;
     }
 }
 
