@@ -146,6 +146,10 @@ ul {
   color: black;
 }
 
+p {
+  color: black;
+}
+
 .newest-img {
   width: 100%;
   height: auto;
@@ -155,7 +159,7 @@ ul {
 @media (max-width: 768px) {
   .project-img {
     width: 100%;
-    height: 60px;
+    height: 100px;
     object-fit: cover;
     border-radius: 10px;
   }
@@ -173,7 +177,7 @@ ul {
     margin-bottom: 5px;
   }
 
-  .container thesis-section mt-5 {
+  .container thesis-section mt-5 .img-fluid newest-img {
     padding-top: -25px;
   }
 
