@@ -352,11 +352,17 @@ p {
         align-items: center;
         gap: 10px;
         margin: 20px auto;
-        padding-left: 0;
+        padding-left: -15px;
 
         transform: scale(0.35);
         /* 🔥 THIS is the fix */
         transform-origin: top center;
+    }
+
+    .next-btn,
+    .back-btn {
+        transform: scale(1.3);
+        transform-origin: bottom right;
     }
 
     /* TEXT */
