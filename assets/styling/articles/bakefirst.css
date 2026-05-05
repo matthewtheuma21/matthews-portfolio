@@ -359,9 +359,9 @@ p {
 
     #cover,
     .flip-book {
-        width: 100px;
+        width: 40px;
         /* MUCH smaller */
-        height: 160px;
+        height: 100px;
     }
 
     /* TEXT */
