@@ -355,7 +355,12 @@ p {
 
         transform: scale(0.4);
         /* 🔥 THIS is the fix */
-        transform-origin: top center;
+        transform-origin: top left;
+
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%) scale(0.4);
+        margin-bottom: -120px;
     }
 
     .next-btn,
