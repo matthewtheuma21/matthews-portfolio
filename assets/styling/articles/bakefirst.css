@@ -349,17 +349,21 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 6px;
+        gap: 4px;
         margin: 20px auto;
+        padding-left: 0;
+        /* IMPORTANT */
 
-        padding-left: 0;   /* 🔥 THIS WAS BREAKING EVERYTHING */
     }
 
     #cover,
     .flip-book {
-        width: 40px;
-        /* MUCH smaller */
-        height: 100px;
+        width: 48%;
+        /* 👈 THIS is the key */
+        max-width: 160px;
+        /* safety cap */
+        height: auto;
+        aspect-ratio: 355 / 504;
     }
 
     /* TEXT */
