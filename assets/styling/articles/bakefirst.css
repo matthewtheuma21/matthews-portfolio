@@ -349,22 +349,19 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 4px;
+        gap: 8px;
         margin: 20px auto;
         padding-left: 0;
-        /* IMPORTANT */
 
     }
 
     #cover,
     .flip-book {
-        width: 49%;
-        aspect-ratio: 355 / 504;
-        height: auto;
-        max-width: 180px;
+        width: 170px;
+        height: 240px;
     }
 
-     #cover img,
+    #cover img,
     .flip-book img {
         width: 100%;
         height: 100%;
