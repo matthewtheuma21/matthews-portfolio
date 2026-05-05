@@ -145,7 +145,7 @@ input {
     justify-content: center;
     margin: 70px auto;
     align-items: center;
-    padding-left: 220px;
+    padding-left: 0px;
 }
 
 #cover {
@@ -154,6 +154,7 @@ input {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    margin-left: 200px;
     /* prevents shrinking */
 }
 
