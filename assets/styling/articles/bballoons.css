@@ -317,45 +317,53 @@ p {
         font-size: 16px;
     }
 
-    /* Book layout */
+    /* BOOK */
+
     .book {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        margin: 40px;
+        gap: 10px;
+
+        margin: 0 auto;
+        padding-left: 0;
+
+        transform: scale(0.45);
+        transform-origin: top center;
+
+        margin-bottom: -180px;
     }
 
-    #cover,
-    .flip-book,
-    .front,
-    .back {
-        width: 500px;
-        height: auto;
+    .cover {
+        padding-left: -50px;
     }
 
-    /* Make images scale properly */
-    .book img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Buttons smaller */
     .next-btn,
     .back-btn {
+        transform: scale(1.6);
+        transform-origin: bottom right;
+
         font-size: 14px;
-        padding: 6px 10px;
+        padding: 10px 16px;
     }
 
-    /* Text */
+    /* TEXT */
     p {
-        margin-left: 50px;
-        margin-right: 50px;
-        font-size: 15px;
+        max-width: 90%;
+        margin: 10px auto;
+        font-size: 14px;
+        text-align: justify;
     }
 
-    /* Navbar text spacing */
-    .nav-item .nav-link {
-        font-size: 18px;
-        margin-right: 20px;
+    /* CAROUSEL */
+    .carousel img {
+        width: 120px;
+    }
+
+    /* Keep pages behaving like pages */
+    .flip {
+        width: 100%;
+        height: 100%;
     }
 
 }
