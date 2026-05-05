@@ -368,6 +368,12 @@ p {
         object-fit: cover;
     }
 
+    .front,
+    .back {
+        width: 170px;
+        height: 240px;
+    }
+
     /* TEXT */
     p {
         max-width: 90%;
