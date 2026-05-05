@@ -358,7 +358,7 @@ p {
 
     #cover,
     .flip-book {
-        width: 48%;
+        width: 60%;
         /* 👈 THIS is the key */
         max-width: 160px;
         /* safety cap */
@@ -371,7 +371,7 @@ p {
         max-width: 90%;
         margin: 40px auto;
         font-size: 14px;
-        text-align: left;
+        text-align: justify;
     }
 
     /* CAROUSEL */
