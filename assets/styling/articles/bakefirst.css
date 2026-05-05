@@ -227,9 +227,9 @@ input {
     position: absolute;
     bottom: 13px;
     right: 13px;
-
+    
     cursor: pointer;
-
+    
     /* NEW STYLING */
     background-color: white;
     color: black;
@@ -238,9 +238,9 @@ input {
     font-size: 16px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
-
+    
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-
+    
     transition: all 0.2s ease;
 }
 
@@ -330,43 +330,47 @@ p {
 }
 
 @media (max-width: 768px) {
-
+    
     /* HEADINGS */
     .row h1 {
         font-size: 22px;
         padding: 100px 20px 20px;
         text-align: center;
     }
-
+    
     .row h2 {
         font-size: 18px;
         text-align: center;
     }
-
+    
     /* BOOK */
-
+    
     .book {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 10px;
-        margin: 20px auto;
-
-        transform: scale(0.4);
-        transform-origin: top left;
-
+        
+        margin: 0 auto;
+        padding-left: 0;
+        margin-bottom: -180px;
+        
         position: relative;
         left: 50%;
-        transform: translateX(-50%) scale(0.4);
-        padding-left: 0px;
+        
+        transform: translateX(-50%) scale(0.45);
+        transform-origin: top center;
     }
-
+    
     .next-btn,
     .back-btn {
-        transform: scale(1.5);
+        transform: scale(1.6);
         transform-origin: bottom right;
+        
+        font-size: 14px;
+        padding: 10px 16px;
     }
-
+    
     /* TEXT */
     p {
         max-width: 90%;
@@ -374,7 +378,7 @@ p {
         font-size: 14px;
         text-align: justify;
     }
-
+    
     /* CAROUSEL */
     .carousel img {
         width: 120px;
