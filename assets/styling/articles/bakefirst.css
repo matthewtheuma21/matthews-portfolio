@@ -145,7 +145,7 @@ input {
     justify-content: center;
     margin: 70px auto;
     align-items: center;
-    padding-left: 0px;
+    padding-left: 220px;
 }
 
 #cover {
@@ -154,7 +154,6 @@ input {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    margin-left: 200px;
     /* prevents shrinking */
 }
 
@@ -359,6 +358,10 @@ p {
         transform-origin: top center;
 
         margin-bottom: -180px;
+    }
+
+    #cover {
+        padding-left: -50px;
     }
 
     .next-btn,
