@@ -346,15 +346,22 @@ p {
 
     /* BOOK */
     .book {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        /* keep book pages side-by-side */
+        justify-content: center;
         align-items: center;
-        margin: 20px 0;
-    }
+        gap: 10px;
+        margin: 20px auto;
+        flex-wrap: nowrap;
+        /* prevents stacking */
+    }s
 
     #cover,
     .flip-book {
-        width: 260px;
-        height: 370px;
+        width: 140px;
+        /* MUCH smaller */
+        height: 200px;
     }
 
     /* TEXT */
