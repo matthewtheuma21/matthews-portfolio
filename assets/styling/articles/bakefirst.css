@@ -358,12 +358,17 @@ p {
 
     #cover,
     .flip-book {
-        width: 60%;
-        /* 👈 THIS is the key */
-        max-width: 160px;
-        /* safety cap */
-        height: auto;
+        width: 49%;
         aspect-ratio: 355 / 504;
+        height: auto;
+        max-width: 180px;
+    }
+
+     #cover img,
+    .flip-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     /* TEXT */
