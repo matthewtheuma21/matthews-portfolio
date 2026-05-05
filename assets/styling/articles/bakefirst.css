@@ -144,7 +144,7 @@ input {
     display: flex;
     justify-content: center;
     margin: 70px auto;
-    padding-left: 200px;
+    padding-left: 240px;
 }
 
 #cover {
@@ -347,15 +347,13 @@ p {
     /* BOOK */
     .book {
         display: flex;
-        flex-direction: row;
-        /* keep book pages side-by-side */
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: 6px;
         margin: 20px auto;
-        flex-wrap: nowrap;
-        /* prevents stacking */
-    }s
+
+        padding-left: 0;   /* 🔥 THIS WAS BREAKING EVERYTHING */
+    }
 
     #cover,
     .flip-book {
