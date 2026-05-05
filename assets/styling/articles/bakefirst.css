@@ -352,9 +352,8 @@ p {
         align-items: center;
         gap: 10px;
         margin: 20px auto;
-        padding-right: 25px;
 
-        transform: scale(0.35);
+        transform: scale(0.4);
         /* 🔥 THIS is the fix */
         transform-origin: top center;
     }
@@ -368,7 +367,7 @@ p {
     /* TEXT */
     p {
         max-width: 90%;
-        margin: 40px auto;
+        margin: 10px auto;
         font-size: 14px;
         text-align: justify;
     }
