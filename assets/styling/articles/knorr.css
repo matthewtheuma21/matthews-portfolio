@@ -44,12 +44,14 @@ html body {
 }
 
 .nav-item .nav-link {
-  position: relative;
-  margin-right: 80px;
-  font-weight: 200;
-  display: inline-block;
-  font-size: 30px;
-  color: black;
+    font-family: "new-order", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    margin-right: 80px;
+    display: inline-block;
+    font-size: 30px;
+    color: black;
 }
 
 /* underline */

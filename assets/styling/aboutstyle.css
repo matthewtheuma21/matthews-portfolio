@@ -50,6 +50,16 @@ html body {
     color: black;
 }
 
+.nav-item .nav-link {
+    font-family: "new-order", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    margin-right: 80px;
+    display: inline-block;
+    font-size: 30px;
+    color: black;
+}
 
 .nav-link b {
     font-weight: 900;
