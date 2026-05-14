@@ -87,10 +87,25 @@ ul {
 
 /* text downwards */
 
-.row h1 {
-    text-align: center;
-    padding-top: 110px;
-    color: black;
+.subtitle {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.top-line {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+.bottom-line {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  /* strong + clear */
+  color: black;
+  margin-top: -30px;
 }
 
 .carousel {

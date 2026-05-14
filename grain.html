@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding</title>
+
+    <link rel="stylesheet" href="assets/styling/articles/grain.css">
+    <link rel="stylesheet" href="assets/styling/bootstrap.css">
+    <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<body id="top">
+
+
+    <div class="scroll-bar"></div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="120" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
+            </div>
+        </nav>
+
+         <p class="subtitle">
+            <span class="top-line"><img src="assets/images/GRAIN_Logo_title.jpg" width="300" height="80"></span><br>
+            <span class="bottom-line">Bread Bakery Brand - Thesis Project</span>
+        </p>
+
+       <div class="row">
+
+            <div class="col-8">
+                <p>In 2024, the European Council Representative of Malta announced to MCAST that Malta would hold the
+                    Presidency of
+                    the Council of Europe from May to November 2025. As part of this initiative, students at MCAST Mosta
+                    were
+                    invited to develop a brand identity, with the best visual concept being selected for official use.
+                    Although the
+                    project had a tight deadline of only two months, the experience proved to be incredibly rewarding.
+                    While
+                    I did
+                    not win the final selection, my work was recognised and shortlisted among the top submissions.
+                    <br>
+                    <br>
+                    The logo is a symbolic composition featuring a stylized Maltese cross, conveying a message relevant
+                    to
+                    today's
+                    generation. Traditionally a symbol of protection, the cross is presented in a folded form,
+                    representing
+                    unity
+                    and the shared direction of the Maltese people. A sandy yellow line signifies the island itself and
+                    its
+                    renowned
+                    beaches, while additional elements introduce key national colours like red (from the Maltese flag)
+                    and
+                    blue that
+                    represents the sea. Together, these elements reflect both the cultural identity and natural beauty
+                    of
+                    Malta.
+                </p>
+            </div>
+            <div class="col-4">
+                <img src="assets/images/GRAIN_Logo.jpg" class="preview5" alt="visual">
+            </div>
+        </div>
+
+         <div class="gallery">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
+            <div class="gallery-grid">
+
+                <img src="assets/images/backpack.png" class="tall">
+
+                <div class="gallery-item">
+                    <img src="assets/images/coaster.png" class="square">
+                    <p><br> Cotton Drawstring Bags: <br>Portable visibility during public event activities<br><br>
+                        Coasters: <br> Used during meetings and encourage conversation in social gathering spaces</p>
+                </div>
+
+                <img src="assets/images/tote-bag.png" class="tall">
+                <div class="gallery-item">
+                    <img src="assets/images/luggage-tag.png" class="square">
+                    <p><br> Tote bags: <br>Used as a sustainable promotion carrying the brand identity
+                        everywhere<br><br>
+                        Keychains: <br> For giveaways, as an everyday reminder of international cooperation values</p>
+                </div>
+
+                <img src="assets/images/lawn-banner.png" class="tall">
+                <div class="gallery-item">
+                    <img src="assets/images/banners.png" class="square">
+                    <p><br> Lawn Banner: <br>Strong institutional presence outside Council venue<br><br>
+                        Vertical Banners <br> Citywide awareness and unified event atmosphere</p>
+                </div>
+
+                <img src="assets/images/lanyard.png" class="tall">
+                <div class="gallery-item">
+                    <img src="assets/images/postage-stamp.png" class="square">
+                    <p><br> Lanyards: <br>Identification, security, and professional event branding<br><br>
+                        Postage Stamps: <br> Commemorating Malta’s role in European dialogue</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
+
+</body>
+
+</html>
