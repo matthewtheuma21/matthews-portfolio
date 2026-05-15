@@ -15,8 +15,6 @@
 
 </head>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <!-- TOP RED SCROLL LINE -->
 <script>
     window.addEventListener('scroll', () => {
@@ -31,108 +29,275 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <body id="top">
+
+    <div class="scroll-bar"></div>
+
     <div class="container">
-        <div class="row">
-            <div class="back-arrow">
-                <a href="projects.html">
-                    <img src="assets/images/back-arrow-white.png" class="back-arrow" alt="Arrow">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="120" height="40">
                 </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
             </div>
-        </div>
-    </div>
+        </nav>
 
-    <h1>the MONO Magazine - Diving into Music, Mood and our familiar colours.</h1>
-    <h2>MAGAZINE MINI-PREVIEW </h2>
+        <div class="row">
 
-    <div class="row">
-        <div class="col-4">
-            <div class="front-cover">
-                <img src="assets/images/mono0.jpg" class="front-cover" alt="image">
-            </div>
-        </div>
+            <p class="subtitle">
+                <span class="top-line"><img src="assets/images/mono_title.png" width="400" height="150"></span><br>
+                <span class="bottom-line">Editorial Music Magazine</span>
+            </p>
 
-        <div class="col-8">
-            <div class="book">
-                <input type="checkbox" id="c1">
-                <input type="checkbox" id="c2">
-                <input type="checkbox" id="c3">
-                <input type="checkbox" id="c4">
+            <section>
+                <div class="book">
+                    <input type="checkbox" id="c1">
+                    <input type="checkbox" id="c2">
+                    <input type="checkbox" id="c3">
+                    <input type="checkbox" id="c4">
+                    <input type="checkbox" id="c5">
+                    <input type="checkbox" id="c6">
+                    <input type="checkbox" id="c7">
+                    <input type="checkbox" id="c8">
+                    <input type="checkbox" id="c9">
+                    <input type="checkbox" id="c10">
 
-                <div id="cover"><img src="assets/images/mono1.jpg"></div>
+                    <div id="cover"><img src="assets/images/Mono Magazine_Blank.jpg"></div>
 
-                <div class="flip-book">
-                    <div class="flip" id="p1"> <!-- SPREAD 1 1 -->
-                        <div class="back">
-                            <img src="assets/images/mono3.jpg">
-                            <label class="back-btn" for="c1">Back </label>
+                    <div class="flip-book">
+                        <div class="flip" id="p1"> <!-- PAGE 1 -->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page2.jpg">
+                                <label class="back-btn" for="c1">Back </label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/mono0.jpg">
+                                <label class="next-btn" for="c1">Next >></label>
+                            </div>
                         </div>
-                        <div class="front">
-                            <img src="assets/images/mono2.jpg">
-                            <label class="next-btn" for="c1">Next >></label>
+                        <div class="flip" id="p2"> <!-- PAGE 2-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page4.jpg">
+                                <label class="back-btn" for="c2">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_Page3.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c2">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p3"> <!-- PAGE 3-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page6.jpg">
+                                <label class="back-btn" for="c3">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page5.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c3">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p4"> <!-- PAGE 4-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page8.jpg">
+                                <label class="back-btn" for="c4">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page7.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c4">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p5"> <!-- PAGE 5-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page10.jpg">
+                                <label class="back-btn" for="c5">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page9.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c5">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p6"> <!-- PAGE 6-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page12.jpg">
+                                <label class="back-btn" for="c6">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page11.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c6">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p7"> <!-- PAGE 7-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page14.jpg">
+                                <label class="back-btn" for="c7">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page13.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c7">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p8"> <!-- PAGE 8-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page16.jpg">
+                                <label class="back-btn" for="c8">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page15.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c8">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p9"> <!-- PAGE 9-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page18.jpg">
+                                <label class="back-btn" for="c9">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page17.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c9">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p10"> <!-- PAGE 10-->
+                            <div class="back">
+                                <img src="assets/images/Mono Magazine_page22.jpg">
+                                <label class="back-btn" for="c10">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Mono Magazine_page19.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c10">Next >></label>
+                            </div>
                         </div>
                     </div>
-                    <div class="flip" id="p2"> <!-- SPREAD 2-->
-                        <div class="back">
-                            <img src="assets/images/mono5.jpg">
-                            <label class="back-btn" for="c2">Back</label>
-                        </div>
-                        <div class="front">
-                            <img src="assets/images/mono4.jpg"> <!-- Back Last Page -->
-                            <label class="next-btn" for="c2">Next >></label>
-                        </div>
+                    <div class="book-right">
+                        <h3>
+                            < PRESS HERE</h3>
                     </div>
-                    <div class="flip" id="p3"> <!-- SPREAD 3-->
-                        <div class="back">
-                            <img src="assets/images/mono7.jpg">
-                            <label class="back-btn" for="c3">Back</label>
-                        </div>
-                        <div class="front">
-                            <img src="assets/images/mono6.jpg"> <!-- Back Last Page -->
-                            <label class="next-btn" for="c3">Next >></label>
-                        </div>
+                </div>
+            </section>
+
+            <p class="article-text">Presented here is one of my most cherished and dedicated works to date. Although it
+                began as a school
+                assignment,
+                I approached the project with a high level of commitment and professionalism. I organised and
+                planned
+                photoshoots involving several models, carefully selecting specific locations that complemented each
+                theme I
+                intended to convey. Every detail—from planning to execution—was carried out with seriousness and
+                purpose. (Note:
+                the images of celebrities featured in the magazine are not my own.)
+                <br>
+                <br>
+                The concept behind the project was to design a magazine that offers a fresh and unique take on music
+                categorisation. Rather than presenting music in a standard format, I chose to group songs by
+                emotional
+                theme—such as happiness, darkness, love, and classic styles. Each category was visually represented
+                by a
+                specific colour, selected to match the tone and mood of the genre, creating a distinct visual
+                identity
+                for each
+                section. In addition to listing the top 20 songs under each mood, the magazine also featured curated
+                articles
+                about artists who reflect the theme of each category.
+                <br>
+                <br>
+                My research involved analysing how established magazines—such as Vogue, Billboard, and Rolling
+                Stone—present
+                information in engaging and aesthetically compelling ways. I observed that these publications often
+                integrate
+                brand advertisements throughout their pages to promote collections and merchandise, and I considered
+                this aspect
+                in my own layout decisions.
+                <br>
+                <br>
+                The primary goal of my magazine was to redefine how music can be promoted and explored. Instead of
+                focusing
+                solely on individual artists or displaying generic top 10 global charts, I wanted to create a more
+                personal and
+                accessible experience. By organising music by emotional themes and offering a rich, visually-driven
+                narrative,
+                the magazine invites readers to discover new music that aligns with their mood or taste—whether it's
+                a
+                song
+                they’ve never heard before or one they’ve long enjoyed but never knew the title of.
+            </p>
+
+            <div class="gallery">
+                <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300"
+                    height="130">
+                <div class="gallery-grid">
+
+                    <img src="assets/images/Mono Magazine_page2.jpg" class="tall">
+
+                    <div class="gallery-item">
+                        <img src="assets/images/mono-preview.jpg" class="square">
+                        <p>On Photoshop:<br><br> Layering Effects<br>Clipping Mask on Image<br>Erasing Details for Depth
+                        </p>
                     </div>
-                    <div class="flip" id="p4"> <!-- SPREAD 4-->
-                        <div class="back">
-                            <img src="assets/images/mono8.jpg">
-                            <label class="back-btn" for="c4">Back</label>
-                        </div>
-                        <div class="front">
-                            <img src="assets/images/mono8.jpg"> <!-- Back Last Page -->
-                        </div>
+
+                    <img src="assets/images/mono5.jpg" class="tall">
+                    <div class="gallery-item">
+                        <img src="assets/images/mono1.png" class="square">
+                        <p> On Illustrator + InDesign: <br><br>Use of geometric forms and shapes, blending lines to
+                            create the elements of the book.
+                            Colour coordinated with each mood of music.
+                        </p>
                     </div>
+
+                    <img src="assets/images/Mono Magazine_page19.jpg" class="tall">
+                    <div class="gallery-item">
+                        <img src="assets/images/mono-photo.jpg" class="square">
+                        <p>Photographs were taken with a professional camera, locally and even abroad (in Sicily). The
+                            photos that exclude me, were all taken by myself, requiring the models to wear specific
+                            clothing, meet at specific locations as if it was an actual photoshoot rather than just a
+                            school assignment.
+                    </div>
+
+                    <img src="assets/images/mono-sketches.png" class="tall">
+                    <div class="gallery-item">
+                        <img src="assets/images/mono-photo2.jpg.png" class="square">
+                    </div>
+
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
 
-    <p>Presented here is one of my most cherished and dedicated works to date. Although it began as a school assignment,
-        I approached the project with a high level of commitment and professionalism. I organised and planned
-        photoshoots involving several models, carefully selecting specific locations that complemented each theme I
-        intended to convey. Every detail—from planning to execution—was carried out with seriousness and purpose. (Note:
-        the images of celebrities featured in the magazine are not my own.)
-        <br>
-        <br>
-        The concept behind the project was to design a magazine that offers a fresh and unique take on music
-        categorisation. Rather than presenting music in a standard format, I chose to group songs by emotional
-        theme—such as happiness, darkness, love, and classic styles. Each category was visually represented by a
-        specific colour, selected to match the tone and mood of the genre, creating a distinct visual identity for each
-        section. In addition to listing the top 20 songs under each mood, the magazine also featured curated articles
-        about artists who reflect the theme of each category.
-        <br>
-        <br>
-        My research involved analysing how established magazines—such as Vogue, Billboard, and Rolling Stone—present
-        information in engaging and aesthetically compelling ways. I observed that these publications often integrate
-        brand advertisements throughout their pages to promote collections and merchandise, and I considered this aspect
-        in my own layout decisions.
-        <br>
-        <br>
-        The primary goal of my magazine was to redefine how music can be promoted and explored. Instead of focusing
-        solely on individual artists or displaying generic top 10 global charts, I wanted to create a more personal and
-        accessible experience. By organising music by emotional themes and offering a rich, visually-driven narrative,
-        the magazine invites readers to discover new music that aligns with their mood or taste—whether it's a song
-        they’ve never heard before or one they’ve long enjoyed but never knew the title of.
-    </p>
 </body>
 
 </html>

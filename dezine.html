@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editorial Designing</title>
+
+    <link rel="stylesheet" href="assets/styling/articles/dezine.css">
+    <link rel="stylesheet" href="assets/styling/bootstrap.css">
+    <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<body id="top">
+
+    <div class="scroll-bar"></div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="120" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT: Image -->
+                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+
+            <p class="subtitle">
+                <span class="top-line"><img src="assets/images/dezine_title.png" width="250" height="175"></span><br>
+                <span class="bottom-line">Editorial Fanzine (Experimental)</span>
+            </p>
+
+            <section>
+                <div class="book">
+                    <input type="checkbox" id="c1">
+                    <input type="checkbox" id="c2">
+                    <input type="checkbox" id="c3">
+                    <input type="checkbox" id="c4">
+                    <input type="checkbox" id="c5">
+                    <input type="checkbox" id="c6">
+                    <input type="checkbox" id="c7">
+
+                    <div id="cover"><img src="assets/images/Mono Magazine_Blank.jpg"></div>
+
+                    <div class="flip-book">
+                        <div class="flip" id="p1"> <!-- PAGE 1 -->
+                            <div class="back">
+                                <img src="assets/images/dezine_page2.jpg">
+                                <label class="back-btn" for="c1">Back </label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/Front Cover 2.png">
+                                <label class="next-btn" for="c1">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p2"> <!-- PAGE 2-->
+                            <div class="back">
+                                <img src="assets/images/dezine_page4.jpg">
+                                <label class="back-btn" for="c2">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/dezine_page3.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c2">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p3"> <!-- PAGE 3-->
+                            <div class="back">
+                                <img src="assets/images/dezine_page6.jpg">
+                                <label class="back-btn" for="c3">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/dezine_page5.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c3">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p4"> <!-- PAGE 4-->
+                            <div class="back">
+                                <img src="assets/images/dezine_page8.jpg">
+                                <label class="back-btn" for="c4">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/dezine_page7.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c4">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p5"> <!-- PAGE 5-->
+                            <div class="back">
+                                <img src="assets/images/dezine_page10.jpg">
+                                <label class="back-btn" for="c5">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/dezine_page9.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c5">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p6"> <!-- PAGE 6-->
+                            <div class="back">
+                                <img src="assets/images/dezine_page12.jpg">
+                                <label class="back-btn" for="c6">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/dezine_page11.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c6">Next >></label>
+                            </div>
+                        </div>
+                        <div class="flip" id="p7"> <!-- PAGE 7-->
+                            <div class="back">
+                                <img src="assets/images/dezine_backcover.jpg">
+                                <label class="back-btn" for="c7">Back</label>
+                            </div>
+                            <div class="front">
+                                <img src="assets/images/dezine_page13.jpg"> <!-- Back Last Page -->
+                                <label class="next-btn" for="c7">Next >></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-right">
+                        <h3>
+                            < PRESS HERE</h3>
+                    </div>
+                </div>
+            </section>
+
+            <p class="article-text">Presented here is one of my most cherished and dedicated works to date. Although it
+                began as a school
+                assignment,
+                I approached the project with a high level of commitment and professionalism. I organised and
+                planned
+                photoshoots involving several models, carefully selecting specific locations that complemented each
+                theme I
+                intended to convey. Every detail—from planning to execution—was carried out with seriousness and
+                purpose. (Note:
+                the images of celebrities featured in the magazine are not my own.)
+                <br>
+                <br>
+                The concept behind the project was to design a magazine that offers a fresh and unique take on music
+                categorisation. Rather than presenting music in a standard format, I chose to group songs by
+                emotional
+                theme—such as happiness, darkness, love, and classic styles. Each category was visually represented
+                by a
+                specific colour, selected to match the tone and mood of the genre, creating a distinct visual
+                identity
+                for each
+                section. In addition to listing the top 20 songs under each mood, the magazine also featured curated
+                articles
+                about artists who reflect the theme of each category.
+                <br>
+                <br>
+                My research involved analysing how established magazines—such as Vogue, Billboard, and Rolling
+                Stone—present
+                information in engaging and aesthetically compelling ways. I observed that these publications often
+                integrate
+                brand advertisements throughout their pages to promote collections and merchandise, and I considered
+                this aspect
+                in my own layout decisions.
+                <br>
+                <br>
+                The primary goal of my magazine was to redefine how music can be promoted and explored. Instead of
+                focusing
+                solely on individual artists or displaying generic top 10 global charts, I wanted to create a more
+                personal and
+                accessible experience. By organising music by emotional themes and offering a rich, visually-driven
+                narrative,
+                the magazine invites readers to discover new music that aligns with their mood or taste—whether it's
+                a
+                song
+                they’ve never heard before or one they’ve long enjoyed but never knew the title of.
+            </p>
+
+            <div class="gallery">
+                <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300"
+                    height="130">
+                <div class="gallery-grid">
+
+                    <img src="assets/images/dezine_photo4.jpg" class="tall">
+
+                    <div class="gallery-item">
+                        <img src="assets/images/dezine-photo1.jpg" class="square">
+                        <p>Photoshop was the main use to edit the photos, compile the pages and work using threshold,
+                            smart filters, masking and more. <br><br>It was an experimental project, personal yet very
+                            fun.
+                            There were no rules, as long as we created something that represented our friend group.
+                        </p>
+                    </div>
+
+                    <img src="assets/images/dezine_photo5.jpg" class="tall">
+                    <div class="gallery-item">
+                        <img src="assets/images/dezine-photo2.jpg" class="square">
+                        <p> To create a special interactive section while going through the zine, we printed a
+                            transparent paper with different food splattered around the page (taste tests that we did,
+                            food that we iconically like).<br><br> With this add on, the food come out almost like a 3D
+                            experience while
+                            you go through the pages.
+                        </p>
+                    </div>
+
+                    <img src="assets/images/dezine_image3.jpeg" class="tall">
+                    <div class="gallery-item">
+                        <img src="assets/images/dezine-page-00.jpg" class="square">
+                        <p>Final Piece was implented in a way to make it perfectly look like a personal
+                            journey/diary.<br><br>
+                            We added sticky notes on the sides and on the front with written marker, and a very cheap
+                            but authentic feel to it, by attaching the pages
+                            together with white zip ties.
+                    </div>
+
+                    <img src="assets/images/dezine_photo6.jpeg" class="tall">
+                    <div class="gallery-item">
+                        <img src="assets/images/dezine-page-000.jpg" class="square">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
+
+</body>
+
+</html>
