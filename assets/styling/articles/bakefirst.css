@@ -331,7 +331,7 @@ p {
     color: rgb(0, 0, 0);
   font-family: 'Arimo', Helvetica, Arial, sans-serif;
     text-align: justify;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 60px auto;
     padding: 0 20px;
     z-index: 1;
