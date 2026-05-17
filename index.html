@@ -203,6 +203,19 @@
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.querySelector("video");
+
+            video.muted = true;
+            video.play();
+
+            video.addEventListener("ended", function () {
+                video.play();
+            });
+        });
+    </script>
+
 </body>
 
 </html>

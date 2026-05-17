@@ -346,32 +346,25 @@ p {
     width: 220px;
   }
 
-  .container newest-section mt-5 .row,
-  .container thesis-section mt-5 .row {
+  .container .newest-section.mt-5 .row,
+  .container .thesis-section.mt-5 .row {
     margin-top: 10px !important;
   }
 
-
-  .container thesis-section mt-5 .img-fluid newest-img {
-    padding-top: -25px;
-  }
-
-  .section-title h1 {
-    font-size: 50px;
-  }
-
-  .section-title p {
-    font-size: 23px;
-    margin-bottom: 5px;
+  .section-title {
+    font-size: 30px;
   }
 
   .newest-section p,
   .thesis-section p {
-    font-size: 18px;
+    font-size: 23px;
+    margin-bottom: 5px;
   }
 
   .newest-img {
-    height: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
     margin-bottom: -10px;
   }
 
