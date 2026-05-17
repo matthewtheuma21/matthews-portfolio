@@ -316,18 +316,8 @@ p {
 
 
   .video-banner {
-    margin-top: 60px;
+    margin-top: 80px;
   }
-
-  .container mt-4 {
-    padding: 25px 20px;
-  }
-
-  .project-img {
-    width: 100%;
-    height: 130px;
-  }
-
 
   .row.g-4 {
     display: flex;
