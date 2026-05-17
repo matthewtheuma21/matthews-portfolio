@@ -315,9 +315,9 @@ p {
 @media (max-width: 768px) {
 
   .hero-text {
-    font-size: 30px;
+    font-size: 20px;
   }
-  
+
   .project-img {
     width: 100%;
     height: auto;
@@ -357,7 +357,7 @@ p {
   }
 
   .section-title h1 {
-    font-size: 30px;
+    font-size: 50px;
   }
 
   .section-title p {
@@ -371,7 +371,7 @@ p {
   }
 
   .newest-img {
-    height: auto;
+    height: 100px;
     margin-bottom: -10px;
   }
 
@@ -403,16 +403,12 @@ p {
   }
 
   .brand-logo {
-    height: 35px;
-  }
-
-  .brands-title {
-    padding-left: 20px;
-    font-size: 30px;
+    height: 40px;
   }
 
   .brands h1 {
-    font-size: 20px;
+    padding-left: 20px;
+    font-size: 30px;
   }
 }
 
