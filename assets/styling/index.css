@@ -318,11 +318,8 @@ p {
     font-size: 25px;
   }
 
-  .project-img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
+  .video-banner {
+    padding-top: 20px;
   }
 
   .container mt-4 {
@@ -350,23 +347,23 @@ p {
     width: 220px;
   }
 
-  .container newest-section mt-5 {
-    padding: 25px 20px;
+  .section-title {
+    font-size: 25px;
+    padding-left: 20px;
   }
 
   .container .newest-section.mt-5 .row,
   .container .thesis-section.mt-5 .row {
     margin-top: 10px !important;
+    padding-left: 20px;
   }
 
-  .section-title {
-    font-size: 25px;
-  }
 
   .newest-section p,
   .thesis-section p {
     font-size: 18px;
     margin-bottom: 5px;
+    padding-left: 20px;
   }
 
   .newest-img {
@@ -374,6 +371,7 @@ p {
     height: auto;
     border-radius: 10px;
     margin-bottom: -10px;
+    padding-left: 20px;
   }
 
 
