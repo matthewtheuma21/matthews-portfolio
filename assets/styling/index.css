@@ -164,6 +164,15 @@ ul {
 
 @media (max-width: 768px) {
 
+
+  .project-img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
   .row.g-4 {
     display: flex;
     flex-wrap: nowrap;
@@ -180,12 +189,13 @@ ul {
     display: none;
   }
 
-  .row.g-4 > div {
+  .row.g-4>div {
     flex: 0 0 auto;
     width: 220px;
   }
 
 }
+
 .newest-section {
   margin-top: 60px;
 }
@@ -232,7 +242,7 @@ p {
   }
 
   .section-title {
-    font-size: 26px;
+    font-size: 30px;
     margin-bottom: 5px;
   }
 
@@ -276,11 +286,12 @@ p {
 
   .newest-section p,
   .thesis-section p {
-    font-size: 14px;
+    font-size: 18px;
   }
 
-   .newest-img {
-    height: 250px;
+  .newest-img {
+    height: 125px;
+    margin-bottom: -30px;
   }
 
 }
@@ -337,6 +348,7 @@ p {
   .subtitle {
     font-size: 16px;
     line-height: 1.4;
+    padding-bottom: 10px;
   }
 
   .top-line,
