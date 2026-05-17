@@ -162,40 +162,6 @@ ul {
   transform: scale(1.03);
 }
 
-@media (max-width: 768px) {
-
-
-  .project-img {
-    width: 100%;
-    height: auto;
-
-    border-radius: 10px;
-    object-fit: cover;
-  }
-
-  .row.g-4 {
-    display: flex;
-    flex-wrap: nowrap;
-
-    overflow-x: auto;
-    gap: 10px;
-
-    padding-bottom: 2px;
-
-    scrollbar-width: none;
-  }
-
-  .row.g-4::-webkit-scrollbar {
-    display: none;
-  }
-
-  .row.g-4>div {
-    flex: 0 0 auto;
-    width: 220px;
-  }
-
-}
-
 .newest-section {
   margin-top: 60px;
 }
@@ -219,23 +185,6 @@ p {
   border-radius: 15px;
 }
 
-@media (max-width: 768px) {
-
-  .container newest-section mt-5 .row,
-  .container thesis-section mt-5 .row {
-    margin-top: 10px !important;
-  }
-
-  .section-title {
-    font-size: 30px;
-    margin-bottom: 5px;
-  }
-
-  .container thesis-section mt-5 .img-fluid newest-img {
-    padding-top: -25px;
-  }
-
-}
 
 /* bottom text before footer */
 
@@ -263,28 +212,6 @@ p {
   margin-top: -30px;
 }
 
-@media (max-width: 768px) {
-
-  .section-title h1 {
-    font-size: 23px;
-  }
-
-  .section-title {
-    font-size: 17px;
-  }
-
-  .newest-section p,
-  .thesis-section p {
-    font-size: 18px;
-  }
-
-  .newest-img {
-    height: auto;
-    margin-bottom: -10px;
-  }
-
-}
-
 /* brand logos section*/
 .brands h1 {
   font-size: 40px;
@@ -307,16 +234,6 @@ p {
   color: black;
 }
 
-@media (max-width: 768px) {
-  .brands-title {
-    padding-left: 20px;
-  }
-
-  .brands h1 {
-    font-size: 20px;
-  }
-}
-
 .brands-logos {
   display: flex;
   justify-content: center;
@@ -330,32 +247,6 @@ p {
   /* default size */
   width: auto;
   object-fit: contain;
-}
-
-@media (max-width: 768px) {
-
-  .subtitle {
-    font-size: 16px;
-    line-height: 1.4;
-    padding-bottom: 10px;
-  }
-
-  .top-line,
-  .bottom-line {
-    display: block;
-
-  }
-
-  .top-line {
-    font-size: 18px;
-    font-style: italic;
-  }
-
-  .bottom-line {
-    font-size: 18px;
-    margin-top: -10px;
-  }
-
 }
 
 .logo-2 {
@@ -376,16 +267,6 @@ p {
 
 .logo-5 {
   height: 90px;
-}
-
-@media (max-width: 768px) {
-  .brands-logos {
-    gap: 30px;
-  }
-
-  .brand-logo {
-    height: 35px;
-  }
 }
 
 /* back to top link */
@@ -429,6 +310,110 @@ p {
   width: 100%;
   height: auto;
   display: block;
+}
+
+@media (max-width: 768px) {
+
+  .hero-text {
+    font-size: 30px;
+  }
+  
+  .project-img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+  }
+
+  .row.g-4 {
+    display: flex;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    gap: 10px;
+
+    padding-bottom: 2px;
+
+    scrollbar-width: none;
+  }
+
+  .row.g-4::-webkit-scrollbar {
+    display: none;
+  }
+
+  .row.g-4>div {
+    flex: 0 0 auto;
+    width: 220px;
+  }
+
+  .container newest-section mt-5 .row,
+  .container thesis-section mt-5 .row {
+    margin-top: 10px !important;
+  }
+
+
+  .container thesis-section mt-5 .img-fluid newest-img {
+    padding-top: -25px;
+  }
+
+  .section-title h1 {
+    font-size: 30px;
+  }
+
+  .section-title p {
+    font-size: 23px;
+    margin-bottom: 5px;
+  }
+
+  .newest-section p,
+  .thesis-section p {
+    font-size: 18px;
+  }
+
+  .newest-img {
+    height: auto;
+    margin-bottom: -10px;
+  }
+
+
+  .subtitle {
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .top-line,
+  .bottom-line {
+    display: block;
+
+  }
+
+  .top-line {
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  .bottom-line {
+    font-size: 18px;
+    margin-top: -10px;
+  }
+
+  .brands-logos {
+    gap: 30px;
+  }
+
+  .brand-logo {
+    height: 35px;
+  }
+
+  .brands-title {
+    padding-left: 20px;
+    font-size: 30px;
+  }
+
+  .brands h1 {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
