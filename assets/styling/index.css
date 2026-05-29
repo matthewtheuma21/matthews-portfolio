@@ -220,16 +220,15 @@ p {
   font-style: normal;
 }
 
-.brands {
+.brands-section {
   width: 100%;
-  padding: 25px 20px;
-  text-align: center;
+  padding: 0px 20px;
+  text-align: left;
 }
 
 .brands-title {
   font-size: 24px;
   text-align: left;
-  padding-left: 130px;
   margin-bottom: 40px;
   color: black;
 }
@@ -239,6 +238,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  padding-top: 20px;
   flex-wrap: wrap;
 }
 
@@ -304,6 +304,7 @@ p {
 
 .footer-image {
   width: 100%;
+  padding-top: 20px; 
 }
 
 .footer-image img {
