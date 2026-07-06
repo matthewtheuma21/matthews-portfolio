@@ -84,7 +84,7 @@
             </video>
 
             <!-- Mobile -->
-            <video class="mobile-video" autoplay muted loop playsinline preload="auto">
+            <video class="mobile-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
 
                 <source src="assets/images/Website AnimationPORTRAIT.mp4" type="video/mp4">
 
@@ -257,15 +257,25 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const video = document.querySelector("video");
+        document.addEventListener("DOMContentLoaded", () => {
 
-            video.muted = true;
-            video.play();
+            const videos = document.querySelectorAll("video");
 
-            video.addEventListener("ended", function () {
-                video.play();
+            videos.forEach(video => {
+                video.muted = true;
+                video.setAttribute("muted", "");
+                video.setAttribute("playsinline", "");
+                video.setAttribute("webkit-playsinline", "");
+
+                const playPromise = video.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Autoplay prevented:", error);
+                    });
+                }
             });
+
         });
     </script>
 
