@@ -67,17 +67,29 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
         </nav>
 
         <div class="video-banner">
-            <video autoplay muted loop playsinline webkit-playsinline preload="auto">
+
+            <!-- Desktop -->
+            <video class="desktop-video" autoplay muted loop playsinline preload="auto">
+
                 <source src="assets/images/Website Animation.mp4" type="video/mp4">
+
             </video>
+
+            <!-- Mobile -->
+            <video class="mobile-video" autoplay muted loop playsinline preload="auto">
+
+                <source src="assets/images/Website AnimationPORTRAIT.mp4" type="video/mp4">
+
+            </video>
+
         </div>
 
         <div class="video-line"></div>
@@ -222,6 +234,27 @@
     <div class="footer-image">
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

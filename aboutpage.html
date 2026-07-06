@@ -70,12 +70,13 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
         </nav>
+
         <div class="hero-image">
             <img src="assets/images/about-image.jpg" alt="Hero Image">
         </div>
@@ -100,7 +101,7 @@
             Europe and the Americas. These experiences continue to influence and inform my creative approach.
             <br><br>
             <b>Some projects shown include work completed for clients. All trademarks, logos, and brand names belong to
-            their respective owners and are used here for demonstration purposes only.</b>
+                their respective owners and are used here for demonstration purposes only.</b>
         </P>
     </div>
 
@@ -124,6 +125,26 @@
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
 
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
 
 </body>
 
