@@ -385,6 +385,9 @@ input {
         margin-right: 0;
     }
 
+    h1 {
+        margin-right: 40px;
+    }
     .col-8,
     .col-4 {
         width: 100%;
@@ -422,7 +425,7 @@ input {
     }
 
     .cover {
-        padding-left: -50px;
+        padding-left: -250px;
     }
 
     .next-btn,

@@ -187,8 +187,7 @@ ul {
     }
 
     .top-line img {
-        width: 240px;
-        height: 60px;
+        height: 100px;
     }
 
     .container {
@@ -196,7 +195,7 @@ ul {
         padding-right: 10px;
     }
 
-    .col-8 p {
+    p {
         width: auto;
         margin: 0 20px;
         font-size: 16px;
@@ -216,6 +215,10 @@ ul {
     display: block;
     padding-top: 100px;
     padding-bottom: 10px;
+}
+
+.top-line img{
+    width: 250px;
 }
 
 .bottom-line {
@@ -292,16 +295,16 @@ ul {
 }
 
 /* text */
-.col-lg-12 p {
+
+p {
+    color: rgb(0, 0, 0);
     font-family: 'Arimo', Helvetica, Arial, sans-serif;
     text-align: justify;
-    margin: 0px 200px;
-    padding-left: 30px;
-    /* Adjust as needed */
-    padding-top: 40px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
     z-index: 1;
-    position: relative;
-    color: black;
+    position: relative
 }
 
 /* footer */

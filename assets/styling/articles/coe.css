@@ -325,6 +325,11 @@ ul {
         line-height: 1.7;
     }
 
+    .preview5 {
+      width: 300px;
+      margin-left: 40px;
+    }
+
 }
 
 .gallery-item p {
