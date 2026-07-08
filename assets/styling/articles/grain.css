@@ -149,7 +149,7 @@ ul {
     .navbar-nav {
         flex-direction: row !important;
         margin: auto;
-        padding-left: 50px;
+        padding-left: 10px;
     }
 
     .nav-link {
@@ -270,6 +270,8 @@ h3 {
     /* ARTICLE LAYOUT */
     .row {
         flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .col-8,
@@ -290,8 +292,10 @@ h3 {
     }
 
     .col-8 p {
-        width: 100%;
-        max-width: none;
+        width: auto;
+        margin: 0 20px;
+        font-size: 16px;
+        line-height: 1.7;
     }
 
     .gallery-grid {
@@ -322,9 +326,11 @@ h3 {
     }
 
     .preview5 {
-        width: 300px;
+        width: 100%;
+        max-width: 260px;
+        display: block;
+        margin: 20px auto 0;
         padding-top: 10px;
-        margin-left: 70px;
     }
 
 }
