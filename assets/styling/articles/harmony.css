@@ -171,6 +171,37 @@ ul {
   .navbar-collapse img {
     display: none;
   }
+
+  /* ARTICLE LAYOUT */
+    .row {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-8,
+    .col-4 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .top-line img {
+        width: 240px;
+        height: 60px;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .col-8 p {
+        width: auto;
+        margin: 0 20px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
 }
 
 /* text */
