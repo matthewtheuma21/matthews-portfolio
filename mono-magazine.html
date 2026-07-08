@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editorial Designing</title>
 
-    <link rel="stylesheet" href="assets/styling/articles/mono-magazine.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/articles/mono-magazine.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
@@ -69,8 +69,8 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
@@ -216,20 +216,21 @@
                 theme I
                 intended to convey every detail (from planning to execution—was carried out with seriousness and
                 purpose). <br><b>Note:
-                the images of celebrities featured in the magazine are not my own.</b>
+                    the images of celebrities featured in the magazine are not my own.</b>
                 <br>
                 <br>
                 The concept behind the project was to <b>design a magazine that offers a fresh and unique take on music
-                categorisation. Rather than presenting music in a standard format, I chose to group songs by
-                emotional
-                theme, such as happiness, darkness, love, and classic styles.</b> Each category was visually represented
+                    categorisation. Rather than presenting music in a standard format, I chose to group songs by
+                    emotional
+                    theme, such as happiness, darkness, love, and classic styles.</b> Each category was visually
+                represented
                 by a
                 specific colour, selected to match the tone and mood of the genre, creating a distinct visual
                 identity
                 for each
                 section. <b>In addition to listing the top 20 songs under each mood, the magazine also featured curated
-                articles
-                about artists who reflect the theme of each category.</b>
+                    articles
+                    about artists who reflect the theme of each category.</b>
                 <br>
                 <br>
                 My research involved analysing how established magazines (such as Vogue, Billboard, and Rolling
@@ -244,8 +245,9 @@
                 The primary goal of my magazine was to redefine how music can be promoted and explored. Instead of
                 focusing
                 solely on individual artists or displaying generic top 10 global charts, <b> wanted to create a more
-                personal and
-                accessible experience. </b> organising music by emotional themes and offering a rich, visually-driven
+                    personal and
+                    accessible experience. </b> organising music by emotional themes and offering a rich,
+                visually-driven
                 narrative,
                 the magazine invites readers to discover new music that aligns with their mood or taste (whether it's
                 a
@@ -297,6 +299,27 @@
     <div class="footer-image">
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
 
 </body>
 

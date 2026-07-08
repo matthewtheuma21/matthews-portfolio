@@ -148,6 +148,7 @@ ul {
     .navbar-nav {
         flex-direction: row !important;
         margin: auto;
+        padding-left: 50px;
     }
 
     .nav-link {

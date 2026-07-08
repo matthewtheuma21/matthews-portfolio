@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editorial Designing</title>
 
-    <link rel="stylesheet" href="assets/styling/articles/bballoons.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/articles/bballoons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
@@ -70,139 +70,161 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
         </nav>
+    </div>
 
-        <div class="row">
+    <div class="row">
 
-            <p class="subtitle">
-                <span class="top-line"><img src="assets/images/beautiful balloons-title.jpg" width="400"
-                        height="105"></span><br>
-                <span class="bottom-line">Editorial Children's Comic Book</span>
-            </p>
+        <p class="subtitle">
+            <span class="top-line"><img src="assets/images/beautiful balloons-title.jpg" width="400"
+                    height="110"></span><br>
+            <span class="bottom-line">Editorial Children's Comic Book</span>
+        </p>
 
-            <section>
-                <div class="book">
-                    <input type="checkbox" id="c1">
-                    <input type="checkbox" id="c2">
-                    <input type="checkbox" id="c3">
-                    <input type="checkbox" id="c4">
-                    <input type="checkbox" id="c5">
+        <section>
+            <div class="book">
+                <input type="checkbox" id="c1">
+                <input type="checkbox" id="c2">
+                <input type="checkbox" id="c3">
+                <input type="checkbox" id="c4">
+                <input type="checkbox" id="c5">
 
-                    <div id="cover"><img src="assets/images/bb_page2.jpg"></div>
+                <div id="cover"><img src="assets/images/bb_page2.jpg"></div>
 
-                    <div class="flip-book">
-                        <div class="flip" id="p1"> <!-- PAGE 1 -->
-                            <div class="back">
-                                <img src="assets/images/bb_page4.jpg">
-                                <label class="back-btn" for="c1">Back </label>
-                            </div>
-                            <div class="front">
-                                <img src="assets/images/bb_page3.jpg">
-                                <label class="next-btn" for="c1">Next >></label>
-                            </div>
+                <div class="flip-book">
+                    <div class="flip" id="p1"> <!-- PAGE 1 -->
+                        <div class="back">
+                            <img src="assets/images/bb_page4.jpg">
+                            <label class="back-btn" for="c1">Back </label>
                         </div>
-                        <div class="flip" id="p2"> <!-- PAGE 2-->
-                            <div class="back">
-                                <img src="assets/images/bb_page6.jpg">
-                                <label class="back-btn" for="c2">Back</label>
-                            </div>
-                            <div class="front">
-                                <img src="assets/images/bb_page5.jpg"> <!-- Back Last Page -->
-                                <label class="next-btn" for="c2">Next >></label>
-                            </div>
-                        </div>
-                        <div class="flip" id="p3"> <!-- PAGE 3-->
-                            <div class="back">
-                                <img src="assets/images/bb_page8.jpg">
-                                <label class="back-btn" for="c3">Back</label>
-                            </div>
-                            <div class="front">
-                                <img src="assets/images/bb_page7.jpg"> <!-- Back Last Page -->
-                                <label class="next-btn" for="c3">Next >></label>
-                            </div>
-                        </div>
-                        <div class="flip" id="p4"> <!-- PAGE 4-->
-                            <div class="back">
-                                <img src="assets/images/bb_page10.jpg">
-                                <label class="back-btn" for="c4">Back</label>
-                            </div>
-                            <div class="front">
-                                <img src="assets/images/bb_page9.jpg"> <!-- Back Last Page -->
-                                <label class="next-btn" for="c4">Next >></label>
-                            </div>
+                        <div class="front">
+                            <img src="assets/images/bb_page3.jpg">
+                            <label class="next-btn" for="c1">Next >></label>
                         </div>
                     </div>
-                    <div class="book-right">
-                        <h3>
-                            < PRESS HERE</h3>
+                    <div class="flip" id="p2"> <!-- PAGE 2-->
+                        <div class="back">
+                            <img src="assets/images/bb_page6.jpg">
+                            <label class="back-btn" for="c2">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bb_page5.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c2">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p3"> <!-- PAGE 3-->
+                        <div class="back">
+                            <img src="assets/images/bb_page8.jpg">
+                            <label class="back-btn" for="c3">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bb_page7.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c3">Next >></label>
+                        </div>
+                    </div>
+                    <div class="flip" id="p4"> <!-- PAGE 4-->
+                        <div class="back">
+                            <img src="assets/images/bb_page10.jpg">
+                            <label class="back-btn" for="c4">Back</label>
+                        </div>
+                        <div class="front">
+                            <img src="assets/images/bb_page9.jpg"> <!-- Back Last Page -->
+                            <label class="next-btn" for="c4">Next >></label>
+                        </div>
                     </div>
                 </div>
-            </section>
-
-
-            <p class="article-text"><b>This project is a children’s comic book centred around themes of self-confidence,
-                    individuality, and emotional growth through symbolic visual storytelling.</b> The story follows Mike,
-                    the main character, whose hair continuously grows whenever he feels insecure or lacks confidence.
-                    His physical appearance becomes a visual representation of his internal emotions, allowing younger
-                    audiences to understand emotional struggles in a simple and engaging way. <b>In contrast, the other
-                    characters confidently embrace their own differences and personalities, each represented by
-                    colourful balloons symbolising self-acceptance and emotional freedom, while Mike’s black balloon
-                    reflects his isolation and uncertainty throughout parts of the narrative.</b>
-<br><br>
-                    Visually, the project was heavily inspired by animated storytelling styles from shows such as The
-                    Amazing World of Gumball and Gravity Falls, combining expressive character design, vibrant colour
-                    palettes, and symbolic graphic elements to strengthen the emotional narrative. The balloon motif
-                    acts as a recurring visual device throughout the book, with shifts in colour, movement, and scale
-                    helping communicate emotional changes across different scenes. <b>Careful attention was given to
-                    composition, pacing, typography, and page layouts to ensure a smooth visual flow and maintain
-                    engagement throughout the reading experience.</b>
-<br><br>
-                    Although comic design falls outside my usual creative focus, which is more connected to advertising,
-                    photography, and textile-related work, <b>this project challenged me to explore storytelling through a
-                    completely different design approach.</b> It strengthened my ability to communicate complex emotions
-                    visually while adapting my creative process to narrative-driven design.
-                    <br>
-                    <br>
-
-            </p>
-
-            <div class="gallery">
-                <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300"
-                    height="130">
-                <div class="gallery-grid">
-
-                    <img src="assets/images/bb_image-03.png" class="tall">
-
-                    <div class="gallery-item">
-                        <img src="assets/images/bb_image1.png" class="square">
-                        <p>The idea for the binding process was to have it as a saddle-stitched book, so it exactly
-                            looks like a comic book and readers can simply enjoy the visuals and storyline.
-                        </p>
-                    </div>
-
-                    <img src="assets/images/bb_image2.png" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/bb_image-02.png" class="square">
-                        <p><br>
-                            I created the main character, Mike as the character who had his hair non-stop growing when
-                            he doesn't feel confident and strong. The rest of the characters were embracing their
-                            differences, which also had a colourful balloon, whereas Mike's balloon was black.
-                        </p>
-                    </div>
-
+                <div class="book-right">
+                    <h3>
+                        < PRESS HERE</h3>
                 </div>
             </div>
+        </section>
+
+
+        <p class="article-text"><b>This project is a children’s comic book centred around themes of self-confidence,
+                individuality, and emotional growth through symbolic visual storytelling.</b> The story follows
+            Mike,
+            the main character, whose hair continuously grows whenever he feels insecure or lacks confidence.
+            His physical appearance becomes a visual representation of his internal emotions, allowing younger
+            audiences to understand emotional struggles in a simple and engaging way. <b>In contrast, the other
+                characters confidently embrace their own differences and personalities, each represented by
+                colourful balloons symbolising self-acceptance and emotional freedom, while Mike’s black balloon
+                reflects his isolation and uncertainty throughout parts of the narrative.</b>
+            <br><br>
+            Visually, the project was heavily inspired by animated storytelling styles from shows such as The
+            Amazing World of Gumball and Gravity Falls, combining expressive character design, vibrant colour
+            palettes, and symbolic graphic elements to strengthen the emotional narrative. The balloon motif
+            acts as a recurring visual device throughout the book, with shifts in colour, movement, and scale
+            helping communicate emotional changes across different scenes. <b>Careful attention was given to
+                composition, pacing, typography, and page layouts to ensure a smooth visual flow and maintain
+                engagement throughout the reading experience.</b>
+            <br><br>
+            Although comic design falls outside my usual creative focus, which is more connected to advertising,
+            photography, and textile-related work, <b>this project challenged me to explore storytelling through a
+                completely different design approach.</b> It strengthened my ability to communicate complex emotions
+            visually while adapting my creative process to narrative-driven design.
+            <br>
+            <br>
+
+        </p>
+
+        <div class="gallery">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
+            <div class="gallery-grid">
+
+                <img src="assets/images/bb_image-03.png" class="tall">
+
+                <div class="gallery-item">
+                    <img src="assets/images/bb_image1.png" class="square">
+                    <p>The idea for the binding process was to have it as a saddle-stitched book, so it exactly
+                        looks like a comic book and readers can simply enjoy the visuals and storyline.
+                    </p>
+                </div>
+
+                <img src="assets/images/bb_image2.png" class="tall">
+                <div class="gallery-item">
+                    <img src="assets/images/bb_image-02.png" class="square">
+                    <p><br>
+                        I created the main character, Mike as the character who had his hair non-stop growing when
+                        he doesn't feel confident and strong. The rest of the characters were embracing their
+                        differences, which also had a colourful balloon, whereas Mike's balloon was black.
+                    </p>
+                </div>
+
+            </div>
         </div>
+    </div>
     </div>
 
     <div class="footer-image">
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
 
 </body>
 

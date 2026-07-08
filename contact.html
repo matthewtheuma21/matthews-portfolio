@@ -7,8 +7,8 @@
     <title>Contact</title>
 
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
-    <link rel="stylesheet" href="assets/styling/contact.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
@@ -69,8 +69,8 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
@@ -99,17 +99,17 @@
                 <form action="https://formspree.io/f/xwvaanqw" method="POST">
 
                     <div class="form-group">
-                        <label>Name and Surname</label>
+                        <label><b>Name & Surname:</b></label>
                         <input type="text" name="name" required>
                     </div>
 
                     <div class="form-group">
-                        <label>Email</label>
+                        <label><b>Email:</b></label>
                         <input type="email" name="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label>What are you looking for?</label>
+                        <label><b>What are you looking for?</b></label>
                         <textarea name="message" rows="3" required></textarea>
                     </div>
 
@@ -148,6 +148,27 @@
     <div class="footer-image">
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
 
 </body>
 

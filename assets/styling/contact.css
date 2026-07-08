@@ -35,7 +35,6 @@ html body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   /* subtle depth */
   z-index: 1000;
-  font-size: 30px;
 }
 
 .navbar-brand {
@@ -45,21 +44,12 @@ html body {
 .nav-link {
   position: relative;
   margin-right: 80px;
-  display: inline-block;
-  font-weight: 300;
-  color: black;
-}
-
-.nav-item .nav-link {
-  font-family: 'Arimo', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  position: relative;
-  margin-right: 80px;
+  font-weight: 200;
   display: inline-block;
   font-size: 30px;
   color: black;
 }
+
 
 .nav-link b {
   font-weight: 900;
@@ -77,9 +67,41 @@ html body {
   transition: width 0.3s ease;
 }
 
+.star-icon {
+  cursor: pointer;
+  user-select: none;
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.star-icon:hover {
+  transform: scale(1.12);
+}
+
+.star-icon.spin {
+  animation: spinTwice 2s ease-in-out;
+}
+
+@keyframes spinTwice {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(720deg);
+    /* 2 full rotations */
+  }
+}
+
 /* hover effect */
 .nav-link:hover::after {
   width: 100%;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .code {
@@ -94,6 +116,60 @@ html body {
 ul {
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+
+  .navbar-toggler {
+    display: none;
+  }
+
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-brand img {
+    width: 80px;
+    height: auto;
+  }
+
+  .navbar-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+    margin: auto;
+    padding-left: 50px;
+  }
+
+  .nav-link {
+    margin-right: 18px;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .navbar-content>img {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-collapse img {
+    display: none;
+  }
 }
 
 /* span image under navigation row */
@@ -188,6 +264,14 @@ button {
   padding: 10px 25px;
   border: none;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  button {
+    margin-bottom: 30px;
+  }
+
 }
 
 @media (max-width: 768px) {

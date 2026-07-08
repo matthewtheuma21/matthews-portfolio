@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Branding</title>
 
-    <link rel="stylesheet" href="assets/styling/articles/coe.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/articles/coe.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
@@ -70,8 +70,8 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
@@ -131,21 +131,22 @@
                 <img src="assets/images/tote-bag.png" class="tall">
                 <div class="gallery-item">
                     <img src="assets/images/luggage-tag.png" class="square">
-                     <p><br> Tote bags: <br>Used as a sustainable promotion carrying the brand identity everywhere<br><br>
+                    <p><br> Tote bags: <br>Used as a sustainable promotion carrying the brand identity
+                        everywhere<br><br>
                         Keychains: <br> For giveaways, as an everyday reminder of international cooperation values</p>
                 </div>
 
                 <img src="assets/images/lawn-banner.png" class="tall">
                 <div class="gallery-item">
                     <img src="assets/images/banners.png" class="square">
-                      <p><br> Lawn Banner: <br>Strong institutional presence outside Council venue<br><br>
+                    <p><br> Lawn Banner: <br>Strong institutional presence outside Council venue<br><br>
                         Vertical Banners <br> Citywide awareness and unified event atmosphere</p>
                 </div>
 
                 <img src="assets/images/lanyard.png" class="tall">
                 <div class="gallery-item">
                     <img src="assets/images/postage-stamp.png" class="square">
-                      <p><br> Lanyards: <br>Identification, security, and professional event branding<br><br>
+                    <p><br> Lanyards: <br>Identification, security, and professional event branding<br><br>
                         Postage Stamps: <br> Commemorating Malta’s role in European dialogue</p>
                 </div>
 
@@ -156,6 +157,27 @@
     <div class="footer-image">
         <img src="assets/images/FOOTER.jpg" alt="Footer">
     </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
 
 </body>
 

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editorial Design</title>
 
-    <link rel="stylesheet" href="assets/styling/articles/bakefirst.css">
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/articles/bakefirst.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
@@ -69,8 +69,8 @@
 
                     </ul>
 
-                    <!-- RIGHT: Image -->
-                    <img src="assets/images/star-design.png" alt="Right" width="40" height="40">
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
 
                 </div>
             </div>
@@ -203,45 +203,67 @@
                 </div>
             </section>
 
-        <section class="text-section">
-            <p>At the core of this project is <b>a manifesto that prioritises sensory experience and
-                    emotional engagement over
-                    literal visual representation</b>. Rather than depicting recognisable objects, the work
-                focuses on <b>communicating
-                    internal qualities such as taste, texture, and atmosphere</b>. Through minimal colour
-                palettes, close-up
-                compositions, and “straight-to-the-face” imagery, the book invites the viewer to feel rather
-                than simply
-                see. This approach challenges passive consumption, encouraging moments of pause, curiosity,
-                and exploration.
-                <br> <br>
-                These principles guided every stage of the design process. Appetising visuals were achieved
-                through
-                detailed, high-quality imagery that emphasises richness and texture, enhanced using tools
-                such as Krea
-                Enhancer and Photoshop. A structured grid system and consistent pacing were applied to
-                maintain clarity and
-                balance, ensuring the visual abstraction remained controlled and readable. <b>The result is
-                    an immersive yet
-                    cohesive visual language that translates the manifesto into a physical reading
-                    experience.</b>
-                <br> <br>
-                The content of the book was curated with equal intention. Recipes were carefully selected to
-                be simple,
-                quick, and suitable for everyday breakfast preparation, focusing on accessibility without
-                compromising
-                appeal. <b>By choosing dishes that are both visually engaging and easy to recreate, the book
-                    creates a
-                    practical and inviting experience for the reader, reinforcing its aim to make cooking
-                    approachable,
-                    enjoyable, and sensorially engaging</b>.
-        </section>
-    </div>
+            <section class="text-section">
+                <p>At the core of this project is <b>a manifesto that prioritises sensory experience and
+                        emotional engagement over
+                        literal visual representation</b>. Rather than depicting recognisable objects, the work
+                    focuses on <b>communicating
+                        internal qualities such as taste, texture, and atmosphere</b>. Through minimal colour
+                    palettes, close-up
+                    compositions, and “straight-to-the-face” imagery, the book invites the viewer to feel rather
+                    than simply
+                    see. This approach challenges passive consumption, encouraging moments of pause, curiosity,
+                    and exploration.
+                    <br> <br>
+                    These principles guided every stage of the design process. Appetising visuals were achieved
+                    through
+                    detailed, high-quality imagery that emphasises richness and texture, enhanced using tools
+                    such as Krea
+                    Enhancer and Photoshop. A structured grid system and consistent pacing were applied to
+                    maintain clarity and
+                    balance, ensuring the visual abstraction remained controlled and readable. <b>The result is
+                        an immersive yet
+                        cohesive visual language that translates the manifesto into a physical reading
+                        experience.</b>
+                    <br> <br>
+                    The content of the book was curated with equal intention. Recipes were carefully selected to
+                    be simple,
+                    quick, and suitable for everyday breakfast preparation, focusing on accessibility without
+                    compromising
+                    appeal. <b>By choosing dishes that are both visually engaging and easy to recreate, the book
+                        creates a
+                        practical and inviting experience for the reader, reinforcing its aim to make cooking
+                        approachable,
+                        enjoyable, and sensorially engaging</b>.
+            </section>
+        </div>
 
-    <div class="footer-image">
-        <img src="assets/images/FOOTER.jpg" alt="Footer">
-    </div>
+        <div class="footer-image">
+            <img src="assets/images/FOOTER.jpg" alt="Footer">
+        </div>
 
+        <!-- STAR ANIMATION -->
+        <script>
+            const star = document.getElementById("spinStar");
+
+            function spinStar() {
+                star.classList.remove("spin");
+
+                // Restart animation
+                void star.offsetWidth;
+
+                star.classList.add("spin");
+            }
+
+            // Play automatically when the page loads
+            window.addEventListener("load", () => {
+                setTimeout(spinStar, 500); // waits half a second after loading
+            });
+
+            // Play again whenever it's clicked
+            star.addEventListener("click", spinStar);
+        </script>
 </body>
+
 
 </html>
