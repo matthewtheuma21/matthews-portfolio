@@ -206,7 +206,7 @@ ul {
     text-align: justify;
     margin: 0 20px;
     padding-top: 0;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
     /* Adjust as needed */
     padding-top: 10px;
@@ -215,9 +215,11 @@ ul {
 }
 
 .preview5 {
-    width: 400px;
-    padding-top: 10px;
-    padding-left: 40px;
+    width: 100%;
+    max-width: 260px;
+    display: block;
+    margin: 20px auto 0;
+    padding: 0;
 }
 
 h3 {
@@ -282,6 +284,16 @@ h3 {
         height: 60px;
     }
 
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .col-8 p {
+        width: 100%;
+        max-width: none;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
@@ -303,7 +315,7 @@ h3 {
     }
 
     .gallery-item p {
-        font-size: 10px;
+        font-size: 8px;
         line-height: 1.2;
         padding-left: 0;
         margin-top: 5px;
