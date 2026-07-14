@@ -221,48 +221,73 @@
             </p>
 
             <div class="gallery">
-                <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300"
-                    height="130">
-                <div class="gallery-grid">
+                <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                    <img src="assets/images/dezine_photo4.jpg" class="tall">
+                <div class="creative-carousel">
 
-                    <div class="gallery-item">
-                        <img src="assets/images/dezine-photo1.jpg" class="square">
-                        <p>Photoshop was the main use to edit the photos, compile the pages and work using threshold,
-                            smart filters, masking and more. <br><br>It was an experimental project, personal yet very
-                            fun.
-                            There were no rules, as long as we created something that represented our friend group.
-                        </p>
+                    <button class="carousel-btn prev">&#10094;</button>
+
+                    <div class="carousel-window">
+
+                        <div class="carousel-track">
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine_photo6.jpeg">
+                                <p>The pages were bound using only zip wires, <b>giving the zine a raw, authentic,
+                                        <br>and
+                                        personal feel, </b> a diary of memories.
+                                </p>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine_photo5.jpg">
+                                <p><b>A transparent overlay was used to create the illusion that the food illustrations
+                                        move between pages,</b> adding a fun and interactive reading experience.</p>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine-photo1.jpg">
+                                <p><b>Threshold, Gradient Maps, and other Photoshop filters were applied throughout the
+                                        zine to achieve the raw, grunge-inspired style we envisioned,</b> while the
+                                    bright
+                                    colours preserved its fun and energetic character.</p>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine-photo2.jpg">
+                                <p>Content Page - Visual sketches</b>
+                                </p>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine_image3.jpeg">
+                                <p>Final <b>'deZine'</b> Output
+                                </p>
+                            </div>
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine-page-00.jpg">
+                                <p>Many of the pages featured crayon-style illustrations, grunge-inspired typewriter
+                                    typography, highlighted text, and strong tonal contrasts to reinforce the zine's
+                                    raw, handmade aesthetic.</b>
+                                </p>
+                            </div>
+
+
+                            <div class="carousel-slide">
+                                <img src="assets/images/dezine-page-000.jpg">
+                                <p><b>Pattern Design</b> featuring all our names and surnames of our school group.</b>
+                                </p>
+                            </div>
+
+                        </div>
+
                     </div>
 
-                    <img src="assets/images/dezine_photo5.jpg" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/dezine-photo2.jpg" class="square">
-                        <p> To create a special interactive section while going through the zine, we printed a
-                            transparent paper with different food splattered around the page (taste tests that we did,
-                            food that we iconically like).<br><br> With this add on, the food come out almost like a 3D
-                            experience while
-                            you go through the pages.
-                        </p>
-                    </div>
-
-                    <img src="assets/images/dezine_image3.jpeg" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/dezine-page-00.jpg" class="square">
-                        <p>Final Piece was implented in a way to make it perfectly look like a personal
-                            journey/diary.<br><br>
-                            We added sticky notes on the sides and on the front with written marker, and a very cheap
-                            but authentic feel to it, by attaching the pages
-                            together with white zip ties.
-                    </div>
-
-                    <img src="assets/images/dezine_photo6.jpeg" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/dezine-page-000.jpg" class="square">
-                    </div>
+                    <button class="carousel-btn next">&#10095;</button>
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -290,6 +315,49 @@
 
         // Play again whenever it's clicked
         star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
     </script>
 
 </body>

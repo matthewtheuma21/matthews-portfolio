@@ -81,7 +81,7 @@
         <div class="row">
             <h1>Malta Presidency 2025<br> Branding a Political Event for the Council of Europe</h1>
 
-            <div class="col-8">
+            <div class="col-12 col-md-8">
                 <p>In 2024, the European Council Representative of Malta announced to MCAST that Malta would hold the
                     Presidency of
                     the Council of Europe from May to November 2025. As part of this initiative, students at MCAST Mosta
@@ -111,47 +111,80 @@
                     Malta.
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4">
                 <img src="assets/images/presidency-logo.png" class="preview5" alt="visual">
             </div>
         </div>
 
         <div class="gallery">
-            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
-            <div class="gallery-grid">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                <img src="assets/images/backpack.png" class="tall">
+            <div class="creative-carousel">
 
-                <div class="gallery-item">
-                    <img src="assets/images/coaster.png" class="square">
-                    <p><br> Cotton Drawstring Bags: <br>Portable visibility during public event activities<br><br>
-                        Coasters: <br> Used during meetings and encourage conversation in social gathering spaces</p>
+                <button class="carousel-btn prev">&#10094;</button>
+
+                <div class="carousel-window">
+
+                    <div class="carousel-track">
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/backpack.png">
+                            <p><b> Drawstring Bags:</b>
+                                Portable visibility during public event activities</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/coaster.png">
+                            <p><b>Coasters:</b>
+                                Used during meetings and encourage conversation in social gathering spaces</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/tote-bag.png">
+                            <p><b>Tote bags:</b>
+                                Used as a sustainable promotion carrying the brand identity everywhere</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/luggage-tag.png">
+                            <p><b>Keychain:</b>
+                                For giveaways, as an everyday reminder of international cooperation values</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/banners.png">
+                            <p><b>Vertical Banners:</b>
+                                Citywide awareness and unified event atmosphere
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/postage-stamp.png">
+                            <p><b>Postage Stamps:</b>
+                                Commemorating Malta’s role in European dialogue</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/lawn-banner.png">
+                            <p><b>Lawn Banner:</b>
+                                Strong institutional presence outside Council venue</p>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/lanyard.png">
+                            <p><b>Lanyards:</b>
+                                Identification, security, and professional event branding
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <img src="assets/images/tote-bag.png" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/luggage-tag.png" class="square">
-                    <p><br> Tote bags: <br>Used as a sustainable promotion carrying the brand identity
-                        everywhere<br><br>
-                        Keychains: <br> For giveaways, as an everyday reminder of international cooperation values</p>
-                </div>
-
-                <img src="assets/images/lawn-banner.png" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/banners.png" class="square">
-                    <p><br> Lawn Banner: <br>Strong institutional presence outside Council venue<br><br>
-                        Vertical Banners <br> Citywide awareness and unified event atmosphere</p>
-                </div>
-
-                <img src="assets/images/lanyard.png" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/postage-stamp.png" class="square">
-                    <p><br> Lanyards: <br>Identification, security, and professional event branding<br><br>
-                        Postage Stamps: <br> Commemorating Malta’s role in European dialogue</p>
-                </div>
+                <button class="carousel-btn next">&#10095;</button>
 
             </div>
+
         </div>
+
     </div>
 
     <div class="footer-image">
@@ -177,6 +210,49 @@
 
         // Play again whenever it's clicked
         star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
     </script>
 
 </body>

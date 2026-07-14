@@ -78,8 +78,8 @@
         </nav>
 
         <p class="subtitle">
-            <span class="top-line"><img src="assets/images/'step-into-safety'-title.jpg" width="600"
-                    height="40"></span><br>
+            <span class="top-line"><img src="assets/images/'step-into-safety'-title.jpg" width="370"
+                    height="23"></span><br>
             <span class="bottom-line">LARGE DIGITAL SCREEN DISPLAY</span>
         </p>
 
@@ -112,35 +112,52 @@
                 </p>
             </div>
         </div>
+    </div>
 
-        <div class="gallery">
-            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
-            <div class="gallery-grid">
+    <div class="gallery">
+        <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                <img src="assets/images/scamBOV-1.jpg" class="tall">
+        <div class="creative-carousel">
 
-                <div class="gallery-item">
-                    <img src="assets/images/scamBOV-5.jpg" class="square">
-                    <p>Using a 360 dynamic experience to promote the marketing campaign.</p>
+            <button class="carousel-btn prev">&#10094;</button>
+
+            <div class="carousel-window">
+
+                <div class="carousel-track">
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/scamBOV-1.jpg">
+                        <p>A virtual experience for BOV clients, spreading awareness on scams in an interactive way.</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/scamBOV-4.jpg">
+                        <p><b>Using a 360 dynamic experience</b> to promote the marketing campaign. Applying the
+                            branding identity with a external campaign using large outputs that thousands of people look
+                            at
+                            while shopping there.</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/scamBOV-2.jpg">
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/scamBOV-5.jpg">
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/scamBOV-6.png">
+                    </div>
+
                 </div>
 
-                <img src="assets/images/scamBOV-2.jpg" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/scamBOV-4.jpg" class="square">
-                    <p>Applying the branding identity with a external campaign using large outputs thousand of
-                        people look at while shopping.</p>
-                </div>
-
-                <img src="assets/images/scamBOV-3.jpg" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/scamBOV-6.png" class="square">
-                </div>
-
-                <img src="assets/images/bov-scam4.jpeg" class="tall">
             </div>
 
+            <button class="carousel-btn next">&#10095;</button>
+
         </div>
-    </div>
+
     </div>
 
 
@@ -169,6 +186,48 @@
         star.addEventListener("click", spinStar);
     </script>
 
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
+    </script>
 </body>
 
 </html>

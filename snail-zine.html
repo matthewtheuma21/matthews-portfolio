@@ -178,27 +178,46 @@
         </div>
 
         <div class="gallery">
-            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
-            <div class="gallery-grid">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                <img src="assets/images/sketch-minizine.png" class="tall">
+            <div class="creative-carousel">
 
-                <div class="gallery-item">
-                    <img src="assets/images/snail-zine.png" class="square">
-                    <p><br> Cotton Drawstring Bags: <br>Portable visibility during public event activities<br><br>
-                        Coasters: <br> Used during meetings and encourage conversation in social gathering spaces
-                    </p>
+                <button class="carousel-btn prev">&#10094;</button>
+
+                <div class="carousel-window">
+
+                    <div class="carousel-track">
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/zine-process.jpeg">
+                            <p><b> Build-up process: </b> <br>A single A4 sheet was folded into eight sections, cut
+                                through
+                                the centre, and folded into an eight-page zine.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/snail-zine.png">
+                            <p>Cover design and branding created for the snail zine</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/sketch-minizine.png">
+                            <p><b>The sketches for each page.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/zinesnail.png">
+                            <p>Finished product of the snail zine, folded.</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <img src="assets/images/zine-process.jpeg" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/zinesnail.png" class="square">
-                    <p><br> Tote bags: <br>Used as a sustainable promotion carrying the brand identity
-                        everywhere<br><br>
-                        Keychains: <br> For giveaways, as an everyday reminder of international cooperation values
-                    </p>
-                </div>
+                <button class="carousel-btn next">&#10095;</button>
+
             </div>
+
         </div>
 
     </div>
@@ -226,6 +245,49 @@
 
         // Play again whenever it's clicked
         star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
     </script>
 
 

@@ -367,14 +367,12 @@ input {
 
     /* Headings */
     .row h1 {
-        padding-left: 150px;
         padding-top: 100px;
         font-size: 28px;
         text-align: center;
     }
 
     .row h2 {
-        padding-left: 100px;
         font-size: 16px;
     }
 
@@ -383,10 +381,6 @@ input {
         flex-direction: column;
         margin-left: 0;
         margin-right: 0;
-    }
-
-    h1 {
-        margin-right: 40px;
     }
 
     .col-8,
@@ -414,15 +408,14 @@ input {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
 
         margin: 0 0 0 -40px;
-        padding-left: 0;
+        margin-left: 30px;
 
         transform: scale(0.45);
         transform-origin: top center;
 
-        margin-bottom: -180px;
+        margin-bottom: -300px;
     }
 
     .cover {
