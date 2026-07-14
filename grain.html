@@ -114,41 +114,65 @@
         </div>
 
         <div class="gallery">
-            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
-            <div class="gallery-grid">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                <img src="assets/images/grain_2630.jpeg" class="tall">
+            <div class="creative-carousel">
 
-                <div class="gallery-item">
-                    <img src="assets/images/grainlogo_style.jpg" class="square">
-                    <p>Experimental hands-on technique: <br><br> I painted directly onto a slice of ftira bread and
-                        pressed it
-                        onto paper to capture the natural texture, holes, and organic imperfections of the bread
-                        surface.</p>
+                <button class="carousel-btn prev">&#10094;</button>
+
+                <div class="carousel-window">
+
+                    <div class="carousel-track">
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/grain_2630.jpeg">
+                            <p><b> Experimental hands-on technique:</b> <br> I painted directly onto a slice of
+                                ftira bread
+                                and pressed it onto paper to capture the natural texture, holes, and organic
+                                imperfections of the bread
+                                surface.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/grainlogo_style.jpg">
+                            <p><b>Logo development, working further done digitally. </b> it character with colours and
+                                rich serif typography.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/grainPosters-01.jpg">
+                            <p><b>Illustrating the main character Mike,</b> representing the main struggle in the story
+                                'Bad Hair growth'</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/grainPosters-03.jpg">
+                            <p>Character development focused on <b>'s growing hair to symbolise his confidence.</b></p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/grainINSPO BOARD.jpg">
+                            <p><b>A sensorial mood, an inspiration I been having</b> to prove how sensory visuals can be
+                                the perfect tool for visual communication.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/grain_2628.jpeg">
+                            <p><b>Creating the posters, by using a micro camera and a tripod for great stability and
+                                    capture
+                                    the details and textures of the bread close-ups.</b> <br><br>Photo editing was then
+                                taken
+                                care of, with good saturation and exposure so that they stand out in the exhibition.</p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <img src="assets/images/grainPosters-01.jpg" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/grainINSPO BOARD.jpg" class="square">
-                    <p>A sensorial mood, an inspiration I been having to prove how sensory visuals can be the
-                        perfect tool for visual communication. </p>
-                </div>
-
-                <img src="assets/images/grainPosters-03.jpg" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/grain_2628.jpeg" class="square">
-                    <p>Creating the posters, by using a micro camera and a tripod for great stability and capture
-                        the details and textures of the bread close-ups. <br><br>Photo editing was then taken care of,
-                        with good
-                        saturation and exposure so that they stand out in the exhibition.</p>
-                </div>
-
-                <img src="assets/images/bread-paperpackaging-mockup.png" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/grain_bread.jpg" class="square">
-                </div>
+                <button class="carousel-btn next">&#10095;</button>
 
             </div>
+
         </div>
     </div>
 
@@ -175,6 +199,49 @@
 
         // Play again whenever it's clicked
         star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
     </script>
 
 </body>

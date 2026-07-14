@@ -190,7 +190,7 @@ ul {
 @media (max-width: 768px) {
     .hero-image {
         height: auto;
-        width: 600px;
+        width: 500px;
         margin-top: 30px;
     }
 

@@ -82,7 +82,7 @@
 
         <p class="subtitle">
             <span class="top-line"><img src="assets/images/beautiful balloons-title.jpg" width="400"
-                    height="110"></span><br>
+                    height="120"></span><br>
             <span class="bottom-line">Editorial Children's Comic Book</span>
         </p>
 
@@ -174,31 +174,48 @@
         </p>
 
         <div class="gallery">
-            <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300" height="130">
-            <div class="gallery-grid">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                <img src="assets/images/bb_image-03.png" class="tall">
+            <div class="creative-carousel">
 
-                <div class="gallery-item">
-                    <img src="assets/images/bb_image1.png" class="square">
-                    <p>The idea for the binding process was to have it as a saddle-stitched book, so it exactly
-                        looks like a comic book and readers can simply enjoy the visuals and storyline.
-                    </p>
+                <button class="carousel-btn prev">&#10094;</button>
+
+                <div class="carousel-window">
+
+                    <div class="carousel-track">
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/bb_image-03.png">
+                            <p>The first sketches <B>exploring the overall visual direction of the comic</B>. Bright,
+                                friendly and cartoony.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/bb_image1.png">
+                            <p>The comic was designed as <b> saddle-stitched book</b> to resemble traditional comic
+                                publications.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/bb_image2.png">
+                            <p><b>Illustrating the main character Mike,</b> representing the main struggle in the story
+                                'Bad Hair growth'</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/bb_image-02.png">
+                            <p>Character development focused on <b>'s growing hair to symbolise his confidence.</b></p>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <img src="assets/images/bb_image2.png" class="tall">
-                <div class="gallery-item">
-                    <img src="assets/images/bb_image-02.png" class="square">
-                    <p><br>
-                        I created the main character, Mike as the character who had his hair non-stop growing when
-                        he doesn't feel confident and strong. The rest of the characters were embracing their
-                        differences, which also had a colourful balloon, whereas Mike's balloon was black.
-                    </p>
-                </div>
+                <button class="carousel-btn next">&#10095;</button>
 
             </div>
+
         </div>
-    </div>
     </div>
 
     <div class="footer-image">
@@ -224,6 +241,49 @@
 
         // Play again whenever it's clicked
         star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
     </script>
 
 </body>
