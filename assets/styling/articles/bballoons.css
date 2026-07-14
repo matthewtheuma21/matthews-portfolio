@@ -433,11 +433,7 @@ input {
         transform: scale(0.45);
         transform-origin: top center;
 
-        margin-bottom: -180px;
-    }
-
-    .cover {
-        padding-left: -50px;
+        margin-bottom: -330px;
     }
 
     .next-btn,
@@ -579,11 +575,15 @@ input {
     }
 
     .carousel-btn {
-
         width: 45px;
         height: 45px;
-        font-size: 24px;
 
+        min-width: 45px;
+        min-height: 45px;
+
+        flex-shrink: 0;
+
+        font-size: 24px;
     }
 
 }

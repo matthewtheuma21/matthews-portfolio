@@ -201,7 +201,7 @@ ul {
     margin-top: -20px;
 }
 
-.col-8 p {
+.col-md-8 p {
     font-family: 'Arimo', Helvetica, Arial, sans-serif;
     text-align: justify;
     margin: 0 20px;
@@ -211,7 +211,8 @@ ul {
     /* Adjust as needed */
     padding-top: 10px;
     z-index: 1;
-    position: relative
+    position: relative;
+    color: black;
 }
 
 .preview5 {
@@ -290,20 +291,20 @@ h3 {
 }
 
 .carousel-btn {
-
     width: 60px;
     height: 60px;
 
+    min-width: 60px;
+    min-height: 60px;
+
+    flex-shrink: 0;
+
     border: none;
     border-radius: 50%;
-
     background: red;
     color: white;
-
     font-size: 34px;
-
     cursor: pointer;
-
     transition: .2s;
 }
 
@@ -316,6 +317,19 @@ h3 {
 }
 
 @media(max-width:768px) {
+
+    .col-8 p,
+    .col-md-8 p {
+        text-align: justify;
+        margin: 0 20px;
+    }
+
+    .preview5 {
+        display: block;
+        max-width: 180px;
+        width: 100%;
+        margin: 30px auto 0;
+    }
 
     .creative-carousel {
 
@@ -338,6 +352,12 @@ h3 {
     .carousel-btn {
         width: 45px;
         height: 45px;
+
+        min-width: 45px;
+        min-height: 45px;
+
+        flex-shrink: 0;
+
         font-size: 24px;
     }
 
