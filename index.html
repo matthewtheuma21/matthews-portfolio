@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="icon" type="image/png" href="assets/images/FAVICON.jpg">
 
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
@@ -103,16 +104,67 @@
             <p>Logos are property of their respective owners.</p>
 
             <div class="brands-logos">
-                <img src="assets/images/BOV-logo.jpeg" class="brand-logo logo-1">
-                <img src="assets/images/bovclub logo.jpg" class="brand-logo logo-6">
-                <img src="assets/images/mcast logo.jpg" class="brand-logo logo-7">
-                <img src="assets/images/nmbl logo.png" class="brand-logo logo-2">
-                <img src="assets/images/bellaciao_logo.png" class="brand-logo logo-3">
-                <img src="assets/images/social hub logo.png" class="brand-logo logo-8">
-                <img src="assets/images/Caritas_Malta_Logo.png" class="brand-logo logo-4">
-                <img src="assets/images/dashuri-logo.png" class="brand-logo logo-5">
-                <img src="assets/images/brndwgn." class="brand-logo logo-9">
+
+                <div class="brands-track">
+
+                    <!-- SET 1 -->
+                    <div class="brands-group">
+                        <img src="assets/images/BOV-logo.jpeg" class="brand-logo logo-1">
+                        <img src="assets/images/bovclub logo.jpg" class="brand-logo logo-6">
+                        <img src="assets/images/mcast logo.jpg" class="brand-logo logo-7">
+                        <img src="assets/images/nmbl logo.png" class="brand-logo logo-2">
+                        <img src="assets/images/bellaciao_logo.png" class="brand-logo logo-3">
+                        <img src="assets/images/social hub logo.png" class="brand-logo logo-8">
+                        <img src="assets/images/Caritas_Malta_Logo.png" class="brand-logo logo-4">
+                        <img src="assets/images/dashuri-logo.png" class="brand-logo logo-5">
+                        <img src="assets/images/WGN stacked logo_WGN dark.png" class="brand-logo logo-9">
+                    </div>
+
+                    <!-- SET 2 - DUPLICATE FOR SEAMLESS LOOP -->
+                    <div class="brands-group" aria-hidden="true">
+                        <img src="assets/images/BOV-logo.jpeg" class="brand-logo logo-1">
+                        <img src="assets/images/bovclub logo.jpg" class="brand-logo logo-6">
+                        <img src="assets/images/mcast logo.jpg" class="brand-logo logo-7">
+                        <img src="assets/images/nmbl logo.png" class="brand-logo logo-2">
+                        <img src="assets/images/bellaciao_logo.png" class="brand-logo logo-3">
+                        <img src="assets/images/social hub logo.png" class="brand-logo logo-8">
+                        <img src="assets/images/Caritas_Malta_Logo.png" class="brand-logo logo-4">
+                        <img src="assets/images/dashuri-logo.png" class="brand-logo logo-5">
+                        <img src="assets/images/WGN stacked logo_WGN dark.png" class="brand-logo logo-9">
+                    </div>
+
+                </div>
+
             </div>
+        </section>
+
+        <section class="kinetic-section">
+
+            <div class="kinetic-row row-1">
+                <div class="kinetic-shape"></div>
+                <span class="kinetic-word">QUESTION</span>
+            </div>
+
+            <div class="kinetic-row row-2">
+                <div class="kinetic-shape"></div>
+                <span class="kinetic-word">EXPLORE</span>
+            </div>
+
+            <div class="kinetic-row row-3">
+                <div class="kinetic-shape"></div>
+                <span class="kinetic-word">CONCEPT</span>
+            </div>
+
+            <div class="kinetic-row row-4">
+                <div class="kinetic-shape"></div>
+                <span class="kinetic-word">CREATE</span>
+            </div>
+
+            <div class="kinetic-row row-5">
+                <div class="kinetic-shape"></div>
+                <span class="kinetic-word">EVOLVE</span>
+            </div>
+
         </section>
 
         <!-- 'BACK TO TOP' Button -->
@@ -163,6 +215,192 @@
             });
 
         });
+    </script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const rows = document.querySelectorAll(".kinetic-row");
+
+
+            function clamp(value, min, max) {
+                return Math.min(Math.max(value, min), max);
+            }
+
+
+            /*
+             * Smooth easing.
+             */
+            function smooth(t) {
+                return t * t * (3 - 2 * t);
+            }
+
+
+            function animateKinetic() {
+
+                const viewportHeight = window.innerHeight;
+
+
+                rows.forEach((row, index) => {
+
+                    const shape =
+                        row.querySelector(".kinetic-shape");
+
+                    const word =
+                        row.querySelector(".kinetic-word");
+
+
+                    const rect =
+                        row.getBoundingClientRect();
+
+
+                    /*
+                     * Animation starts when the row
+                     * begins entering the lower part
+                     * of the screen.
+                     *
+                     * It finishes when the row reaches
+                     * roughly the middle of the screen.
+                     */
+
+                    const startPoint =
+                        viewportHeight * 0.95;
+
+                    const endPoint =
+                        viewportHeight * 0.38;
+
+
+                    let progress =
+                        (startPoint - rect.top) /
+                        (startPoint - endPoint);
+
+
+                    progress =
+                        clamp(progress, 0, 1);
+
+
+                    progress =
+                        smooth(progress);
+
+
+                    /* =========================================
+                       ALTERNATING HORIZONTAL MOVEMENT
+                    ========================================= */
+
+
+                    let x;
+
+
+                    if (index % 2 === 0) {
+
+                        /*
+                         * LEFT → RIGHT
+                         */
+
+                        x =
+                            -85 +
+                            (progress * 85);
+
+                    } else {
+
+                        /*
+                         * RIGHT → LEFT
+                         */
+
+                        x =
+                            85 -
+                            (progress * 85);
+
+                    }
+
+
+                    /* =========================================
+                       VERTICAL MOVEMENT
+                    ========================================= */
+
+                    const y =
+                        5 -
+                        (progress * 5);
+
+
+                    /* =========================================
+                       SCALE
+                    ========================================= */
+
+                    const scale =
+                        0.90 +
+                        (progress * 0.10);
+
+
+                    shape.style.transform = `
+                translate(
+                    calc(-50% + ${x}vw),
+                    ${y}px
+                )
+                scale(${scale})
+            `;
+
+
+                    /* =========================================
+                       TEXT
+                    ========================================= */
+
+                    const textProgress =
+                        clamp(
+                            (progress - 0.35) / 0.30,
+                            0,
+                            1
+                        );
+
+
+                    word.style.opacity =
+                        textProgress;
+
+
+                    const direction =
+                        index % 2 === 0 ? 10 : -10;
+
+
+                    const textX =
+                        direction -
+                        (direction * textProgress);
+
+
+                    const textY =
+                        12 -
+                        (12 * textProgress);
+
+
+                    word.style.transform = `
+                translate(
+                    ${textX}px,
+                    ${textY}px
+                )
+            `;
+
+                });
+
+            }
+
+
+            window.addEventListener(
+                "scroll",
+                animateKinetic,
+                { passive: true }
+            );
+
+
+            window.addEventListener(
+                "resize",
+                animateKinetic
+            );
+
+
+            animateKinetic();
+
+        });
+
     </script>
 
 </body>

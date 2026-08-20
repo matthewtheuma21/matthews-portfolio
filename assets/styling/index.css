@@ -168,7 +168,7 @@ ul {
     filter: blur(12px);
     transform: translateY(15px);
 
-    animation: buttonFadeIn 17s ease forwards;
+    animation: buttonFadeIn 13s ease forwards;
 
     transition:
       background 0.3s ease,
@@ -300,22 +300,58 @@ ul {
 }
 
 .brands-logos {
+  position: relative;
+
+  width: calc(100% - 80px);
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  padding: 35px 0 60px;
+
+  /* Prevent horizontal scrollbar */
+  isolation: isolate;
+}
+
+
+/* Moving track */
+.brands-track {
   display: flex;
-  justify-content: center;
+  width: max-content;
+
+  animation: logoMarquee 28s linear infinite;
+
+  will-change: transform;
+}
+
+
+/* Each complete set of logos */
+.brands-group {
+  display: flex;
   align-items: center;
-  gap: 50px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  flex-wrap: wrap;
+
+  gap: 70px;
+
+  padding-right: 70px;
+
+  flex-shrink: 0;
 }
 
+
+/* Logos */
 .brand-logo {
+  flex: 0 0 auto;
+
   height: 50px;
-  /* default size */
   width: auto;
+
   object-fit: contain;
+
+  display: block;
 }
 
+
+/* Individual logo sizing */
 .logo-2 {
   height: 30px;
 }
@@ -335,6 +371,54 @@ ul {
 .logo-5 {
   height: 90px;
 }
+
+
+/* =========================
+   SIDE FADE / BLUR
+========================= */
+
+.brands-logos::after {
+  content: "";
+
+  position: absolute;
+  z-index: 5;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(to right,
+
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.95) 3%,
+      rgba(255, 255, 255, 0.65) 7%,
+      rgba(255, 255, 255, 0) 13%,
+
+      rgba(255, 255, 255, 0) 87%,
+      rgba(255, 255, 255, 0.65) 93%,
+      rgba(255, 255, 255, 0.95) 97%,
+      #ffffff 100%);
+}
+
+
+/* Continuous movement */
+@keyframes logoMarquee {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
 
@@ -388,4 +472,377 @@ ul {
   .navbar-collapse img {
     display: none;
   }
+
+  .brands-logos {
+    width: calc(100% - 40px);
+    padding: 25px 0 45px;
+  }
+
+  .brands-track {
+    animation-duration: 22s;
+  }
+
+  .brands-group {
+    gap: 45px;
+    padding-right: 45px;
+  }
+
+  .brand-logo {
+    height: 38px;
+  }
+
+  .logo-2 {
+    height: 24px;
+  }
+
+  .logo-3 {
+    height: 70px;
+  }
+
+  .logo-6 {
+    height: 70px;
+  }
+
+  .logo-8 {
+    height: 65px;
+  }
+
+  .logo-5 {
+    height: 65px;
+  }
+
+  .brands-logos::after {
+    background:
+      linear-gradient(to right,
+
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.95) 5%,
+        rgba(255, 255, 255, 0.55) 11%,
+        rgba(255, 255, 255, 0) 20%,
+
+        rgba(255, 255, 255, 0) 80%,
+        rgba(255, 255, 255, 0.55) 89%,
+        rgba(255, 255, 255, 0.95) 95%,
+        #ffffff 100%);
+  }
+}
+
+/* =========================================================
+   KINETIC EDITORIAL SECTION
+========================================================= */
+
+.kinetic-section {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background: #ffffff;
+  overflow: hidden;
+  padding: 100px 0 120px;
+}
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.kinetic-row {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   RED SHAPE
+========================================================= */
+
+.kinetic-shape {
+  position: absolute;
+  background: #ff0808;
+
+  /*
+       This is intentionally much larger
+       than the visible row.
+    */
+
+  width: 1150px;
+  height: 1150px;
+  border-radius: 50%;
+  top: 110px;
+
+  /*
+       Soft editorial edge
+    */
+
+  box-shadow:
+    0 0 45px rgba(255, 0, 0, 0.22);
+  filter: blur(0.5px);
+  will-change: transform;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   WORD
+========================================================= */
+
+.kinetic-word {
+  position: absolute;
+  z-index: 5;
+  color: #050505;
+  font-family: 'Arimo', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  opacity: 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SHAPE POSITIONS
+========================================================= */
+
+
+/* ---------- ROW 1 ---------- */
+
+.row-1 {
+    height: 250px;
+}
+
+.row-1 .kinetic-shape {
+
+    width: 1250px;
+    height: 1250px;
+
+    /*
+       Move the giant circle upward.
+    */
+
+    top: 70px;
+
+    left: 50%;
+}
+
+.row-1 .kinetic-word {
+    top: 42px;
+    left: 39%;
+}
+
+
+/* ---------- ROW 2 ---------- */
+
+.row-2 {
+    height: 220px;
+}
+
+.row-2 .kinetic-shape {
+
+    width: 1050px;
+    height: 1050px;
+
+    top: 20px;
+
+    left: 50%;
+}
+
+.row-2 .kinetic-word {
+    top: 70px;
+    left: 51%;
+}
+
+
+/* ---------- ROW 3 ---------- */
+
+.row-3 {
+    height: 250px;
+}
+
+.row-3 .kinetic-shape {
+
+    width: 1400px;
+    height: 900px;
+
+    top: 15px;
+
+    left: 50%;
+
+    border-radius: 50%;
+}
+
+.row-3 .kinetic-word {
+    top: 38px;
+    left: 49%;
+}
+
+
+/* ---------- ROW 4 ---------- */
+
+.row-4 {
+    height: 230px;
+}
+
+.row-4 .kinetic-shape {
+
+    width: 1100px;
+    height: 1100px;
+
+    top: 15px;
+    left: 50%;
+}
+
+.row-4 .kinetic-word {
+    top: 80px;
+    left: 56%;
+}
+
+
+/* ---------- ROW 5 ---------- */
+
+.row-5 {
+    height: 260px;
+}
+
+.row-5 .kinetic-shape {
+
+    width: 1500px;
+    height: 950px;
+
+    top: -10px;
+
+    left: 80%;
+
+    border-radius: 50%;
+}
+
+.row-5 .kinetic-word {
+    top: 110px;
+    left: 50%;
+}
+
+
+/* =========================================================
+   SUBTLE RED GLOW
+========================================================= */
+
+.kinetic-shape::after {
+  content: "";
+  position: absolute;
+  inset: -35px;
+  border-radius: inherit;
+  background: rgba(255, 0, 0, 0.18);
+  filter: blur(35px);
+  z-index: -1;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .kinetic-section {
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+
+  .kinetic-row {
+    height: 170px;
+  }
+
+  .row-1 {
+    height: 185px;
+  }
+
+  .row-3 {
+    height: 180px;
+  }
+
+  .row-5 {
+    height: 190px;
+  }
+
+
+  .kinetic-shape {
+    width: 750px;
+    height: 750px;
+
+    top: 80px;
+  }
+
+
+  .row-1 .kinetic-shape {
+    width: 800px;
+    height: 800px;
+
+    top: 70px;
+  }
+
+
+  .row-2 .kinetic-shape {
+    width: 650px;
+    height: 650px;
+
+    top: 50px;
+  }
+
+
+  .row-3 .kinetic-shape {
+    width: 850px;
+    height: 560px;
+
+    top: 60px;
+  }
+
+
+  .row-4 .kinetic-shape {
+    width: 700px;
+    height: 700px;
+
+    top: 55px;
+  }
+
+
+  .row-5 .kinetic-shape {
+    width: 900px;
+    height: 600px;
+
+    top: 30px;
+  }
+
+
+  .kinetic-word {
+    font-size: 18px;
+  }
+
+
+  .row-1 .kinetic-word {
+    top: 32px;
+    left: 30%;
+  }
+
+  .row-2 .kinetic-word {
+    top: 70px;
+    left: 50%;
+  }
+
+  .row-3 .kinetic-word {
+    top: 92px;
+    left: 38%;
+  }
+
+  .row-4 .kinetic-word {
+    top: 80px;
+    left: 55%;
+  }
+
+  .row-5 .kinetic-word {
+    top: 95px;
+    left: 38%;
+  }
+
 }

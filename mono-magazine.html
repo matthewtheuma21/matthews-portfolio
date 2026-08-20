@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editorial Designing</title>
+    <link rel="icon" type="image/png" href="assets/images/FAVICON.jpg">
 
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
@@ -254,46 +255,49 @@
                 song
                 they’ve never heard before or one they’ve long enjoyed but never knew the title of).
             </p>
+        </div>
 
-            <div class="gallery">
-                <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300"
-                    height="130">
-                <div class="gallery-grid">
+        <div class="gallery">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                    <img src="assets/images/Mono Magazine_page2.jpg" class="tall">
+            <div class="creative-carousel">
 
-                    <div class="gallery-item">
-                        <img src="assets/images/mono-preview.jpg" class="square">
-                        <p>On Photoshop:<br><br> Layering Effects<br>Clipping Mask on Image<br>Erasing Details for Depth
-                        </p>
-                    </div>
+                <button class="carousel-btn prev">&#10094;</button>
 
-                    <img src="assets/images/mono5.jpg" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/mono1.png" class="square">
-                        <p> On Illustrator + InDesign: <br><br>Use of geometric forms and shapes, blending lines to
-                            create the elements of the book.
-                            Colour coordinated with each mood of music.
-                        </p>
-                    </div>
+                <div class="carousel-window">
 
-                    <img src="assets/images/Mono Magazine_page19.jpg" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/mono-photo.jpg" class="square">
-                        <p>Photographs were taken with a professional camera, locally and even abroad (in Sicily). The
-                            photos that exclude me, were all taken by myself, requiring the models to wear specific
-                            clothing, meet at specific locations as if it was an actual photoshoot rather than just a
-                            school assignment.
-                    </div>
+                    <div class="carousel-track">
 
-                    <img src="assets/images/mono-sketches.png" class="tall">
-                    <div class="gallery-item">
-                        <img src="assets/images/mono-photo2.jpg.png" class="square">
+                        <div class="carousel-slide">
+                            <img src="assets/images/mono-sketches.png">
+                            <p><b> Layout Sketch:</b>
+                                Early concepts exploring layout, use of colour in each section, and photo style.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/mono0.jpg">
+                            <p><b>Magazine Cover:</b>
+                                Final cover design showcasing the magazine’s visual identity through typography, colour,
+                                and imagery.</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/Mono Magazine_page7.jpg">
+                            <p><b>Photo Editing:</b>
+                                Using Photoshop colour masking to create contrast and highlight specific elements of the
+                                image.</p>
+                        </div>
+
                     </div>
 
                 </div>
+
+                <button class="carousel-btn next">&#10095;</button>
+
             </div>
+
         </div>
+
     </div>
 
     <div class="footer-image">
@@ -321,6 +325,48 @@
         star.addEventListener("click", spinStar);
     </script>
 
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
+    </script>
 </body>
 
 </html>

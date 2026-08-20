@@ -224,16 +224,16 @@ ul {
     font-size: 18px;
     font-weight: 100px;
     text-align: justify;
-    padding-left: 315px;
-    padding-right: 255px;
+    padding-left: 450px;
+    padding-right: 390px;
     padding-bottom: 40px;
     color: black;
 }
 
 @media (max-width: 768px) {
     .text {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 67px;
+        padding-right: 75px;
         font-size: 13px;
         text-align: justify;
         /* optional, improves readability on mobile */

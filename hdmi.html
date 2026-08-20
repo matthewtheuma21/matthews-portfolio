@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Design</title>
+    <link rel="icon" type="image/png" href="assets/images/FAVICON.jpg">
 
     <link rel="stylesheet" href="assets/styling/bootstrap.css">
     <link rel="stylesheet" href="assets/styling/master.css">
@@ -134,46 +135,117 @@
                 </section>
 
             </div>
-            <div class="gallery">
-                <img src="assets/images/creativeprocess_text.jpg" class="preview4" alt="Right" width="1300"
-                    height="130">
-                <div class="gallery-grid">
+        </div>
 
-                    <img src="assets/images/wireframes_hdmi.png" class="tall">
+        <div class="gallery">
+            <img src="assets/images/creativeprocess_text.jpg" class="preview4">
 
-                    <div class="gallery-item">
-                        <img src="assets/images/hdmi_previewmockup.png" class="square">
+            <div class="creative-carousel">
+
+                <button class="carousel-btn prev">&#10094;</button>
+
+                <div class="carousel-window">
+
+                    <div class="carousel-track">
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/wireframes_hdmi.png">
+                            <p><b> Crafting Wireframes:</b>
+                                Applying layout and grid to low-fidelity wireframes to giving character into the design
+                                within the high fidelity wireframes</p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/hdmi_previewmockup.png">
+                            <p><b>Mockup</b></p>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/website-map.png">
+                            <p><b>Wireframe Map:</b>
+                                Digital sketch of where main buttons of the website should navigate to.</p>
+                        </div>
+
                     </div>
 
                 </div>
+
+                <button class="carousel-btn next">&#10095;</button>
+
             </div>
+
         </div>
 
+    </div>
 
-        <div class="footer-image">
-            <img src="assets/images/FOOTER.jpg" alt="Footer">
-        </div>
 
-        <script>
-            const star = document.getElementById("spinStar");
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
 
-            function spinStar() {
-                star.classList.remove("spin");
+    <script>
+        const star = document.getElementById("spinStar");
 
-                // Restart animation
-                void star.offsetWidth;
+        function spinStar() {
+            star.classList.remove("spin");
 
-                star.classList.add("spin");
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
             }
 
-            // Play automatically when the page loads
-            window.addEventListener("load", () => {
-                setTimeout(spinStar, 500); // waits half a second after loading
-            });
+            updateCarousel();
 
-            // Play again whenever it's clicked
-            star.addEventListener("click", spinStar);
-        </script>
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
+    </script>
 
 </body>
 
