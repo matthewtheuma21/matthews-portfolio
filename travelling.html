@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Conceptual Project</title>
+    <link rel="icon" type="image/png" href="assets/images/FAVICON.jpg">
+
+    <link rel="stylesheet" href="assets/styling/bootstrap.css">
+    <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/articles/travelling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<body id="top">
+
+    <div class="scroll-bar"></div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="120" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
+
+                </div>
+            </div>
+        </nav>
+
+        <h1>#TRAVELLING<br>Personal Conceptual Project</h1>
+
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="assets/images/stamp-AMERICA01.png" alt="preview 8">
+                <img src="assets/images/stamp-AMERICA05.png" alt="preview 3">
+                <img src="assets/images/stamp-AMERICA02.png" alt="preview 6">
+                <img src="assets/images/stamp-AMERICA03.png" alt="preview 2">
+                <img src="assets/images/stamp-AMERICA04.png" alt="preview 4">
+                <!-- duplicate images for seamless loop -->
+                <img src="assets/images/stamp-AMERICA01.png" alt="preview 8">
+                <img src="assets/images/stamp-AMERICA05.png" alt="preview 3">
+                <img src="assets/images/stamp-AMERICA02.png" alt="preview 6">
+                <img src="assets/images/stamp-AMERICA03.png" alt="preview 2">
+                <img src="assets/images/stamp-AMERICA04.png" alt="preview 4">
+
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="assets/images/stamp-MADRID01.png" alt="preview 8">
+                <img src="assets/images/stanmp-MADRID02.png" alt="preview 3">
+                <img src="assets/images/stamp-MADRID03.png" alt="preview 6">
+                <img src="assets/images/stamp-MADRID04.png" alt="preview 2">
+                <img src="assets/images/stamp-MADRID05.png" alt="preview 4">
+                <img src="assets/images/stamp-MADRID 06.png" alt="preview 1">
+                <!-- duplicate images for seamless loop -->
+                <img src="assets/images/stamp-MADRID01.png" alt="preview 8">
+                <img src="assets/images/stanmp-MADRID02.png" alt="preview 3">
+                <img src="assets/images/stamp-MADRID03.png" alt="preview 6">
+                <img src="assets/images/stamp-MADRID04.png" alt="preview 2">
+                <img src="assets/images/stamp-MADRID05.png" alt="preview 4">
+                <img src="assets/images/stamp-MADRID 06.png" alt="preview 1">
+
+            </div>
+        </div>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="assets/images/stamp_STOCKHOLM01.png" alt="preview 8">
+                <img src="assets/images/stamp_STOCKHOLM02.png" alt="preview 3">
+                <img src="assets/images/stamp-STOCKHOLM03.png" alt="preview 6">
+                <img src="assets/images/stamp-STOCKHOLM04.png" alt="preview 2">
+                <img src="assets/images/stamps_STOCKHOLM05.png" alt="preview 4">
+                <!-- duplicate images for seamless loop -->
+                <img src="assets/images/stamp_STOCKHOLM01.png" alt="preview 8">
+                <img src="assets/images/stamp_STOCKHOLM02.png" alt="preview 3">
+                <img src="assets/images/stamp-STOCKHOLM03.png" alt="preview 6">
+                <img src="assets/images/stamp-STOCKHOLM04.png" alt="preview 2">
+                <img src="assets/images/stamps_STOCKHOLM05.png" alt="preview 4">
+
+            </div>
+        </div>
+
+        <section class="text-section">
+            <p><b> This project is a personal exploration of turning some of my favourite travel memories into a
+                    collection of stamp-inspired designs.</b> I used my own photographs from places I loved being in —
+                including <b>Miami, Roatán, Quintana Roo, Madrid and Stockholm, </b> and transformed them through a mix
+                of
+                photo editing, layering, colour adjustments, textures, noise and graphic elements. I wanted each
+                stamp to feel like a small piece of a place and a memory, while pushing the original photographs
+                into something more stylised and unexpected.
+                <Br><br>
+                A big part of the project was creating a consistent visual language across all the different
+                locations. Although each city has its own colours, atmosphere and imagery, the repeated stamp
+                format, typography, textures and bold colour treatments help bring the whole collection together. I
+                really enjoyed playing with the balance between photography and graphic design, making the images
+                feel slightly vintage, printed and imperfect while still keeping them bright and eye-catching. The
+                final collection feels playful and distinctive, while still working as one cohesive series.
+            </p>
+        </section>
+    </div>
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
+
+</body>
+
+</html>

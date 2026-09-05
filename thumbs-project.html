@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Advertising</title>
+    <link rel="icon" type="image/png" href="assets/images/FAVICON.jpg">
+
+    <link rel="stylesheet" href="assets/styling/bootstrap.css">
+    <link rel="stylesheet" href="assets/styling/master.css">
+    <link rel="stylesheet" href="assets/styling/articles/thumb-project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<!-- TOP RED SCROLL LINE -->
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+
+        document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<body id="top">
+
+    <div class="scroll-bar"></div>
+
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+
+                <!-- LEFT: Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/LOGO.png" alt="Logo" width="120" height="40">
+                </a>
+
+                <!-- TOGGLE (for mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- CENTER: Nav links -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutpage.html">about</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">work</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+
+                    </ul>
+
+                    <img id="spinStar" src="assets/images/star-design.png" alt="Right" width="40" height="40"
+                        class="star-icon">
+
+                </div>
+            </div>
+        </nav>
+
+        <p class="subtitle">
+            <span class="top-line"><img src="assets/images/YOUR THUMBS-title.png" width="420" height="200"></span><br>
+            <span class="bottom-line">MOVING IMAGE POSTERS</span>
+        </p>
+
+        <section class="video-section">
+
+            <div class="video-wrapper">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/images/POST 1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-wrapper">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/images/POST 2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-wrapper">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/images/POST 3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Your Thumb Needs a Break is <b>a conceptual poster campaign exploring our increasingly automatic
+                        relationship with screens.</b> From endlessly scrolling through TikTok while a drink sits
+                    untouched, to
+                    recording an entire concert instead of experiencing it, and repeatedly moving a thumb across a
+                    gaming controller, the campaign focuses on the small, almost unconscious actions that keep us
+                    connected to our devices. Rather than presenting technology as something inherently negative, the
+                    project takes a more humorous approach to the everyday habits we've come to accept as normal.
+                    <br><br>
+                    <b>The visual language combines photographic imagery with contrasting typographic styles, pairing an
+                        elegant serif typeface with pixel-inspired typography and digital interface references.</b> The
+                    pixel
+                    elements act almost like a system monitoring our behaviour, turning ordinary moments into humorous
+                    “activity reports” and highlighting the absurdity of our digital routines. Each poster captures a
+                    different situation, but together they deliver the same simple message: sometimes the best thing
+                    your thumb can do is nothing.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <img src="assets/images/creativeprocess_text.jpg" class="preview4">
+
+        <div class="creative-carousel">
+
+            <button class="carousel-btn prev">&#10094;</button>
+
+            <div class="carousel-window">
+
+                <div class="carousel-track">
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/THUMBS_asset-01.jpg">
+                        <p>A moodboard of the visual concept and aesthetic approach I had in mind.</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/THUMBS_asset-06.jpg">
+                        <p><b>Adapting logo branding to the campaign</b>, rather than sticking to the usual bottom-right
+                                corner placement (for branding purposes on social media).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/THUMBS_asset-02.jpg">
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="assets/images/THUMBS_asset-03.jpg">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="carousel-btn next">&#10095;</button>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
+
+    <script>
+        const star = document.getElementById("spinStar");
+
+        function spinStar() {
+            star.classList.remove("spin");
+
+            // Restart animation
+            void star.offsetWidth;
+
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            updateCarousel();
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
+    </script>
+</body>
+
+</html>
