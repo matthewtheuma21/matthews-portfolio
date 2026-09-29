@@ -28,6 +28,31 @@
   });
 </script>
 
+<!-- NAV BAR -->
+<script>
+  let navScrollTimeout;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    document.querySelector('.scroll-bar').style.width = scrollPercent + '%';
+
+    const navbar = document.querySelector('.navbar');
+
+    // Show the glass navigation while scrolling.
+    navbar.classList.add('is-scrolling');
+
+    // Reset the fade-out timer every time the user scrolls.
+    clearTimeout(navScrollTimeout);
+
+    navScrollTimeout = setTimeout(() => {
+      navbar.classList.remove('is-scrolling');
+    }, 500);
+  });
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <body id="top">
@@ -40,7 +65,7 @@
 
         <!-- LEFT: Logo -->
         <a class="navbar-brand" href="#">
-          <img src="assets/images/LOGO.png" alt="Logo" width="120" height="40">
+          <img src="assets/images/LOGO_transparent.png" alt="Logo" width="120" height="50">
         </a>
 
         <!-- TOGGLE (for mobile) -->
@@ -62,6 +87,10 @@
 
             <li class="nav-item">
               <a class="nav-link" href="projects.html"><b>work</b></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">gallery</a>
             </li>
 
             <li class="nav-item">
@@ -196,56 +225,56 @@
           </a>
         </div>
 
-      <!-- PROJECT 12 -->
-      <div class="col-lg-3 col-md-6">
-        <a href="mono-magazine.html" class="project-card">
-          <img src="assets/images/mono-thumbnail.jpg" class="project-img" alt="">
-          <div class="overlay">
-            <span class="project-title">Editorial Design: <br>'MONO' Magazine</span>
-          </div>
-        </a>
+        <!-- PROJECT 12 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="mono-magazine.html" class="project-card">
+            <img src="assets/images/mono-thumbnail.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Editorial Design: <br>'MONO' Magazine</span>
+            </div>
+          </a>
+        </div>
       </div>
+
+      <div class="row g-4 project-row">
+        <!-- PROJECT 13 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="coe.html" class="project-card">
+            <img src="assets/images/coe-logo.png" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Branding: Council of Europe, 'Presidency of Malta 2025'</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- PROJECT 14 -->
+        <div class="col-lg-3 col-md-6">
+          <a href="hdmi.html" class="project-card">
+            <img src="assets/images/hdmi_thumbnail.jpg" class="project-img" alt="">
+            <div class="overlay">
+              <span class="project-title">Website Design: <br>'The Hidden Gems of Malta' </span>
+            </div>
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <div class="row g-4 project-row">
-      <!-- PROJECT 13 -->
-      <div class="col-lg-3 col-md-6">
-        <a href="coe.html" class="project-card">
-          <img src="assets/images/coe-logo.png" class="project-img" alt="">
-          <div class="overlay">
-            <span class="project-title">Branding: Council of Europe, 'Presidency of Malta 2025'</span>
-          </div>
-        </a>
-      </div>
+    <a href="#top" class="back-to-top">↑ back to top</a>
 
-      <!-- PROJECT 14 -->
-      <div class="col-lg-3 col-md-6">
-        <a href="hdmi.html" class="project-card">
-          <img src="assets/images/hdmi_thumbnail.jpg" class="project-img" alt="">
-          <div class="overlay">
-            <span class="project-title">Website Design: <br>'The Hidden Gems of Malta' </span>
-          </div>
-        </a>
-      </div>
-    </div>
+    <!-- 'BACK TO TOP' Button -->
 
-  </div>
+    <script>
+      const button = document.querySelector('.back-to-top');
 
-  <a href="#top" class="back-to-top">↑ back to top</a>
-
-  <!-- 'BACK TO TOP' Button -->
-
-  <script>
-    const button = document.querySelector('.back-to-top');
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        button.classList.add('show');
-      } else {
-        button.classList.remove('show');
-      }
-    });
-  </script>
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          button.classList.add('show');
+        } else {
+          button.classList.remove('show');
+        }
+      });
+    </script>
 
   </div>
 
