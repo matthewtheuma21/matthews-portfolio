@@ -112,7 +112,13 @@
         <!-- PROJECT 1 -->
         <div class="col-lg-3 col-md-6">
           <a href="bakefirst.html" class="project-card">
-            <img src="assets/images/project-preview_thumbnail2.jpg" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/project-preview_thumbnail2.jpg" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/videos/#" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
               <span class="project-title">Branding and <br>Editorial Design: Baking Book <br> 'Bake First'</span>
             </div>
@@ -122,9 +128,15 @@
         <!-- PROJECT 2 -->
         <div class="col-lg-3 col-md-6">
           <a href="stepintosafety.html" class="project-card">
-            <img src="assets/images/Step Into Safety - thumbnail.jpg" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/Step Into Safety - thumbnail.jpg" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/videos/#" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
-              <span class="project-title">Branding: 'Step into Safety' BOV Event</span>
+              <span class="project-title">Branding: 'Step Into Safety' BOV Event</span>
             </div>
           </a>
         </div>
@@ -142,12 +154,19 @@
         <!-- PROJECT 4 -->
         <div class="col-lg-3 col-md-6">
           <a href="dezine.html" class="project-card">
-            <img src="assets/images/dezine_thumbnail.jpg" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/dezine_thumbnail.jpg" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/videos/#" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
-              <span class="project-title">Editorial Design: <br> 'DEZINE' <br>Mini Zine</span>
+              <span class="project-title">Editorial Design: <br>'DEZINE' <br>Mini Zine</span>
             </div>
           </a>
         </div>
+
       </div>
 
       <div class="row g-4 project-row">
@@ -175,7 +194,13 @@
         <!-- PROJECT 7 -->
         <div class="col-lg-3 col-md-6">
           <a href="TRAVELLING.html" class="project-card">
-            <img src="assets/images/travelling-cover.jpg" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/travelling-cover.jpg" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/images/TRAVELLING_projectsthumbnail.mp4" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
               <span class="project-title">Personal Conceptual Project: <br>#TRAVELLING</span>
             </div>
@@ -198,7 +223,13 @@
         <!-- PROJECT 9 -->
         <div class="col-lg-3 col-md-6">
           <a href="beautifulballoons.html" class="project-card">
-            <img src="assets/images/beautifulballoons-projectsthumbnail2.png" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/beautifulballoons-projectsthumbnail2.png" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/videos/#" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
               <span class="project-title">Editorial Design: <br>'Beautiful Balloons' <br> Comic Book</span>
             </div>
@@ -208,9 +239,15 @@
         <!-- PROJECT 10 -->
         <div class="col-lg-3 col-md-6">
           <a href="thumbs-project.html" class="project-card">
-            <img src="assets/images/thumbproject-cover.jpg" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/thumbproject-cover.jpg" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/videos/#" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
-              <span class="project-title">Conceptual Moving Poster: <br> The Thumb Project</span>
+              <span class="project-title">Conceptual Moving Poster: <br>The Thumb Project</span>
             </div>
           </a>
         </div>
@@ -218,7 +255,13 @@
         <!-- PROJECT 11 -->
         <div class="col-lg-3 col-md-6">
           <a href="snail-zine.html" class="project-card">
-            <img src="assets/images/snail-zine.png" class="project-img" alt="">
+            <div class="project-media">
+              <img src="assets/images/snail-zine.png" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/images/Snail_Thumbnail.mp4" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
               <span class="project-title">Editorial Design: <br>'The Snail' <br> Zine Artwork</span>
             </div>
@@ -240,7 +283,14 @@
         <!-- PROJECT 13 -->
         <div class="col-lg-3 col-md-6">
           <a href="coe.html" class="project-card">
-            <img src="assets/images/coe-logo.png" class="project-img" alt="">
+
+            <div class="project-media">
+              <img src="assets/images/coe-logo.png" class="project-img" alt="">
+              <video class="project-video" muted loop playsinline preload="metadata">
+                <source src="assets/videos/#" type="video/mp4">
+              </video>
+            </div>
+
             <div class="overlay">
               <span class="project-title">Branding: Council of Europe, 'Presidency of Malta 2025'</span>
             </div>
@@ -282,8 +332,107 @@
     <img src="assets/images/FOOTER.jpg" alt="Footer">
   </div>
 
-  <script src="assets/scripts/projects.js"></script>
+  <script>
+    const projectCards = document.querySelectorAll('.project-card');
 
+    /* =========================
+       DESKTOP: HOVER VIDEOS
+    ========================= */
+
+    projectCards.forEach(card => {
+
+      const video = card.querySelector('.project-video');
+
+      if (!video) return;
+
+      card.addEventListener('mouseenter', () => {
+
+        // Only use hover behaviour on devices with a mouse
+        if (window.matchMedia('(hover: hover)').matches) {
+          video.currentTime = 0;
+          video.play();
+        }
+
+      });
+
+      card.addEventListener('mouseleave', () => {
+
+        if (window.matchMedia('(hover: hover)').matches) {
+          video.pause();
+          video.currentTime = 0;
+        }
+
+      });
+
+    });
+
+
+    /* =========================
+       PHONE: PLAY WHILE SCROLLING
+    ========================= */
+
+    const mobileObserver = new IntersectionObserver((entries) => {
+
+      entries.forEach(entry => {
+
+        const card = entry.target;
+        const video = card.querySelector('.project-video');
+
+        if (!video) return;
+
+
+        if (entry.isIntersecting) {
+
+          // Stop every other project video
+          document.querySelectorAll('.project-video').forEach(otherVideo => {
+
+            if (otherVideo !== video) {
+              otherVideo.pause();
+              otherVideo.currentTime = 0;
+            }
+
+          });
+
+          // Start this project's video
+          card.classList.add('mobile-playing');
+
+          video.currentTime = 0;
+          video.play();
+
+        } else {
+
+          // Stop video when it leaves the screen
+          card.classList.remove('mobile-playing');
+
+          video.pause();
+          video.currentTime = 0;
+
+        }
+
+      });
+
+    }, {
+
+      // Video starts when roughly 50% of the project
+      // is visible on screen
+      threshold: 0.5
+
+    });
+
+
+    /* Only activate this behaviour on phones/tablets */
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+
+      projectCards.forEach(card => {
+        mobileObserver.observe(card);
+      });
+
+    }
+  </script>
+
+
+  <script src="assets/scripts/projects.js"></script>
 
   <script>
     const star = document.getElementById("spinStar");
