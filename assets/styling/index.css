@@ -478,8 +478,7 @@ ul {
   .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: space-between;
     flex-wrap: nowrap;
   }
 
@@ -496,11 +495,9 @@ ul {
 
   .navbar-collapse {
     display: flex !important;
-    flex: 1 1 auto;
     flex-basis: auto;
-    min-width: 0;
+    flex-grow: 0;
     align-items: center;
-    justify-content: flex-end;
   }
 
   .navbar-nav {
@@ -508,26 +505,21 @@ ul {
     flex-direction: row !important;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: flex-end;
 
     margin: 0 !important;
     padding: 0 !important;
-
-    min-width: 0;
   }
 
   .nav-link {
-    margin-right: 12px;
+    margin-right: 18px;
     margin-top: 0;
-    font-size: 30px;
+    margin-bottom: 0;
+    font-size: 16px;
     padding: 0;
     white-space: nowrap;
   }
 
-  .navbar-content>img {
-    display: none;
-  }
-
+  .navbar-collapse > img,
   .navbar-collapse img {
     display: none;
   }

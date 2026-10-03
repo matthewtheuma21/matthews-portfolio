@@ -132,7 +132,6 @@
             <video class="mobile-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
 
                 <source src="assets/images/Website Animation_PHONE_v3.mp4" type="video/mp4">
-
             </video>
         </div>
 
@@ -215,7 +214,7 @@
 
     <!-- VIDEO PREVIEWS -->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", function () {
 
             const mobileVideo = document.querySelector(".mobile-video");
 
@@ -230,19 +229,23 @@
             mobileVideo.setAttribute("playsinline", "");
             mobileVideo.setAttribute("webkit-playsinline", "");
 
-            const startMobileVideo = () => {
-                mobileVideo.play().catch(() => {
-                    console.log("Mobile video autoplay was prevented.");
-                });
-            };
+            function startVideo() {
+                mobileVideo.muted = true;
 
-            // Try as soon as the video can play
-            mobileVideo.addEventListener("canplay", startMobileVideo, {
-                once: true
-            });
+                const playPromise = mobileVideo.play();
 
-            // Also try immediately
-            startMobileVideo();
+                if (playPromise !== undefined) {
+                    playPromise.catch(function (error) {
+                        console.log("Mobile video could not autoplay:", error);
+                    });
+                }
+            }
+
+            if (mobileVideo.readyState >= 2) {
+                startVideo();
+            } else {
+                mobileVideo.addEventListener("loadeddata", startVideo, { once: true });
+            }
 
         });
     </script>
