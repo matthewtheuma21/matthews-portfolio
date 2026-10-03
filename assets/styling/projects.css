@@ -285,11 +285,11 @@ ul {
 }
 
 /* Immediately replace image with video on hover */
-.project-card:hover .project-img {
+.project-card:has(.project-video):hover .project-img {
   display: none;
 }
 
-.project-card:hover .project-video {
+.project-card:has(.project-video):hover .project-video {
   display: block;
 }
 
@@ -339,7 +339,6 @@ ul {
   }
 
 }
-
 
 /* back to top link */
 

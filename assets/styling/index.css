@@ -478,12 +478,15 @@ ul {
   .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: nowrap;
   }
 
   .navbar-brand {
     margin: 0;
     padding: 0;
+    flex-shrink: 0;
   }
 
   .navbar-brand img {
@@ -491,31 +494,38 @@ ul {
     height: auto;
   }
 
-  .navbar-content {
-    display: flex;
+  .navbar-collapse {
+    display: flex !important;
+    flex: 1 1 auto;
+    flex-basis: auto;
+    min-width: 0;
     align-items: center;
+    justify-content: flex-end;
   }
 
   .navbar-nav {
+    display: flex;
     flex-direction: row !important;
-    margin: auto;
-    padding-left: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    min-width: 0;
   }
 
   .nav-link {
-    margin-right: 18px;
-    margin-top: 10px;
-    font-size: 16px;
+    margin-right: 12px;
+    margin-top: 0;
+    font-size: 30px;
     padding: 0;
+    white-space: nowrap;
   }
 
   .navbar-content>img {
     display: none;
-  }
-
-  .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
   }
 
   .navbar-collapse img {

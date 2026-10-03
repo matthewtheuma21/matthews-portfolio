@@ -129,7 +129,7 @@
             </video>
 
             <!-- Mobile -->
-            <video class="mobile-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="">
+            <video class="mobile-video" autoplay muted loop playsinline webkit-playsinline preload="auto">
 
                 <source src="assets/images/Website Animation_PHONE_v3.mp4" type="video/mp4">
 
@@ -217,26 +217,35 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
 
-            const videos = document.querySelectorAll("video");
+            const mobileVideo = document.querySelector(".mobile-video");
 
-            videos.forEach(video => {
-                video.muted = true;
-                video.setAttribute("muted", "");
-                video.setAttribute("playsinline", "");
-                video.setAttribute("webkit-playsinline", "");
+            if (!mobileVideo) return;
 
-                const playPromise = video.play();
+            mobileVideo.muted = true;
+            mobileVideo.defaultMuted = true;
 
-                if (playPromise !== undefined) {
-                    playPromise.catch(error => {
-                        console.log("Autoplay prevented:", error);
-                    });
-                }
+            mobileVideo.setAttribute("muted", "");
+            mobileVideo.setAttribute("autoplay", "");
+            mobileVideo.setAttribute("loop", "");
+            mobileVideo.setAttribute("playsinline", "");
+            mobileVideo.setAttribute("webkit-playsinline", "");
+
+            const startMobileVideo = () => {
+                mobileVideo.play().catch(() => {
+                    console.log("Mobile video autoplay was prevented.");
+                });
+            };
+
+            // Try as soon as the video can play
+            mobileVideo.addEventListener("canplay", startMobileVideo, {
+                once: true
             });
+
+            // Also try immediately
+            startMobileVideo();
 
         });
     </script>
-
 </body>
 
 </html>
