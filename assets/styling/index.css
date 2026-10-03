@@ -227,7 +227,7 @@ ul {
 .contact-cta {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding: 105px 20px 110px;
+  padding: 65px 20px 110px;
   background: #ffffff;
   text-align: center;
 }
@@ -418,7 +418,15 @@ ul {
 }
 
 .logo-10 {
-  height: 60px;
+  height: 75px;
+}
+
+.logo-7 {
+  height: 75px;
+}
+
+.logo-4 {
+  height: 70px;
 }
 
 
@@ -544,7 +552,7 @@ ul {
   ========================= */
 
   .brands-logos {
-    width: calc(100% - 40px);
+    width: calc(100% - 70px);
     padding: 25px 0 45px;
   }
 
