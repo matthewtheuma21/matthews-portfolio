@@ -475,54 +475,73 @@ ul {
     display: none;
   }
 
-  .container-fluid {
+  /* Keep logo + navigation on ONE line */
+  .navbar>.container-fluid {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
+  /* Logo */
   .navbar-brand {
     margin: 0;
     padding: 0;
-    flex-shrink: 0;
+    flex: 0 0 auto;
   }
 
   .navbar-brand img {
     width: 80px;
     height: auto;
+    display: block;
   }
 
+  /* Navigation container */
   .navbar-collapse {
     display: flex !important;
-    flex-basis: auto;
-    flex-grow: 0;
+    flex: 0 0 auto;
+    flex-basis: auto !important;
+    width: auto;
+    margin-left: auto;
     align-items: center;
   }
 
+  /* Navigation links */
   .navbar-nav {
     display: flex;
     flex-direction: row !important;
     flex-wrap: nowrap;
     align-items: center;
 
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-item {
+    flex: 0 0 auto;
   }
 
   .nav-link {
-    margin-right: 18px;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 0 0 18px;
+    padding: 0 !important;
+
     font-size: 16px;
-    padding: 0;
     white-space: nowrap;
   }
 
-  .navbar-collapse > img,
+  /* Hide star on mobile */
+  .navbar-collapse>img,
   .navbar-collapse img {
     display: none;
   }
+
+
+  /* =========================
+     BRANDS - MOBILE
+  ========================= */
 
   .brands-logos {
     width: calc(100% - 40px);
@@ -565,12 +584,10 @@ ul {
   .brands-logos::after {
     background:
       linear-gradient(to right,
-
         #ffffff 0%,
         rgba(255, 255, 255, 0.95) 5%,
         rgba(255, 255, 255, 0.55) 11%,
         rgba(255, 255, 255, 0) 20%,
-
         rgba(255, 255, 255, 0) 80%,
         rgba(255, 255, 255, 0.55) 89%,
         rgba(255, 255, 255, 0.95) 95%,
