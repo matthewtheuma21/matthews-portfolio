@@ -171,6 +171,10 @@ ul {
     .navbar-collapse img {
         display: none;
     }
+
+    .nav-link::after {
+        height: 1px;
+    }
 }
 
 /* content */
