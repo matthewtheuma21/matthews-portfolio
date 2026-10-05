@@ -159,55 +159,67 @@ ul {
         display: none;
     }
 
-    .container-fluid {
+    /* Keep logo + navigation on ONE line */
+    .navbar>.container-fluid {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
+    /* Logo */
     .navbar-brand {
         margin: 0;
         padding: 0;
+        flex: 0 0 auto;
     }
 
     .navbar-brand img {
         width: 80px;
         height: auto;
+        display: block;
     }
 
-    .navbar-content {
-        display: flex;
+    /* Navigation container */
+    .navbar-collapse {
+        display: flex !important;
+        flex: 0 0 auto;
+        flex-basis: auto !important;
+        width: auto;
+        margin-left: auto;
         align-items: center;
     }
 
+    /* Navigation links */
     .navbar-nav {
+        display: flex;
         flex-direction: row !important;
-        margin: auto;
-        padding-left: 10px;
-    }
+        flex-wrap: nowrap;
+        align-items: center;
 
-    .nav-link {
-        margin-right: 18px;
-        margin-top: 10px;
-        font-size: 18px;
+        margin: 0;
         padding: 0;
     }
 
-    .navbar-content>img {
-        display: none;
+    .nav-item {
+        flex: 0 0 auto;
     }
 
-    .navbar-collapse {
-        display: flex !important;
-        flex-basis: auto;
+    .nav-link {
+        margin: 9px 0 0 12px;
+        padding: 0 !important;
+
+        font-size: 12px;
+        white-space: nowrap;
     }
 
+    /* Hide star on mobile */
+    .navbar-collapse>img,
     .navbar-collapse img {
         display: none;
-    }
-
-    .nav-link::after {
-        height: 1px;
     }
 }
 
@@ -253,7 +265,6 @@ ul {
     color: rgb(0, 0, 0);
     font-size: 40px;
     font-weight: 700;
-    margin-top: 30px;
     font-size: 40px;
     font-weight: 700;
     color: black;
@@ -265,7 +276,7 @@ ul {
     text-align: justify;
     padding-left: 450px;
     padding-right: 390px;
-    padding-bottom: 40px;
+    padding-bottom: 200px;
     color: black;
 }
 
@@ -276,6 +287,174 @@ ul {
         font-size: 13px;
         text-align: justify;
         /* optional, improves readability on mobile */
+    }
+}
+
+/* --------------------------------
+   SCROLL CARD SECTION
+-------------------------------- */
+
+.about-cards-section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: -35vh;
+    height: 170vh;
+    padding: 0;
+}
+
+.about-cards-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+}
+
+
+/* --------------------------------
+   CARD
+-------------------------------- */
+
+.about-card {
+    position: absolute;
+
+    width: min(92vw, 1100px);
+    height: 430px;
+
+    border-radius: 28px;
+
+    padding: 45px 48px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform-origin: center center;
+
+    will-change: transform, opacity;
+}
+
+
+/* Card colours */
+
+.card-1 {
+    background: red;
+    color: white;
+
+    z-index: 1;
+}
+
+.card-2 {
+    background: #f94449;
+    color: white;
+
+    z-index: 2;
+
+    transform: translateY(30px);
+}
+
+.card-3 {
+    background: #ee6b6e;
+    color: white;
+
+    z-index: 3;
+
+    transform: translateY(60px);
+}
+
+
+/* --------------------------------
+   CARD TITLE
+-------------------------------- */
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+
+    font-size: clamp(40px, 5vw, 72px);
+    line-height: 0.95;
+
+    letter-spacing: -0.04em;
+}
+
+.card-title .muted {
+    font-weight: bold;
+    color: #ffffffcb;
+}
+
+
+/* --------------------------------
+   BOTTOM CONTENT
+-------------------------------- */
+
+.card-bottom {
+    width: 65%;
+}
+
+.card-tags {
+    display: flex;
+    gap: 28px;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+    opacity: 0.8;
+
+    flex-wrap: wrap;
+}
+
+.card-bottom p {
+    max-width: 620px;
+
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 768px) {
+
+    .about-cards-section {
+        height: 300vh;
+    }
+
+    .about-card {
+        width: calc(100vw - 32px);
+        height: 380px;
+
+        padding: 30px;
+        border-radius: 22px;
+    }
+
+    .card-title {
+        font-size: 40px;
+    }
+
+    .card-bottom {
+        width: 100%;
+    }
+
+    .card-tags {
+        gap: 12px;
+        margin-bottom: 18px;
+
+        font-size: 10px;
+    }
+
+    .card-bottom p {
+        font-size: 13px;
     }
 }
 

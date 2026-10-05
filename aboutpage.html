@@ -124,6 +124,86 @@
             distinctive and memorable. Whether restrained or expressive, I aim for every design choice to have a purpose
             and contribute to the overall experience.
             <br><br>
+        </P>
+
+        <section class="about-cards-section">
+
+            <div class="about-cards-sticky">
+
+                <div class="about-card card-1">
+                    <div class="card-title">
+                        <span>Brand</span>
+                        <span class="muted">Identities</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div class="card-tags">
+                            <span>Logo</span>
+                            <span>Typography</span>
+                            <span>Colour</span>
+                            <span>Visual Systems</span>
+                            <span>Brand Guidelines</span>
+                        </div>
+
+                        <p>
+                            ✳ Love creating distinctive visual identities that give brands a clear and
+                            consistent look, from the initial concept and logo through to the visual details that bring
+                            the brand together.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="about-card card-2">
+                    <div class="card-title">
+                        <span>Social Media</span>
+                        <span class="muted">Content</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div class="card-tags">
+                            <span>Content Planning</span>
+                            <span>Video Editing</span>
+                            <span>Campaigns</span>
+                            <span>Attention-grabbing visuals</span>
+                            <span>Stunts</span>
+                        </div>
+
+                        <p>
+                            ✳ Creating engaging content for social media, combining graphic design, motion and video to
+                            help brands communicate consistently and creatively across platforms.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="about-card card-3">
+                    <div class="card-title">
+                        <span>Photography</span>
+                        <span class="muted">+ Editing</span>
+                    </div>
+
+                    <div class="card-bottom">
+                        <div class="card-tags">
+                            <span>Product</span>
+                            <span>Content</span>
+                            <span>Brand Visuals</span>
+                            <span>Events</span>
+                        </div>
+
+                        <p>
+                            ✳ Capturing photography that supports and strengthens a brand’s visual identity, creating
+                            imagery that can be used across social media, campaigns, websites and other creative
+                            content.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <p>
             Throughout my work, I focus on creating designs that are both purposeful and engaging, with particular
             attention to composition, hierarchy, and narrative. My studies have also encouraged me to think critically
             about design as a form of communication (something that can inform, evoke, and create a connection, rather
@@ -181,6 +261,78 @@
 
         // Play again whenever it's clicked
         star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+        const section = document.querySelector(".about-cards-section");
+
+        const card1 = document.querySelector(".card-1");
+        const card2 = document.querySelector(".card-2");
+        const card3 = document.querySelector(".card-3");
+
+        function updateCards() {
+
+            const rect = section.getBoundingClientRect();
+
+            const sectionHeight = section.offsetHeight;
+            const viewportHeight = window.innerHeight;
+
+            /*
+                How far we've travelled through
+                the sticky section.
+            */
+
+            let progress =
+                -rect.top / (sectionHeight - viewportHeight);
+
+            progress = Math.max(0, Math.min(1, progress));
+
+
+            /* --------------------------------
+               CARD 1
+            -------------------------------- */
+
+            // Text/card starts fading in immediately
+            const card1Opacity = Math.min(progress / 0.12, 1);
+
+            card1.style.opacity = card1Opacity;
+
+
+            /* --------------------------------
+               CARD 2
+            -------------------------------- */
+
+            // Starts entering around 20%
+            const card2Progress =
+                Math.max(0, Math.min(1, (progress - 0.18) / 0.30));
+
+            const card2Y =
+                100 - (card2Progress * 100);
+
+            card2.style.transform =
+                `translateY(calc(${card2Y}vh + 30px))`;
+
+
+            /* --------------------------------
+               CARD 3
+            -------------------------------- */
+
+            // Starts entering around 48%
+            const card3Progress =
+                Math.max(0, Math.min(1, (progress - 0.48) / 0.30));
+
+            const card3Y =
+                100 - (card3Progress * 100);
+
+            card3.style.transform =
+                `translateY(calc(${card3Y}vh + 60px))`;
+        }
+
+
+        window.addEventListener("scroll", updateCards);
+        window.addEventListener("resize", updateCards);
+
+        updateCards();
     </script>
 
 </body>

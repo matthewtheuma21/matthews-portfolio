@@ -224,89 +224,564 @@ ul {
 
 }
 
+/* =========================
+   CONTACT CTA
+========================= */
+
 .contact-cta {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding: 65px 20px 110px;
+  padding: 110px 20px 30px;
   background: #ffffff;
-  text-align: center;
+  color: #000000;
 }
 
 .contact-cta-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: min(900px, 100%);
+  margin: 0 auto;
 }
+
+
+/* =========================
+   TITLE
+========================= */
 
 .contact-cta-title {
-  margin: 0 0 32px;
+  width: 82%;
+  margin: 0 auto 55px;
+
   color: #000000;
+
   font-family: 'Arimo', Helvetica, Arial, sans-serif;
-  font-size: clamp(24px, 3vw, 42px);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  max-width: 900px;
+  font-size: clamp(30px, 3vw, 45px);
+  font-weight: 400;
+  line-height: 0.91;
+  letter-spacing: -4px;
 }
 
-.contact-cta-title span {
-  color: #ff0808;
+/* Every line */
+.title-line {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
 }
+
+/* TOP LINE — LEFT */
+.title-left {
+  text-align: left;
+}
+
+/* MIDDLE LINES — JUSTIFIED */
+.title-justify {
+  text-align: justify;
+  text-align-last: justify;
+}
+
+/* BOTTOM LINE — RIGHT */
+.title-right {
+  text-align: right;
+}
+
+
+/* =========================
+   MAIN IMAGE
+========================= */
+
+.contact-cta-image {
+  position: relative;
+
+  width: 82%;
+  height: 300px;
+
+  margin: 0 auto;
+
+  overflow: visible;
+}
+
+.contact-cta-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 35px;
+}
+
+
+/* =========================
+   LOWER CONTENT
+========================= */
+
+.contact-cta-bottom {
+  position: relative;
+
+  width: 82%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+
+  min-height: 220px;
+}
+
+
+/* =========================
+   MUSIC PLAYER CARD
+========================= */
+
+.contact-cta-card {
+  position: relative;
+
+  width: 110px;
+  min-width: 110px;
+  height: 150px;
+
+  margin-left: 25px;
+  margin-top: -65px;
+
+  padding: 13px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+
+/* TOP LABEL */
+
+.music-player-top {
+  margin-bottom: 8px;
+}
+
+.music-label {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #777;
+}
+
+
+/* SONG INFORMATION */
+
+.music-info {
+  min-width: 0;
+  margin-bottom: 9px;
+}
+
+.music-title {
+  overflow: hidden;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.music-artist {
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  font-size: 8px;
+  line-height: 1.1;
+
+  color: #777;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* PROGRESS BAR */
+
+.music-progress {
+  width: 100%;
+  height: 2px;
+
+  margin-bottom: 9px;
+
+  background: rgba(0, 0, 0, 0.15);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.music-progress-bar {
+  width: 0%;
+  height: 100%;
+
+  background: #000;
+
+  transition: width 0.1s linear;
+}
+
+
+/* CONTROLS */
+
+.music-controls {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/* CONTROL BUTTONS */
+
+.music-controls button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #000;
+
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.music-controls button:hover {
+  transform: scale(1.15);
+  opacity: 0.6;
+}
+
+
+/* PLAY BUTTON */
+
+.music-controls .play-button {
+  width: 25px;
+  height: 25px;
+
+  background: #000;
+  border-radius: 50%;
+
+  color: #fff;
+
+  padding-left: 2px;
+  padding-top: 1px;
+
+  font-size: 11px;
+}
+
+/* Move pause symbol slightly left */
+.music-controls .play-button.is-playing {
+  padding-left: 1;
+  padding-right: 1px;
+}
+
+/* SONG NUMBER */
+
+.music-count {
+  margin-top: 7px;
+  font-size: 7px;
+  color: #888;
+  text-align: center;
+  position: absolute;
+  bottom: 8px;
+}
+
+
+/* =========================
+   RIGHT INFORMATION
+========================= */
+
+.contact-cta-info {
+  margin-left: 65px;
+  padding-top: 40px;
+
+  max-width: 390px;
+}
+
+
+/* BUTTON ROW */
+
+.contact-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+
+/* SMALL OUTLINED BUTTON */
+
+.contact-cta-small-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 30px;
+
+  border: 1.5px solid #000000;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+/* CONTACT BUTTON */
 
 .contact-cta-button {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
-  min-width: 190px;
-  padding: 16px 42px;
-  background: #ff0808;
-  border: 2px solid #ff0808;
-  border-radius: 12px;
+
+  min-width: 120px;
+  height: 30px;
+
+  padding: 0 20px;
+
+  background: red;
+  border-radius: 20px;
+
   color: #ffffff;
+
   font-family: 'Arimo', Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 700;
-  line-height: 1;
+
   text-decoration: none;
-  transform: scale(1);
+
   transition:
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.3s ease,
     background-color 0.3s ease,
     color 0.3s ease;
 }
 
 .contact-cta-button:hover {
-  transform: scale(1.07);
-  background: #ff0808;
+  transform: scale(1.06);
+
+  background: #000000;
   color: #ffffff;
 }
 
-.contact-cta-button:focus-visible {
-  outline: 3px solid rgba(255, 8, 8, 0.3);
-  outline-offset: 5px;
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.contact-cta-description {
+  margin: 0;
+
+  max-width: 380px;
+
+  color: #000000;
+
+  font-family: 'Arimo', Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.5px;
 }
 
 
-/* MOBILE — CONTACT CTA */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 768px) {
+
   .contact-cta {
-    padding: 75px 20px 80px;
+    padding: 70px 20px 0px;
   }
+
+  .contact-cta-inner {
+    width: 100%;
+  }
+
+  /* TITLE */
 
   .contact-cta-title {
-    margin-bottom: 26px;
-    font-size: 25px;
-    letter-spacing: -1px;
+    width: 82%;
+    margin: 0 auto 55px;
+
+    color: #000000;
+
+    font-family: 'Arimo', Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: 0px;
   }
 
-  .contact-cta-button {
-    min-width: 165px;
-    padding: 14px 32px;
-    font-size: 18px;
-    border-radius: 10px;
+  /* Every line */
+  .title-line {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
   }
+
+  /* TOP LINE — LEFT */
+  .title-left {
+    text-align: left;
+  }
+
+  /* MIDDLE LINES — JUSTIFIED */
+  .title-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+
+  /* BOTTOM LINE — RIGHT */
+  .title-right {
+    text-align: right;
+  }
+
+  /* IMAGE */
+
+  .contact-cta-image {
+    width: 92%;
+    height: 200px;
+  }
+
+  .contact-cta-image img {
+    border-radius: 25px;
+  }
+
+
+  /* LOWER CONTENT */
+
+  .contact-cta-bottom {
+    width: 92%;
+
+    min-height: 210px;
+  }
+
+
+  /* CARD */
+
+  @media (max-width: 768px) {
+
+    .contact-cta-card {
+      width: 85px;
+      min-width: 85px;
+      height: 105px;
+
+      margin-left: 10px;
+      margin-top: -45px;
+
+      padding: 10px;
+
+      border-radius: 10px;
+    }
+
+    .music-player-top {
+      margin-bottom: 6px;
+    }
+
+    .music-label {
+      font-size: 6px;
+    }
+
+    .music-info {
+      margin-bottom: 7px;
+    }
+
+    .music-title {
+      font-size: 8px;
+    }
+
+    .music-artist {
+      font-size: 7px;
+    }
+
+    .music-progress {
+      margin-bottom: 7px;
+    }
+
+    .music-controls button {
+      width: 17px;
+      height: 17px;
+
+      font-size: 14px;
+    }
+
+    .music-controls .play-button {
+      width: 21px;
+      height: 21px;
+
+      font-size: 8px;
+    }
+
+    .music-count {
+      margin-top: 5px;
+      font-size: 6px;
+    }
+
+  }
+
+
+  /* RIGHT CONTENT */
+
+  .contact-cta-info {
+    margin-left: 25px;
+    padding-top: 30px;
+
+    max-width: calc(100% - 110px);
+  }
+
+
+  .contact-cta-buttons {
+    margin-bottom: 15px;
+  }
+
+
+  .contact-cta-small-button {
+    width: 40px;
+    height: 26px;
+
+    font-size: 9px;
+  }
+
+
+  .contact-cta-button {
+    min-width: 105px;
+    height: 26px;
+
+    padding: 0 14px;
+
+    font-size: 9px;
+  }
+
+
+  .contact-cta-description {
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: -0.3px;
+  }
+
 }
 
 /* brand logos section */
@@ -533,10 +1008,10 @@ ul {
   }
 
   .nav-link {
-    margin: 9px 0 0 10px;
+    margin: 9px 0 0 12px;
     padding: 0 !important;
 
-    font-size: 11px;
+    font-size: 12px;
     white-space: nowrap;
   }
 
@@ -553,7 +1028,7 @@ ul {
 
   .brands-logos {
     width: calc(100% - 60px);
-    padding: 25px 0 45px;
+    padding: 25px 0 85px;
   }
 
   .brands-track {

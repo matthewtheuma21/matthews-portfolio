@@ -78,7 +78,7 @@
 
                 <!-- LEFT: Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="assets/images/LOGO_white_transparent.png" alt="Logo" width="120" height="50">
+                    <img src="assets/images/LOGO_red_transparent.png" alt="Logo" width="120" height="50">
                 </a>
 
                 <!-- TOGGLE (for mobile) -->
@@ -138,11 +138,93 @@
         <div class="video-line"></div>
 
         <section class="contact-cta">
+
             <div class="contact-cta-inner">
-                <h2 class="contact-cta-title">"Design should be <span>about its experience</span> rather than absolute
-                    perfection"</h2>
-                <a href="contact.html" class="contact-cta-button">CONTACT ME</a>
+
+                <h2 class="contact-cta-title">
+                    <span class="title-line title-left">DESIGN</span>
+                    <span class="title-line title-justify">SHOULD BE ABOUT ITS</span>
+                    <span class="title-line title-justify">EXPERIENCE RATHER THAN JUST</span>
+                    <span class="title-line title-right">PERFECTION</span>
+                </h2>
+
+                <!-- MAIN IMAGE -->
+                <div class="contact-cta-image">
+                    <img src="assets/images/home_image-of-me.jpg" alt="Creative work">
+                </div>
+
+                <!-- LOWER CONTENT -->
+                <div class="contact-cta-bottom">
+
+                    <!-- TRANSPARENT CARD -->
+                    <!-- MUSIC PLAYER -->
+                    <div class="contact-cta-card music-player">
+
+                        <div class="music-player-top">
+                            <span class="music-label">NOW PLAYING</span>
+                        </div>
+
+                        <div class="music-info">
+                            <div class="music-title" id="musicTitle">Song One</div>
+                            <div class="music-artist" id="musicArtist">Artist</div>
+                        </div>
+
+                        <div class="music-progress">
+                            <div class="music-progress-bar" id="musicProgress"></div>
+                        </div>
+
+                        <div class="music-controls">
+
+                            <button id="prevSong" aria-label="Previous song">
+                                ‹
+                            </button>
+
+                            <button id="playPause" class="play-button" aria-label="Play">
+                                ▶
+                            </button>
+
+                            <button id="nextSong" aria-label="Next song">
+                                ›
+                            </button>
+
+                        </div>
+
+                        <div class="music-count" id="musicCount">
+                            01 / 03
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="contact-cta-info">
+
+                        <div class="contact-cta-buttons">
+
+                            <span class="contact-cta-small-button">
+                                01
+                            </span>
+
+                            <a href="contact.html" class="contact-cta-button">
+                                CONTACT ME
+                            </a>
+
+                        </div>
+
+                        <p class="contact-cta-description">
+                            LET'S CREATE SOMETHING THAT<br>
+                            STANDS OUT. WHETHER IT'S A BRAND,<br>
+                            CAMPAIGN, DIGITAL EXPERIENCE OR<br>
+                            SOMETHING COMPLETELY DIFFERENT,<br>
+                            I'M ALWAYS OPEN TO NEW IDEAS AND<br>
+                            CREATIVE CHALLENGES.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </section>
 
         <section class="container brands-section mt-5">
@@ -248,6 +330,141 @@
             }
 
         });
+    </script>
+
+    <script>
+
+        const songs = [
+            {
+                title: "Moth To A Flame",
+                artist: "The Weeknd",
+                src: "assets/audio/moth to a flame - the weeknd 「edit audio」.mp3"
+            },
+            {
+                title: "Disease",
+                artist: "Lady Gaga",
+                src: "assets/audio/DISEASE- @LadyGaga [Edit Audio].mp3"
+            },
+            {
+                title: "Self Aware",
+                artist: "Temper City",
+                src: "assets/audio/self aware temper city [edit audio].mp3"
+            }
+        ];
+
+        let currentSong = 0;
+
+        const audio = new Audio();
+
+        const title = document.getElementById("musicTitle");
+        const artist = document.getElementById("musicArtist");
+        const playPause = document.getElementById("playPause");
+        const nextSong = document.getElementById("nextSong");
+        const prevSong = document.getElementById("prevSong");
+        const progress = document.getElementById("musicProgress");
+        const count = document.getElementById("musicCount");
+
+
+        function loadSong(index) {
+
+            currentSong = index;
+
+            audio.src = songs[currentSong].src;
+
+            title.textContent = songs[currentSong].title;
+            artist.textContent = songs[currentSong].artist;
+
+            count.textContent =
+                String(currentSong + 1).padStart(2, "0") + " / 03";
+
+            progress.style.width = "0%";
+        }
+
+        function playSong() {
+
+            audio.play();
+
+            playPause.textContent = "❚❚";
+            playPause.classList.add("is-playing");
+        }
+
+
+
+        function pauseSong() {
+
+            audio.pause();
+
+            playPause.textContent = "▶";
+            playPause.classList.remove("is-playing");
+        }
+
+        playPause.addEventListener("click", () => {
+
+            if (audio.paused) {
+                playSong();
+            } else {
+                pauseSong();
+            }
+
+        });
+
+
+        nextSong.addEventListener("click", () => {
+
+            currentSong++;
+
+            if (currentSong >= songs.length) {
+                currentSong = 0;
+            }
+
+            loadSong(currentSong);
+            playSong();
+
+        });
+
+
+        prevSong.addEventListener("click", () => {
+
+            currentSong--;
+
+            if (currentSong < 0) {
+                currentSong = songs.length - 1;
+            }
+
+            loadSong(currentSong);
+            playSong();
+
+        });
+
+
+        audio.addEventListener("timeupdate", () => {
+
+            if (!audio.duration) return;
+
+            const percentage =
+                (audio.currentTime / audio.duration) * 100;
+
+            progress.style.width = percentage + "%";
+
+        });
+
+
+        audio.addEventListener("ended", () => {
+
+            currentSong++;
+
+            if (currentSong >= songs.length) {
+                currentSong = 0;
+            }
+
+            loadSong(currentSong);
+            playSong();
+
+        });
+
+
+        loadSong(0);
+
     </script>
 </body>
 
