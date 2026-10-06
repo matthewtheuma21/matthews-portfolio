@@ -644,199 +644,6 @@ ul {
   letter-spacing: -0.5px;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .contact-cta {
-    padding: 70px 20px 0px;
-  }
-
-  .contact-cta-inner {
-    width: 100%;
-  }
-
-  /* TITLE */
-
-  .contact-cta-title {
-    width: 82%;
-    margin: 0 auto 35px;
-
-    color: #000000;
-
-    font-family: 'Arimo', Helvetica, Arial, sans-serif;
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 0.91;
-    letter-spacing: 0px;
-  }
-
-  /* Every line */
-  .title-line {
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-  }
-
-  /* TOP LINE — LEFT */
-  .title-left {
-    text-align: left;
-  }
-
-  /* MIDDLE LINES — JUSTIFIED */
-  .title-justify {
-    text-align: justify;
-    text-align-last: justify;
-  }
-
-  /* BOTTOM LINE — RIGHT */
-  .title-right {
-    text-align: right;
-  }
-
-  /* IMAGE */
-
-  .contact-cta-image {
-    width: 92%;
-    height: 200px;
-  }
-
-  .contact-cta-image img {
-    border-radius: 25px;
-  }
-
-
-  /* LOWER CONTENT */
-
-  .contact-cta-bottom {
-    width: 92%;
-
-    min-height: 210px;
-  }
-
-
-  /* CARD */
-
-  .contact-cta-card {
-    width: 85px;
-    min-width: 85px;
-    height: 105px;
-
-    margin-left: 10px;
-    margin-top: -45px;
-
-    padding: 10px;
-
-    border-radius: 10px;
-  }
-
-  .music-player-top {
-    margin-bottom: 6px;
-  }
-
-  .music-label {
-    font-size: 6px;
-  }
-
-  .music-info {
-    margin-bottom: 7px;
-  }
-
-  .music-title {
-    font-size: 8px;
-  }
-
-  .music-artist {
-    font-size: 7px;
-  }
-
-  .music-progress {
-    margin-bottom: 7px;
-  }
-
-  .music-controls button {
-    width: 17px;
-    height: 17px;
-
-    font-size: 14px;
-  }
-
-  .music-controls .play-button {
-    width: 21px;
-    height: 21px;
-  }
-
-  .music-controls .play-button::before {
-    border-top-width: 4px;
-    border-bottom-width: 4px;
-    border-left-width: 6px;
-    margin-left: 1px;
-  }
-
-  .music-controls .play-button.is-playing::before {
-    width: 6px;
-    height: 8px;
-
-    background:
-      linear-gradient(to right,
-        #fff 0,
-        #fff 2px,
-        transparent 2px,
-        transparent 4px,
-        #fff 4px,
-        #fff 6px);
-  }
-
-  .music-count {
-    margin-top: 5px;
-    font-size: 6px;
-  }
-
-  /* RIGHT CONTENT */
-
-  .contact-cta-info {
-    margin-left: 25px;
-    padding-top: 30px;
-
-    max-width: calc(100% - 110px);
-  }
-
-
-  .contact-cta-buttons {
-    margin-bottom: 15px;
-  }
-
-
-  .contact-cta-small-button {
-    width: 40px;
-    height: 26px;
-
-    font-size: 9px;
-  }
-
-
-  .contact-cta-button {
-    min-width: 105px;
-    height: 26px;
-
-    padding: 0 14px;
-
-    font-size: 9px;
-  }
-
-
-  .contact-cta-description {
-    font-size: 13px;
-    line-height: 1;
-    letter-spacing: -0.3px;
-    padding-right: 15px;
-  }
-
-}
-
 /* brand logos section */
 
 .brands h1 {
@@ -1074,7 +881,188 @@ ul {
     display: none;
   }
 
+  .contact-cta {
+    padding: 70px 20px 0px;
+  }
 
+  .contact-cta-inner {
+    width: 100%;
+  }
+
+  /* TITLE */
+
+  .contact-cta-title {
+    width: 82%;
+    margin: 0 15px 15px;
+
+    color: #000000;
+
+    font-family: 'Arimo', Helvetica, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: 0px;
+  }
+
+  /* Every line */
+  .title-line {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  /* TOP LINE — LEFT */
+  .title-left {
+    text-align: left;
+  }
+
+  /* MIDDLE LINES — JUSTIFIED */
+  .title-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+
+  /* BOTTOM LINE — RIGHT */
+  .title-right {
+    text-align: right;
+  }
+
+  /* IMAGE */
+
+  .contact-cta-image {
+    width: 92%;
+    height: 200px;
+  }
+
+  .contact-cta-image img {
+    border-radius: 25px;
+  }
+
+
+  /* LOWER CONTENT */
+
+  .contact-cta-bottom {
+    width: 92%;
+    min-height: 210px;
+  }
+
+
+  /* CARD */
+
+  .contact-cta-card {
+    width: 85px;
+    min-width: 85px;
+    height: 105px;
+
+    margin-left: 10px;
+    margin-top: -45px;
+
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+
+  .music-player-top {
+    margin-bottom: 6px;
+  }
+
+  .music-label {
+    font-size: 6px;
+  }
+
+  .music-info {
+    margin-bottom: 7px;
+  }
+
+  .music-title {
+    font-size: 8px;
+  }
+
+  .music-artist {
+    font-size: 7px;
+  }
+
+  .music-progress {
+    margin-bottom: 7px;
+  }
+
+  .music-controls button {
+    width: 17px;
+    height: 17px;
+
+    font-size: 14px;
+  }
+
+  .music-controls .play-button {
+    width: 21px;
+    height: 21px;
+  }
+
+  .music-controls .play-button::before {
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 6px;
+    margin-left: 1px;
+  }
+
+  .music-controls .play-button.is-playing::before {
+    width: 6px;
+    height: 8px;
+
+    background:
+      linear-gradient(to right,
+        #fff 0,
+        #fff 2px,
+        transparent 2px,
+        transparent 4px,
+        #fff 4px,
+        #fff 6px);
+  }
+
+  .music-count {
+    margin-top: 5px;
+    font-size: 6px;
+  }
+
+  /* RIGHT CONTENT */
+
+  .contact-cta-info {
+    margin-left: 25px;
+    padding-top: 30px;
+
+    max-width: calc(100% - 110px);
+  }
+
+
+  .contact-cta-buttons {
+    margin-bottom: 15px;
+  }
+
+
+  .contact-cta-small-button {
+    width: 40px;
+    height: 26px;
+
+    font-size: 9px;
+  }
+
+
+  .contact-cta-button {
+    min-width: 105px;
+    height: 26px;
+    padding: 0 14px;
+    font-size: 9px;
+    color: #777;
+  }
+
+
+  .contact-cta-description {
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    padding-right: 15px;
+  }
+  
   /* =========================
      BRANDS - MOBILE
   ========================= */
