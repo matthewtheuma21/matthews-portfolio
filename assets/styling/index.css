@@ -474,24 +474,62 @@ ul {
 
 /* PLAY BUTTON */
 
+/* PLAY BUTTON */
+
 .music-controls .play-button {
+  position: relative;
+
   width: 25px;
   height: 25px;
 
   background: #000;
   border-radius: 50%;
 
-  color: #fff;
+  padding: 0;
+  border: none;
 
-  padding-left: 2px;
-  padding-top: 1px;
+  font-size: 0;
 
-  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* PLAY ICON */
+.music-controls .play-button::before {
+  content: "";
+
+  width: 0;
+  height: 0;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #fff;
+
+  margin-left: 2px;
+}
+
+/* PAUSE ICON */
+.music-controls .play-button.is-playing::before {
+  width: 7px;
+  height: 9px;
+
+  border: none;
+  margin-left: 0;
+
+  background:
+    linear-gradient(to right,
+      #fff 0,
+      #fff 2px,
+      transparent 2px,
+      transparent 5px,
+      #fff 5px,
+      #fff 7px);
 }
 
 /* Move pause symbol slightly left */
 .music-controls .play-button.is-playing {
-  padding-left: 1;
+  padding-left: 1px;
   padding-right: 1px;
 }
 
@@ -625,7 +663,7 @@ ul {
 
   .contact-cta-title {
     width: 82%;
-    margin: 0 auto 55px;
+    margin: 0 auto 35px;
 
     color: #000000;
 
@@ -682,66 +720,80 @@ ul {
 
   /* CARD */
 
-  @media (max-width: 768px) {
+  .contact-cta-card {
+    width: 85px;
+    min-width: 85px;
+    height: 105px;
 
-    .contact-cta-card {
-      width: 85px;
-      min-width: 85px;
-      height: 105px;
+    margin-left: 10px;
+    margin-top: -45px;
 
-      margin-left: 10px;
-      margin-top: -45px;
+    padding: 10px;
 
-      padding: 10px;
-
-      border-radius: 10px;
-    }
-
-    .music-player-top {
-      margin-bottom: 6px;
-    }
-
-    .music-label {
-      font-size: 6px;
-    }
-
-    .music-info {
-      margin-bottom: 7px;
-    }
-
-    .music-title {
-      font-size: 8px;
-    }
-
-    .music-artist {
-      font-size: 7px;
-    }
-
-    .music-progress {
-      margin-bottom: 7px;
-    }
-
-    .music-controls button {
-      width: 17px;
-      height: 17px;
-
-      font-size: 14px;
-    }
-
-    .music-controls .play-button {
-      width: 21px;
-      height: 21px;
-
-      font-size: 8px;
-    }
-
-    .music-count {
-      margin-top: 5px;
-      font-size: 6px;
-    }
-
+    border-radius: 10px;
   }
 
+  .music-player-top {
+    margin-bottom: 6px;
+  }
+
+  .music-label {
+    font-size: 6px;
+  }
+
+  .music-info {
+    margin-bottom: 7px;
+  }
+
+  .music-title {
+    font-size: 8px;
+  }
+
+  .music-artist {
+    font-size: 7px;
+  }
+
+  .music-progress {
+    margin-bottom: 7px;
+  }
+
+  .music-controls button {
+    width: 17px;
+    height: 17px;
+
+    font-size: 14px;
+  }
+
+  .music-controls .play-button {
+    width: 21px;
+    height: 21px;
+  }
+
+  .music-controls .play-button::before {
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-left-width: 6px;
+    margin-left: 1px;
+  }
+
+  .music-controls .play-button.is-playing::before {
+    width: 6px;
+    height: 8px;
+
+    background:
+      linear-gradient(to right,
+        #fff 0,
+        #fff 2px,
+        transparent 2px,
+        transparent 4px,
+        #fff 4px,
+        #fff 6px);
+  }
+
+  .music-count {
+    margin-top: 5px;
+    font-size: 6px;
+  }
 
   /* RIGHT CONTENT */
 
@@ -780,6 +832,7 @@ ul {
     font-size: 13px;
     line-height: 1;
     letter-spacing: -0.3px;
+    padding-right: 15px;
   }
 
 }
@@ -1025,6 +1078,10 @@ ul {
   /* =========================
      BRANDS - MOBILE
   ========================= */
+
+  .brands h1 {
+    font-size: 20px;
+  }
 
   .brands-logos {
     width: calc(100% - 60px);
