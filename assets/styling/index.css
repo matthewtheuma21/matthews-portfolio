@@ -1014,7 +1014,7 @@ ul {
   .contact-cta-card {
     width: 85px;
     min-width: 85px;
-    height: 105px;
+    height: 120px;
 
     margin-left: 10px;
     margin-top: -45px;
@@ -1082,7 +1082,7 @@ ul {
   }
 
   .music-count {
-    margin-top: 5px;
+    margin-top: 8px;
     font-size: 6px;
   }
 
@@ -1116,7 +1116,7 @@ ul {
     height: 26px;
     padding: 0 14px;
     font-size: 9px;
-    color: #777;
+    color: white;
   }
 
 
@@ -1132,7 +1132,7 @@ ul {
   ========================= */
 
   .brands-section .section-title {
-    font-size: 16px;
+    font-size: 18px;
     white-space: nowrap;
   }
 

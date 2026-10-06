@@ -299,7 +299,7 @@ ul {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-top: -35vh;
-    height: 170vh;
+    height: 600vh;
     padding: 0;
 }
 
@@ -427,7 +427,7 @@ ul {
 @media (max-width: 768px) {
 
     .about-cards-section {
-        height: 300vh;
+        height: 600vh;
     }
 
     .about-card {
