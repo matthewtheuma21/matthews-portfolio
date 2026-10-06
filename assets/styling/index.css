@@ -259,6 +259,10 @@ ul {
   letter-spacing: -4px;
 }
 
+.mobile-title {
+  display: none;
+}
+
 /* Every line */
 .title-line {
   display: block;
@@ -644,6 +648,10 @@ ul {
   letter-spacing: -0.5px;
 }
 
+.mobile-description {
+  display: none;
+}
+
 /* brand logos section */
 
 .brands h1 {
@@ -904,6 +912,43 @@ ul {
     letter-spacing: 0px;
   }
 
+  .desktop-title {
+    display: none;
+  }
+
+  .mobile-title {
+    display: block;
+
+    width: 92%;
+    margin: 0 auto 35px;
+
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 0.91;
+    letter-spacing: 0;
+
+    color: #000;
+  }
+
+  .mobile-title .title-line {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .mobile-title-left {
+    text-align: left;
+  }
+
+  .mobile-title-justify {
+    text-align: justify;
+    text-align-last: justify;
+  }
+
+  .mobile-title-right {
+    text-align: right;
+  }
+
   /* Every line */
   .title-line {
     display: block;
@@ -944,6 +989,23 @@ ul {
   .contact-cta-bottom {
     width: 92%;
     min-height: 210px;
+  }
+
+  .desktop-description {
+    display: none;
+  }
+
+  .mobile-description {
+    display: block;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: -0.3px;
+
+    color: #000;
   }
 
 
@@ -1030,7 +1092,9 @@ ul {
     margin-left: 25px;
     padding-top: 30px;
 
-    max-width: calc(100% - 110px);
+    width: calc(100% - 110px);
+    max-width: none;
+    min-width: 0;
   }
 
 
@@ -1062,13 +1126,14 @@ ul {
     letter-spacing: -0.3px;
     padding-right: 15px;
   }
-  
+
   /* =========================
      BRANDS - MOBILE
   ========================= */
 
-  .brands h1 {
-    font-size: 20px;
+  .brands-section .section-title {
+    font-size: 16px;
+    white-space: nowrap;
   }
 
   .brands-logos {
