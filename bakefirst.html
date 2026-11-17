@@ -89,32 +89,6 @@
             <span class="bottom-line">Editorial Baking Recipe Book</span>
         </p>
 
-        <div class="carousel">
-            <div class="carousel-track">
-                <img src="assets/images/bakefirst-book.jpg" alt="preview 1">
-                <img src="assets/images/bakefirst-book02.jpg" alt="preview 2">
-                <img src="assets/images/bakefirst-book03.jpg" alt="preview 3">
-                <img src="assets/images/bakefirst-book04.jpg" alt="preview 4">
-                <img src="assets/images/bakefirst-book05.jpg" alt="preview 5">
-                <img src="assets/images/bakefirst-book06.jpg" alt="preview 6">
-                <img src="assets/images/bakefirst-book08.jpg" alt="preview 8">
-                <img src="assets/images/bakefirst-book09.jpg" alt="preview 9">
-                <img src="assets/images/bakefirst-book10.jpg" alt="preview 10">
-
-                <!-- duplicate images for seamless loop -->
-                <img src="assets/images/bakefirst-book.jpg" alt="preview 1">
-                <img src="assets/images/bakefirst-book02.jpg" alt="preview 2">
-                <img src="assets/images/bakefirst-book03.jpg" alt="preview 3">
-                <img src="assets/images/bakefirst-book04.jpg" alt="preview 4">
-                <img src="assets/images/bakefirst-book05.jpg" alt="preview 5">
-                <img src="assets/images/bakefirst-book06.jpg" alt="preview 6">
-                <img src="assets/images/bakefirst-book08.jpg" alt="preview 8">
-                <img src="assets/images/bakefirst-book09.jpg" alt="preview 9">
-                <img src="assets/images/bakefirst-book10.jpg" alt="preview 10">
-
-            </div>
-        </div>
-
         <div class="content-wrapper">
 
             <section class="book-section">
@@ -255,23 +229,25 @@
                     <div class="carousel-track">
 
                         <div class="carousel-slide">
-                            <img src="assets/images/THUMBS_asset-01.jpg">
-                            <p>A moodboard of the visual concept and aesthetic approach I had in mind.</p>
+                            <img src="assets/images/BakeFirst_Sketch 2.png">
+                            <p>Sketched ideas for how visually the book's elements can be structured.
+                            </p>
                         </div>
 
                         <div class="carousel-slide">
-                            <img src="assets/images/THUMBS_asset-06.jpg">
-                            <p><b>Adapting logo branding to the campaign</b>, rather than sticking to the usual
-                                bottom-right
-                                corner placement (for branding purposes on social media).</p>
+                            <img src="assets/images/bakefirst-book02.jpg">
                         </div>
 
                         <div class="carousel-slide">
-                            <img src="assets/images/THUMBS_asset-02.jpg">
+                            <img src="assets/images/bakefirst-book03.jpg">
                         </div>
 
                         <div class="carousel-slide">
-                            <img src="assets/images/THUMBS_asset-03.jpg">
+                            <img src="assets/images/bakefirst-book08.jpg">
+                        </div>
+
+                        <div class="carousel-slide">
+                            <img src="assets/images/bakefirst-page10.jpg">
                         </div>
 
                     </div>
@@ -283,32 +259,77 @@
             </div>
 
         </div>
+    </div>
 
-        <div class="footer-image">
-            <img src="assets/images/FOOTER.jpg" alt="Footer">
-        </div>
+    <div class="footer-image">
+        <img src="assets/images/FOOTER.jpg" alt="Footer">
+    </div>
 
-        <!-- STAR ANIMATION -->
-        <script>
-            const star = document.getElementById("spinStar");
+    <!-- STAR ANIMATION -->
+    <script>
+        const star = document.getElementById("spinStar");
 
-            function spinStar() {
-                star.classList.remove("spin");
+        function spinStar() {
+            star.classList.remove("spin");
 
-                // Restart animation
-                void star.offsetWidth;
+            // Restart animation
+            void star.offsetWidth;
 
-                star.classList.add("spin");
+            star.classList.add("spin");
+        }
+
+        // Play automatically when the page loads
+        window.addEventListener("load", () => {
+            setTimeout(spinStar, 500); // waits half a second after loading
+        });
+
+        // Play again whenever it's clicked
+        star.addEventListener("click", spinStar);
+    </script>
+
+    <script>
+
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function updateCarousel() {
+
+            track.style.transform =
+                `translateX(-${index * 100}%)`;
+
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
             }
 
-            // Play automatically when the page loads
-            window.addEventListener("load", () => {
-                setTimeout(spinStar, 500); // waits half a second after loading
-            });
+            updateCarousel();
 
-            // Play again whenever it's clicked
-            star.addEventListener("click", spinStar);
-        </script>
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            updateCarousel();
+
+        });
+
+    </script>
+
 </body>
 
 

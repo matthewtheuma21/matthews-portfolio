@@ -213,37 +213,6 @@ ul {
     margin-top: -30px;
 }
 
-.carousel {
-    overflow: hidden;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.carousel-track {
-    display: flex;
-    width: max-content;
-    animation: scroll 20s linear infinite;
-}
-
-.carousel img {
-    width: 200px;
-    /* adjust size */
-    height: auto;
-    margin-right: 15px;
-    padding-top: 20px;
-}
-
-/* animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
 /* book flip animation */
 input {
     display: none;
@@ -509,15 +478,6 @@ p {
         margin-left: -100px;
     }
 
-    .next-btn,
-    .back-btn {
-        transform: scale(1.6);
-        transform-origin: bottom right;
-
-        font-size: 14px;
-        padding: 10px 16px;
-    }
-
     /* TEXT */
     p {
         max-width: 90%;
@@ -526,16 +486,141 @@ p {
         text-align: justify;
     }
 
-    /* CAROUSEL */
-    .carousel img {
-        width: 120px;
-    }
-
     /* Keep pages behaving like pages */
     .flip {
         width: 100%;
         height: 100%;
     }
+}
+
+.gallery {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.preview4 {
+    display: block;
+    margin: 0 auto 40px;
+    max-width: 900px;
+    width: 90%;
+    height: auto;
+}
+
+.creative-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.carousel-window {
+    width: 900px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform .45s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carousel-slide img {
+
+    width: 100%;
+    height: 450px;
+
+    object-fit: contain;
+
+    background: white;
+}
+
+.carousel-slide p {
+
+    margin-top: 25px;
+
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-btn {
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: red;
+    color: white;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.carousel-btn:hover {
+
+    transform: scale(1.1);
+
+    background: #c70000;
+
+}
+
+@media(max-width:768px) {
+
+    .row p {
+        max-width: 90%;
+        margin: 10px auto;
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .creative-carousel {
+        gap: 10px;
+    }
+
+    .carousel-window {
+        width: 90%;
+    }
+
+    .carousel-slide img {
+
+        height: 220px;
+    }
+
+    .carousel-slide p {
+
+        font-size: 14px;
+        color: black;
+        padding: 0 10px;
+
+    }
+
+    .carousel-btn {
+        width: 45px;
+        height: 45px;
+
+        min-width: 45px;
+        min-height: 45px;
+
+        flex-shrink: 0;
+
+        font-size: 24px;
+    }
+
 }
 
 /* footer */
