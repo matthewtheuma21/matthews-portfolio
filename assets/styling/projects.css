@@ -241,7 +241,7 @@ ul {
   transform: none;
 }
 
-.project-row > div {
+.project-row>div {
   flex: 0 0 calc(50% - 75px);
   max-width: calc(50% - 75px);
   padding: 12px 0;
@@ -295,13 +295,17 @@ ul {
   display: none;
 }
 
-/* Immediately replace image with video on hover */
-.project-card:has(.project-video):hover .project-img {
-  display: none;
-}
+/* DESKTOP HOVER EFFECT ONLY */
+@media (hover: hover) and (pointer: fine) {
 
-.project-card:has(.project-video):hover .project-video {
-  display: block;
+  .project-card:has(.project-video):hover .project-img {
+    display: none;
+  }
+
+  .project-card:has(.project-video):hover .project-video {
+    display: block;
+  }
+
 }
 
 
@@ -341,11 +345,11 @@ ul {
 
 @media (max-width: 768px) {
 
-  .project-row > div {
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 10px;
-}
+  .project-row>div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
 
   .project-media {
     height: 300px;
@@ -364,12 +368,35 @@ ul {
     border-radius: 14px;
   }
 
-  .project-card.mobile-playing .project-img {
-    display: none;
+  /* Keep the thumbnail visible at all times */
+  .project-media .project-img {
+    display: block;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
   }
 
-  .project-card.mobile-playing .project-video {
+  .project-card>.project-img {
+    height: 300px;
+    width: 100%;
+  }
+
+  /* Video sits above the thumbnail */
+  .project-media .project-video {
     display: block;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    transition: opacity 0.35s ease;
+  }
+
+  /* Reveal video when project enters the screen */
+  .project-card.mobile-playing .project-video {
+    opacity: 1;
   }
 
 }

@@ -336,107 +336,121 @@
     <img src="assets/images/FOOTER.jpg" alt="Footer">
   </div>
 
+
+
+
+  <script src="assets/scripts/projects.js"></script>
+
   <script>
+
     const projectCards = document.querySelectorAll('.project-card');
 
     /* =========================
        DESKTOP: HOVER VIDEOS
     ========================= */
 
-    projectCards.forEach(card => {
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
 
-      const video = card.querySelector('.project-video');
+      projectCards.forEach(card => {
 
-      if (!video) return;
-
-      card.addEventListener('mouseenter', () => {
-
-        // Only use hover behaviour on devices with a mouse
-        if (window.matchMedia('(hover: hover)').matches) {
-          video.currentTime = 0;
-          video.play();
-        }
-
-      });
-
-      card.addEventListener('mouseleave', () => {
-
-        if (window.matchMedia('(hover: hover)').matches) {
-          video.pause();
-          video.currentTime = 0;
-        }
-
-      });
-
-    });
-
-
-    /* =========================
-       PHONE: PLAY WHILE SCROLLING
-    ========================= */
-
-    const mobileObserver = new IntersectionObserver((entries) => {
-
-      entries.forEach(entry => {
-
-        const card = entry.target;
         const video = card.querySelector('.project-video');
 
         if (!video) return;
 
-
-        if (entry.isIntersecting) {
-
-          // Stop every other project video
-          document.querySelectorAll('.project-video').forEach(otherVideo => {
-
-            if (otherVideo !== video) {
-              otherVideo.pause();
-              otherVideo.currentTime = 0;
-            }
-
-          });
-
-          // Start this project's video
-          card.classList.add('mobile-playing');
+        card.addEventListener('mouseenter', () => {
 
           video.currentTime = 0;
           video.play();
 
-        } else {
+        });
 
-          // Stop video when it leaves the screen
-          card.classList.remove('mobile-playing');
+        card.addEventListener('mouseleave', () => {
 
           video.pause();
           video.currentTime = 0;
 
+        });
+
+      });
+
+    }
+
+
+    /* =========================
+       MOBILE: SCROLL VIDEOS
+    ========================= */
+
+    if (window.matchMedia('(max-width: 768px)').matches) {
+
+      const mobileObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+          const card = entry.target;
+          const video = card.querySelector('.project-video');
+
+          if (!video) return;
+
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+
+            // Stop all other videos
+            projectCards.forEach(otherCard => {
+
+              if (otherCard !== card) {
+
+                const otherVideo = otherCard.querySelector('.project-video');
+
+                if (otherVideo) {
+                  otherVideo.pause();
+                  otherVideo.currentTime = 0;
+                }
+
+                otherCard.classList.remove('mobile-playing');
+
+              }
+
+            });
+
+            // Start the current video
+            card.classList.add('mobile-playing');
+
+            if (video.paused) {
+              video.play().catch(() => {
+                card.classList.remove('mobile-playing');
+              });
+            }
+
+          } else {
+
+            // Reveal the original thumbnail again
+            card.classList.remove('mobile-playing');
+
+            video.pause();
+            video.currentTime = 0;
+
+          }
+
+        });
+
+      }, {
+
+        threshold: [0, 0.5]
+
+      });
+
+
+      // Observe only projects that actually contain videos
+      projectCards.forEach(card => {
+
+        if (card.querySelector('.project-video')) {
+          mobileObserver.observe(card);
         }
 
       });
 
-    }, {
-
-      // Video starts when roughly 50% of the project
-      // is visible on screen
-      threshold: 0.5
-
-    });
-
-
-    /* Only activate this behaviour on phones/tablets */
-
-    if (window.matchMedia('(max-width: 768px)').matches) {
-
-      projectCards.forEach(card => {
-        mobileObserver.observe(card);
-      });
-
     }
+
   </script>
-
-
-  <script src="assets/scripts/projects.js"></script>
 
   <script>
     const star = document.getElementById("spinStar");
