@@ -353,6 +353,12 @@ ul {
 
 @media (max-width: 768px) {
 
+    .top-line {
+        width: 300px;
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
+
     /* INTRODUCTION */
 
     .project-introduction {
