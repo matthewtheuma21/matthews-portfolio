@@ -12,6 +12,7 @@ html body {
     box-sizing: border-box;
     overflow-x: hidden;
     background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .scroll-bar {
@@ -175,100 +176,259 @@ ul {
     .nav-link::after {
         height: 1px;
     }
-
-    /* ARTICLE LAYOUT */
-    .row {
-        flex-direction: column;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .col-8,
-    .col-4 {
-        width: 100%;
-        max-width: 100%;
-        flex: 0 0 100%;
-    }
 }
 
-/* content */
-h1 {
-    text-align: center;
-    padding-top: 110px;
-    padding-bottom: 40px;
-    color: black;
-}
+/* text downwards */
 
 .subtitle {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px;
 }
 
-.carousel {
-    overflow: hidden;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.carousel-track {
-    display: flex;
-    width: max-content;
-    animation: scroll 20s linear infinite;
-}
-
-.carousel img {
-    width: 300px !important;
-    height: auto !important;
-    max-width: none !important;
-    min-width: 300px !important;
-    flex: 0 0 300px !important;
-    object-fit: contain !important;
+.top-line {
     display: block;
-    margin-right: 15px;
-    padding-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+.bottom-line {
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+    /* strong + clear */
+    color: black;
 }
 
 
-/* PHONE */
-@media (max-width: 768px) {
-    .carousel img {
-        width: 180px;
-        height: auto;
-        flex: 0 0 auto;
-        margin-right: 10px;
-        margin-top: 10px;
-        padding: 0;
-    }
+/* =====================================
+   PROJECT PAGE LAYOUT
+===================================== */
+
+.project-page {
+    width: 100%;
+    padding: 0 5%;
 }
 
-/* animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
 
-    100% {
-        transform: translateX(-50%);
-    }
+/* =====================================
+   PROJECT VIDEO
+===================================== */
+
+.project-video {
+    width: 100%;
+    max-width: 1400px;
+    margin: 100px auto 0;
+    overflow: hidden;
 }
 
-.preview4 {
-    margin-left: 30px;
+.project-video video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
-/* text */
+/* =====================================
+   PROJECT INTRODUCTION
+===================================== */
 
-p {
-    color: rgb(0, 0, 0);
-    font-family: 'Arimo', Helvetica, Arial, sans-serif;
+.project-introduction {
+    max-width: 850px;
+    margin: 90px auto 0;
+    text-align: center;
+}
+
+.project-introduction h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.project-introduction p {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =====================================
+   PROJECT BRIEF
+===================================== */
+
+.project-brief {
+    width: 100%;
+    max-width: 1100px;
+    margin: 130px auto 0;
+}
+
+.project-brief h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.brief-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px;
+    align-items: start;
+}
+
+.brief-column p {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.8;
     text-align: justify;
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 0 20px;
-    z-index: 1;
-    position: relative
 }
+
+
+/* =====================================
+   MASONRY GALLERY
+===================================== */
+
+.project-gallery {
+    width: 100%;
+    max-width: 1400px;
+    margin: 150px auto 0;
+}
+
+.masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 8px;
+    grid-auto-flow: dense;
+    gap: 12px;
+}
+
+.masonry-gallery img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    min-width: 0;
+}
+
+/* Vary image heights for a masonry effect */
+
+.masonry-gallery img:nth-child(4n + 1) {
+    grid-row: span 32;
+}
+
+.masonry-gallery img:nth-child(4n + 2) {
+    grid-row: span 23;
+}
+
+.masonry-gallery img:nth-child(4n + 3) {
+    grid-row: span 28;
+}
+
+.masonry-gallery img:nth-child(4n + 4) {
+    grid-row: span 19;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 992px) {
+
+    .masonry-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    /* INTRODUCTION */
+
+    .project-introduction {
+        margin-top: 60px;
+    }
+
+    .project-introduction h1 {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+
+    .project-introduction p {
+        font-size: 14px;
+        line-height: 1.7;
+        padding: 0 10px;
+    }
+
+
+    /* BRIEF */
+
+    .project-brief {
+        margin-top: 80px;
+    }
+
+    .project-brief h2 {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+
+    .brief-columns {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .brief-column p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* GALLERY */
+
+    .project-gallery {
+        margin-top: 85px;
+    }
+
+    @media (max-width: 768px) {
+        .masonry-gallery {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-rows: 5px;
+            gap: 8px;
+        }
+
+        .masonry-gallery img {
+            border-radius: 8px;
+        }
+
+        .masonry-gallery img:nth-child(4n+1) {
+            grid-row: span 24;
+        }
+
+        .masonry-gallery img:nth-child(4n+2) {
+            grid-row: span 17;
+        }
+
+        .masonry-gallery img:nth-child(4n+3) {
+            grid-row: span 21;
+        }
+
+        .masonry-gallery img:nth-child(4n+4) {
+            grid-row: span 15;
+        }
+    }
+
+}
+
 
 /* footer */
 
